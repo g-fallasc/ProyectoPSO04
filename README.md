@@ -1,5 +1,5 @@
 # ProyectoPSO04
-** Proyecto del curso PSO-04 **
+**Proyecto del curso PSO-04**
 
 
 ***Proyecto de automatización de pruebas bajo el framework Selenium al sitio web http://tutorialsninja.com/demo/***	
