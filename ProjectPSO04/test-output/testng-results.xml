@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-05-13T22:19:20 CST" name="Default suite" finished-at="2022-05-13T22:19:40 CST" duration-ms="20073">
+    <groups>
+    </groups>
+    <test started-at="2022-05-13T22:19:20 CST" name="Default test" finished-at="2022-05-13T22:19:40 CST" duration-ms="20073">
+      <class name="TestCases.Auth">
+        <test-method signature="TestCaseCorrectRegister()[pri:0, instance:TestCases.Auth@1a18644]" started-at="2022-05-13T22:19:20 CST" name="TestCaseCorrectRegister" finished-at="2022-05-13T22:19:40 CST" duration-ms="19956" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseCorrectRegister -->
+      </class> <!-- TestCases.Auth -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
