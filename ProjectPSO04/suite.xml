@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Auth">
+	<!-- Test Cases for Register -->
+	<test name="Pruebas Registro">
+		<parameter name="browser" value="Chrome"></parameter>
+		<parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"></parameter>
+		<parameter name="URL" value="http://tutorialsninja.com/demo/"></parameter>
+		<classes>
+			<class name="TestCases.Auth">
+				<methods>
+					<include name="TestCaseCorrectRegister"></include>
+					<include name="TestCaseIncompleteRegister"></include>
+					<include name="TestCaseRepeatedRegister"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<!-- Test Cases for Login / Logout -->
+	<test name="Pruebas Iniciar Sesion">
+		<parameter name="tipoNavegador" value="Chrome"></parameter>
+		<parameter name="rutaDriver" value="C:\\Drivers\\chromedriver.exe"></parameter>
+		<parameter name="URL" value="https://blazedemo.com/"></parameter>
+		<classes>
+			<class name="TestCases.Auth">
+				<methods>
+					<include name="TestCaseCorrectLogin"></include>
+					<include name="TestCaseIncorrectLogin"></include>
+					<include name="TestCaseLogout"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<!-- Test Cases for Checkout -->
+	<test name="Pruebas Validar Orden">
+		<parameter name="tipoNavegador" value="Chrome"></parameter>
+		<parameter name="rutaDriver" value="C:\\Drivers\\chromedriver.exe"></parameter>
+		<parameter name="URL" value="https://blazedemo.com/"></parameter>
+		<classes>
+			<class name="TestCases.CheckoutOrder">
+				<methods>
+					<include name="TestCaseCheckoutOrder"></include>
+					<include name="TestCaseCheckoutOrderAddNewAddress"></include>
+					<include name="TestCaseLogout"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
