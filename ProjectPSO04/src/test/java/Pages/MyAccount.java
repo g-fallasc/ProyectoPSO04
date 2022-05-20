@@ -84,7 +84,7 @@ public class MyAccount {
 	 **/
 
 	public void verifyLogin() {
-		WebElement title = driver.findElement(byAffiliateAccount);
+		WebElement title = driver.findElement(byTitleMyAccount);
 		Assert.assertEquals(title.getText().equals("My Account"), true, "El login fue incorrecto");
 	}
 

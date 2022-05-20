@@ -3,15 +3,20 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCases.CheckoutOrder">
+      <class name="TestCases.Auth">
         <methods>
-          <include name="afterClass"/>
+          <include name="TestCaseLogout"/>
+          <include name="TestCaseLoginIncorrect"/>
           <include name="afterTest"/>
           <include name="beforeTest"/>
+          <include name="afterClass"/>
+          <include name="TestCaseRegisterSuccess"/>
           <include name="beforeClass"/>
-          <include name="TestCaseCheckoutOrder"/>
+          <include name="TestCaseLoginSuccess"/>
+          <include name="TestCaseRegisterWithoutPrivacyPolicy"/>
+          <include name="TestCaseRegisterRepeatedEmail"/>
         </methods>
-      </class> <!-- TestCases.CheckoutOrder -->
+      </class> <!-- TestCases.Auth -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

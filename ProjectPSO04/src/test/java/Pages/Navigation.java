@@ -14,15 +14,19 @@ public class Navigation {
 	By byMyAccount = By.xpath("//a[@title='My Account']");
 	By byRegister = By.xpath("//a[contains(text(),'Register')]");
 	By byLogin = By.xpath("//a[contains(text(),'Login')]");
-	By byOrderHistory = By.xpath("//a[contains(text(),'Login')]");
-	By byTransactions = By.xpath("//a[contains(text(),'Login')]");
-	By byDownloads = By.xpath("//a[contains(text(),'Login')]");
-	By byLogout = By.xpath("//a[contains(text(),'Login')]");
+	By byOrderHistory = By.xpath("//a[contains(text(),'Order History')]");
+	By byTransactions = By.xpath("//a[contains(text(),'Transactions')]");
+	By byDownloads = By.xpath("//a[contains(text(),'Downloads')]");
+	By byLogout = By.xpath("//a[contains(text(),'Logout')]");
 
 	// Options
 	By byWishList = By.id("wishlist-total");
 	By byShoppingCart = By.xpath("//a[@title='Shopping Cart']");
 	By byCheckout = By.xpath("//a[@title='Checkout']");
+
+	// Search bar
+	By bySearchBar = By.xpath("//input[@type='text'][@name='search']");
+	By byButtonSearch = By.xpath("//button[@type='button'][@class='btn btn-default btn-lg']");
 
 	public Navigation(WebDriver driver, String URL) {
 		this.driver = driver;
@@ -31,44 +35,44 @@ public class Navigation {
 		this.driver.get(URL);
 	}
 
-	public void navToRegister() {
+	// Open menu 'My Account'
+	private void navToMyAccount() {
 		WebElement dropdownMyAccount = driver.findElement(byMyAccount);
 		dropdownMyAccount.click();
+	}
+
+	public void navToRegister() {
+		navToMyAccount();
 		WebElement toRegister = driver.findElement(byRegister);
 		toRegister.click();
 	}
 
 	public void navToLogin() {
-		WebElement dropdownMyAccount = driver.findElement(byMyAccount);
-		dropdownMyAccount.click();
+		navToMyAccount();
 		WebElement toLogin = driver.findElement(byLogin);
 		toLogin.click();
 	}
 
 	public void navToOrderHistory() {
-		WebElement dropdownMyAccount = driver.findElement(byMyAccount);
-		dropdownMyAccount.click();
+		navToMyAccount();
 		WebElement toOrderHistory = driver.findElement(byOrderHistory);
 		toOrderHistory.click();
 	}
 
 	public void navToTransactions() {
-		WebElement dropdownMyAccount = driver.findElement(byMyAccount);
-		dropdownMyAccount.click();
+		navToMyAccount();
 		WebElement toTransactions = driver.findElement(byTransactions);
 		toTransactions.click();
 	}
 
 	public void navToDownloads() {
-		WebElement dropdownMyAccount = driver.findElement(byMyAccount);
-		dropdownMyAccount.click();
+		navToMyAccount();
 		WebElement toDownloads = driver.findElement(byDownloads);
 		toDownloads.click();
 	}
 
 	public void navToLogout() {
-		WebElement dropdownMyAccount = driver.findElement(byMyAccount);
-		dropdownMyAccount.click();
+		navToMyAccount();
 		WebElement toLogout = driver.findElement(byLogout);
 		toLogout.click();
 	}
@@ -86,6 +90,17 @@ public class Navigation {
 	public void navToCheckout() {
 		WebElement toCheckout = driver.findElement(byCheckout);
 		toCheckout.click();
+	}
+
+	public void enterValueSearch(String value) {
+		WebElement input = driver.findElement(bySearchBar);
+		input.clear();
+		input.sendKeys(value);
+	}
+
+	public void clickButtonSearch() {
+		WebElement button = driver.findElement(byButtonSearch);
+		button.click();
 	}
 
 }

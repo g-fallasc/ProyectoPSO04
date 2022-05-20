@@ -22,6 +22,7 @@ public class Auth {
 	Navigation Navigation;
 	Login PagLogin;
 	MyAccount PagMyAccount;
+	String newEmail = "email5@mail.com";
 
 	@BeforeClass
 	public void beforeClass() {
@@ -38,7 +39,7 @@ public class Auth {
 			System.setProperty("webdriver.geckod.driver", driverPath);
 			// driver = new FirefoxDriver();
 		}
-		// Set Navigation class
+		// Instance Navigation class
 		Navigation = new Navigation(driver, URL);
 
 		// Pages Instances
@@ -48,7 +49,7 @@ public class Auth {
 	}
 
 	@Test
-	public void TestCaseCorrectRegister() throws InterruptedException {
+	public void TestCaseRegisterSuccess() throws InterruptedException {
 		// Navigation to register page
 		Navigation.navToRegister();
 		Thread.sleep(1000);
@@ -56,7 +57,7 @@ public class Auth {
 		// Enter personal details
 		PagRegister.enterFirstName("Prueba");
 		PagRegister.enterLastName("Test Case");
-		PagRegister.enterEmail("email2@mail.com");
+		PagRegister.enterEmail(newEmail);
 		PagRegister.enterPhone("+50688997766");
 		Thread.sleep(1500);
 
@@ -80,7 +81,7 @@ public class Auth {
 	}
 
 	@Test
-	public void TestCaseIncompleteRegister() throws InterruptedException {
+	public void TestCaseRegisterWithoutPrivacyPolicy() throws InterruptedException {
 		// Navigation to register page
 		Navigation.navToRegister();
 		Thread.sleep(1000);
@@ -91,16 +92,21 @@ public class Auth {
 		PagRegister.enterEmail("email@mail.com");
 		PagRegister.enterPhone("+50688997766");
 		Thread.sleep(1500);
+		// Enter password
+		PagRegister.enterPassword("qwerty");
+		PagRegister.enterPasswordConfirm("qwerty");
+		Thread.sleep(1000);
 
 		PagRegister.clickContinue();
 		Thread.sleep(1000);
 
+		// Validate Message Alert
 		PagRegister.validateMessagePrivacyPolicy();
 		Thread.sleep(1000);
 	}
 
-	// @Test
-	public void TestCaseRepeatedRegister() throws InterruptedException {
+	@Test
+	public void TestCaseRegisterRepeatedEmail() throws InterruptedException {
 		// Navigation to register page
 		Navigation.navToRegister();
 		Thread.sleep(1000);
@@ -108,7 +114,7 @@ public class Auth {
 		// Enter personal details
 		PagRegister.enterFirstName("Prueba");
 		PagRegister.enterLastName("Test Case");
-		PagRegister.enterEmail("email@mail.com");
+		PagRegister.enterEmail("gus@email.com");
 		PagRegister.enterPhone("+50688997766");
 		Thread.sleep(1500);
 
@@ -118,16 +124,23 @@ public class Auth {
 		Thread.sleep(1000);
 
 		// Enter checks
-		PagRegister.selectSubscribe("No");
+		PagRegister.selectSubscribe("Yes");
 		Thread.sleep(1500);
 		PagRegister.clickPrivayPolicy();
 		Thread.sleep(2000);
 		PagRegister.clickContinue();
 		Thread.sleep(1000);
+
+		// Validate Message Alert
+		PagRegister.validateMessageEmailExist();
+		Thread.sleep(1500);
 	}
 
-	// @Test
-	public void TestCaseCorrectLogin() throws InterruptedException {
+	/*
+	 * ------------- Login test cases -------------
+	 */
+	@Test
+	public void TestCaseLoginSuccess() throws InterruptedException {
 		// Navigation to register page
 		Navigation.navToLogin();
 		Thread.sleep(1000);
@@ -146,8 +159,8 @@ public class Auth {
 		Thread.sleep(1000);
 	}
 
-	// @Test
-	public void TestCaseIncorrectLogin() throws InterruptedException {
+	@Test
+	public void TestCaseLoginIncorrect() throws InterruptedException {
 		// Navigation to register page
 		Navigation.navToLogin();
 		Thread.sleep(1000);

@@ -29,8 +29,9 @@ public class Register {
 	By byTitleCreated = By.xpath("//h1[contains(text(), 'Your Account Has Been Created!')]");
 	By byBtnContinueCreated = By.xpath("//a[contains(text(),'Continue')]");
 
-	// Incomplete Register
+	// Message Register Error
 	By byMessagePrivacyPolicy = By.xpath("//div[@class='alert alert-danger alert-dismissible']");
+	By byMessageEmailExist = By.xpath("//div[@class='alert alert-danger alert-dismissible']");
 
 	public Register(WebDriver driver) {
 		this.driver = driver;
@@ -113,6 +114,12 @@ public class Register {
 	public void validateMessagePrivacyPolicy() {
 		WebElement alertWarning = driver.findElement(byMessagePrivacyPolicy);
 		Assert.assertEquals(alertWarning.getText().equals("Warning: You must agree to the Privacy Policy!"), true,
+				"El mensaje de alerta no se desplego correctamente");
+	}
+
+	public void validateMessageEmailExist() {
+		WebElement alertWarning = driver.findElement(byMessageEmailExist);
+		Assert.assertEquals(alertWarning.getText().equals("Warning: E-Mail Address is already registered!"), true,
 				"El mensaje de alerta no se desplego correctamente");
 	}
 

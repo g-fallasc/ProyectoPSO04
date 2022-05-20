@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Auth]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Pruebas Iniciar Sesion(failed)">
+    <parameter name="tipoNavegador" value="Chrome"/>
+    <parameter name="rutaDriver" value="C:\\Drivers\\chromedriver.exe"/>
+    <parameter name="URL" value="https://blazedemo.com/"/>
+    <classes>
+      <class name="TestCases.Auth">
+        <methods>
+          <include name="TestCaseLogout"/>
+          <include name="TestCaseLoginIncorrect"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+          <include name="TestCaseLoginSuccess"/>
+        </methods>
+      </class> <!-- TestCases.Auth -->
+    </classes>
+  </test> <!-- Pruebas Iniciar Sesion(failed) -->
+  <test thread-count="5" name="Pruebas Validar Orden(failed)">
+    <parameter name="tipoNavegador" value="Chrome"/>
+    <parameter name="rutaDriver" value="C:\\Drivers\\chromedriver.exe"/>
+    <parameter name="URL" value="https://blazedemo.com/"/>
+    <classes>
+      <class name="TestCases.CheckoutOrder">
+        <methods>
+          <include name="afterClass"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeClass"/>
+          <include name="TestCaseCheckoutOrder"/>
+        </methods>
+      </class> <!-- TestCases.CheckoutOrder -->
+    </classes>
+  </test> <!-- Pruebas Validar Orden(failed) -->
+  <test thread-count="5" name="Pruebas Busqueda(failed)">
+    <parameter name="tipoNavegador" value="Chrome"/>
+    <parameter name="rutaDriver" value="C:\\Drivers\\chromedriver.exe"/>
+    <parameter name="URL" value="https://blazedemo.com/"/>
+    <classes>
+      <class name="TestCases.SearchProduct">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="TestCaseSearchChangeCriteria"/>
+          <include name="TestCaseSearchProductExist"/>
+          <include name="afterClass"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="TestCaseSearchProductNotExist"/>
+        </methods>
+      </class> <!-- TestCases.SearchProduct -->
+    </classes>
+  </test> <!-- Pruebas Busqueda(failed) -->
+</suite> <!-- Failed suite [Auth] -->
