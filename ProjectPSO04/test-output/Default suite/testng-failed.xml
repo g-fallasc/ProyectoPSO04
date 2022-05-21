@@ -5,7 +5,18 @@
     <classes>
       <class name="TestCases.Auth">
         <methods>
-          <include name="TestCaseCorrectRegister"/>
+          <include name="TestCaseLogout"/>
+          <include name="TestCaseLoginIncorrect"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="afterClass"/>
+          <include name="TestCaseRegisterSuccess"/>
+          <include name="beforeClass"/>
+          <include name="TestCaseOptionRegister"/>
+          <include name="TestCaseOptionLogin"/>
+          <include name="TestCaseLoginSuccess"/>
+          <include name="TestCaseRegisterWithoutPrivacyPolicy"/>
+          <include name="TestCaseRegisterRepeatedEmail"/>
         </methods>
       </class> <!-- TestCases.Auth -->
     </classes>
