@@ -10,9 +10,10 @@
 		<classes>
 			<class name="TestCases.Auth">
 				<methods>
+					<include name="TestCaseOptionRegister"></include>
+					<include name="TestCaseRegisterWithoutPrivacyPolicy"></include>
 					<include name="TestCaseRegisterSuccess"></include>
 					<include name="TestCaseRegisterRepeatedEmail"></include>
-					<include name="TestCaseRegisterWithoutPrivacyPolicy"></include>
 				</methods>
 			</class>
 		</classes>
@@ -26,9 +27,45 @@
 		<classes>
 			<class name="TestCases.Auth">
 				<methods>
-					<include name="TestCaseLoginSuccess"></include>
+					<include name="TestCaseOptionLogin"></include>
 					<include name="TestCaseLoginIncorrect"></include>
+					<include name="TestCaseLoginSuccess"></include>
 					<include name="TestCaseLogout"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<!-- Test Cases for Home Page -->
+	<test name="Pruebas Pagina Principal - Verificar Productos">
+		<parameter name="browser" value="Chrome"></parameter>
+		<parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"></parameter>
+		<parameter name="URL" value="http://tutorialsninja.com/demo/"></parameter>
+		<classes>
+			<class name="TestCases.ProductHomePage">
+				<methods>
+					<include name="TestCaseValidateProduct"></include>
+					<include name="TestCaseValidateProductNotExist"></include>
+					<include name="TestCaseSelectCurrency"></include>
+					<include name="TestCaseProductAddToCart"></include>
+					<include name="TestCaseProductAddToWishList"></include>
+					<include name="TestCaseProductAddToCompare"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<!-- Test Cases for Search -->
+	<test name="Pruebas Busqueda">
+		<parameter name="browser" value="Chrome"></parameter>
+		<parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"></parameter>
+		<parameter name="URL" value="http://tutorialsninja.com/demo/"></parameter>
+		<classes>
+			<class name="TestCases.SearchProduct">
+				<methods>
+					<include name="TestCaseSearchProductExist"></include>
+					<include name="TestCaseSearchChangeCriteria"></include>
+					<include name="TestCaseSearchProductNotExist"></include>
 				</methods>
 			</class>
 		</classes>
@@ -44,22 +81,6 @@
 				<methods>
 					<include name="TestCaseCheckoutOrder"></include>
 					<include name="TestCaseCheckoutOrderAddNewAddress"></include>
-				</methods>
-			</class>
-		</classes>
-	</test>
-
-	<!-- Test Cases for Search -->
-	<test name="Pruebas Busqueda">
-		<parameter name="browser" value="Chrome"></parameter>
-		<parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"></parameter>
-		<parameter name="URL" value="http://tutorialsninja.com/demo/"></parameter>
-		<classes>
-			<class name="TestCases.SearchProduct">
-				<methods>
-					<include name="TestCaseSearchChangeCriteria"></include>
-					<include name="TestCaseSearchProductExist"></include>
-					<include name="TestCaseSearchProductNotExist"></include>
 				</methods>
 			</class>
 		</classes>

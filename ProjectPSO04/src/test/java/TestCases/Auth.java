@@ -1,5 +1,7 @@
 package TestCases;
 
+import java.util.Random;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -22,7 +24,6 @@ public class Auth {
 	Navigation Navigation;
 	Login PagLogin;
 	MyAccount PagMyAccount;
-	String newEmail = "email5@mail.com";
 
 	@BeforeClass
 	public void beforeClass() {
@@ -49,6 +50,19 @@ public class Auth {
 	}
 
 	@Test
+	public void TestCaseOptionRegister() throws InterruptedException {
+		// Navigation to register page
+		Navigation.navToRegister();
+		Thread.sleep(1500);
+
+		// Validate page Register
+		PagRegister.validateTitlePageRegister();
+		Thread.sleep(500);
+		PagRegister.validateTextPageRegister();
+		Thread.sleep(1500);
+	}
+
+	@Test
 	public void TestCaseRegisterSuccess() throws InterruptedException {
 		// Navigation to register page
 		Navigation.navToRegister();
@@ -57,7 +71,9 @@ public class Auth {
 		// Enter personal details
 		PagRegister.enterFirstName("Prueba");
 		PagRegister.enterLastName("Test Case");
-		PagRegister.enterEmail(newEmail);
+		Random randomGenerator = new Random();
+		int randomInt = randomGenerator.nextInt(10000);
+		PagRegister.enterEmail("email" + randomInt + "@mail.com");
 		PagRegister.enterPhone("+50688997766");
 		Thread.sleep(1500);
 
@@ -140,6 +156,17 @@ public class Auth {
 	 * ------------- Login test cases -------------
 	 */
 	@Test
+	public void TestCaseOptionLogin() throws InterruptedException {
+		// Navigation to login page
+		Navigation.navToLogin();
+		Thread.sleep(1500);
+
+		// Validate page Login
+		PagLogin.validateTitlePageLogin();
+		Thread.sleep(1500);
+	}
+
+	@Test
 	public void TestCaseLoginSuccess() throws InterruptedException {
 		// Navigation to register page
 		Navigation.navToLogin();
@@ -165,8 +192,11 @@ public class Auth {
 		Navigation.navToLogin();
 		Thread.sleep(1000);
 
+		Random randomGenerator = new Random();
+		int randomInt = randomGenerator.nextInt(1000);
+
 		// Enter credentials
-		PagLogin.enterEmail("email@no.existe");
+		PagLogin.enterEmail("email" + randomInt + "@no.existe");
 		PagLogin.enterPassword("12345678");
 		Thread.sleep(1000);
 
@@ -203,6 +233,7 @@ public class Auth {
 		PagLogin.verifyLogout();
 		Thread.sleep(1000);
 		PagLogin.clickBtnContinueLogout();
+		Thread.sleep(1500);
 	}
 
 	@AfterMethod

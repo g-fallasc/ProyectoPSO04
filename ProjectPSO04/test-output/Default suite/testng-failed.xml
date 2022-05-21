@@ -12,6 +12,8 @@
           <include name="afterClass"/>
           <include name="TestCaseRegisterSuccess"/>
           <include name="beforeClass"/>
+          <include name="TestCaseOptionRegister"/>
+          <include name="TestCaseOptionLogin"/>
           <include name="TestCaseLoginSuccess"/>
           <include name="TestCaseRegisterWithoutPrivacyPolicy"/>
           <include name="TestCaseRegisterRepeatedEmail"/>

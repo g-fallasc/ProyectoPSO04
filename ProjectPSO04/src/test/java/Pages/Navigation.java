@@ -19,6 +19,9 @@ public class Navigation {
 	By byDownloads = By.xpath("//a[contains(text(),'Downloads')]");
 	By byLogout = By.xpath("//a[contains(text(),'Logout')]");
 
+	// Select currency type
+	By byBtnCurrency = By.id("form-currency");
+
 	// Options
 	By byWishList = By.id("wishlist-total");
 	By byShoppingCart = By.xpath("//a[@title='Shopping Cart']");
@@ -33,6 +36,22 @@ public class Navigation {
 		this.driver.manage().window().maximize();
 		this.driver.manage().deleteAllCookies();
 		this.driver.get(URL);
+	}
+
+	// Open menu 'Currency'
+	public void navToCurrency() {
+		WebElement currency = driver.findElement(byBtnCurrency);
+		currency.click();
+	}
+
+	/**
+	 * @param enter "EUR" or "GBP" or "USD"
+	 */
+	public void selectCurrency(String currency) {
+		navToCurrency();
+		By byBtnCurrency = By.name(currency);
+		WebElement selectType = driver.findElement(byBtnCurrency);
+		selectType.click();
 	}
 
 	// Open menu 'My Account'

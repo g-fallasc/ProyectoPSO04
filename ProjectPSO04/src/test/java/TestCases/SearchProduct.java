@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 
 import Pages.Login;
 import Pages.Navigation;
+import Pages.Product;
 import Pages.Search;
 
 public class SearchProduct {
@@ -21,6 +22,7 @@ public class SearchProduct {
 	Navigation Navigation;
 	Search PagSearch;
 	Login PagLogin;
+	Product Product;
 
 	@BeforeClass
 	public void beforeClass() {
@@ -42,6 +44,7 @@ public class SearchProduct {
 
 		// Pages Instances
 		PagSearch = new Search(driver);
+		Product = new Product(driver);
 	}
 
 	@Test
@@ -56,7 +59,10 @@ public class SearchProduct {
 		Thread.sleep(1000);
 
 		// Validate product result
-		// TODO
+		String productDetail = "iPhone iPhone is a revolutionary new mobile phone that allows you to make a call by simply tapping a name o.. $123.20 Ex Tax: $101.00";
+		// Validate product detail in home page
+		Product.validateProducto(productDetail, true);
+		Thread.sleep(1000);
 	}
 
 	@Test
@@ -116,7 +122,6 @@ public class SearchProduct {
 		// Enter search from home page
 		Navigation.enterValueSearch(name);
 		Navigation.clickButtonSearch();
-
 	}
 
 	public void LoginUser(String email, String password) throws InterruptedException {

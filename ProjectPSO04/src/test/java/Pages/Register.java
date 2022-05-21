@@ -33,6 +33,10 @@ public class Register {
 	By byMessagePrivacyPolicy = By.xpath("//div[@class='alert alert-danger alert-dismissible']");
 	By byMessageEmailExist = By.xpath("//div[@class='alert alert-danger alert-dismissible']");
 
+	// Title and Text Page
+	By byTitlePageRegister = By.xpath("//h1[contains(text(), 'Register Account')]");
+	By byTextAlreadyAccount = By.xpath("//div[@id='content']//following-sibling::p");
+
 	public Register(WebDriver driver) {
 		this.driver = driver;
 	}
@@ -123,4 +127,15 @@ public class Register {
 				"El mensaje de alerta no se desplego correctamente");
 	}
 
+	public void validateTitlePageRegister() {
+		WebElement title = driver.findElement(byTitlePageRegister);
+		Assert.assertTrue(title.isDisplayed(), "El titulo es incorrecto");
+	}
+
+	public void validateTextPageRegister() {
+		WebElement text = driver.findElement(byTextAlreadyAccount);
+		Assert.assertEquals(
+				text.getText().equals("If you already have an account with us, please login at the login page."), true,
+				"El texto no es el correcto");
+	}
 }

@@ -13,6 +13,8 @@ public class Login {
 	By byPassword = By.id("input-password");
 	By byForgottenPassword = By.xpath("//a[contains(text(), 'Forgotten Password')]");
 	By byButtonLogin = By.xpath("//input[@type='submit'][@value='Login']");
+	// Title Page Login
+	By byTitlePageLogin = By.xpath("//h2[contains(text(), 'Returning Customer')]");
 
 	// ToRegister
 	By byRegisterPage = By.xpath("//a[contains(text(), 'Continue')]");
@@ -69,10 +71,15 @@ public class Login {
 		Assert.assertTrue(titleLogout.isDisplayed(), "No se cerro sesión correctamente");
 		Assert.assertTrue(messageLogout.isDisplayed(), "El mensaje no es el correcto");
 	}
-	
+
 	public void clickBtnContinueLogout() {
 		WebElement btnContinue = driver.findElement(byBtnContinueLogout);
 		btnContinue.click();
+	}
+
+	public void validateTitlePageLogin() {
+		WebElement title = driver.findElement(byTitlePageLogin);
+		Assert.assertTrue(title.isDisplayed(), "El titulo es incorrecto");
 	}
 
 }
