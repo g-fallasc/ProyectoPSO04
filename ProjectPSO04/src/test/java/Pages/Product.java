@@ -1,6 +1,7 @@
 package Pages;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -31,16 +32,21 @@ public class Product {
 	}
 
 	public void addProductToCart(String productName) {
-		By byProductName = By.xpath("//div[@class='caption']//a[contains(text(), '" + productName + "')]");
-		WebElement product = driver.findElement(byProductName);
-		String productId = getProductId(product);
+		try {
+			By byProductName = By.xpath("//div[@class='caption']//a[contains(text(), '" + productName + "')]");
+			WebElement product = driver.findElement(byProductName);
+			String productId = getProductId(product);
 
-		if (product.isDisplayed()) {
-			By byBtnAddCart = By.xpath("//button[@type='button' and contains(@onclick, '" + productId + "')]");
-			WebElement buttonAddProductCart = driver.findElement(byBtnAddCart);
-			buttonAddProductCart.click();
-		} else {
-			Assert.fail("El producto no fue encontrado");
+			if (product.isDisplayed()) {
+				By byBtnAddCart = By.xpath("//button[@type='button' and contains(@onclick, '" + productId + "')]");
+				WebElement buttonAddProductCart = driver.findElement(byBtnAddCart);
+				buttonAddProductCart.click();
+			} else {
+				Assert.fail("El producto no fue encontrado");
+			}
+		} catch (NoSuchElementException e) {
+			System.out.println(e);
+			Assert.fail("El producto: " + productName + " no fue encontrado");
 		}
 	}
 

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="17" total="22" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-20T22:44:09 CST" name="Test Cases - Primer Entrega" finished-at="2022-05-20T22:44:39 CST" duration-ms="30032">
+  <suite started-at="2022-05-21T08:43:11 CST" name="Test Cases - Primer Entrega" finished-at="2022-05-21T08:44:32 CST" duration-ms="81627">
     <groups>
     </groups>
-    <test started-at="2022-05-20T22:44:09 CST" name="Pruebas Validar Orden" finished-at="2022-05-20T22:44:39 CST" duration-ms="30032">
-      <class name="TestCases.CheckoutOrder">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:TestCases.CheckoutOrder@51e69659]" started-at="2022-05-20T22:44:09 CST" name="beforeClass" finished-at="2022-05-20T22:44:09 CST" duration-ms="15" status="PASS">
+    <test started-at="2022-05-21T08:43:11 CST" name="Pruebas Registro" finished-at="2022-05-21T08:43:36 CST" duration-ms="25225">
+      <class name="TestCases.Auth">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:TestCases.Auth@4b8ee4de]" started-at="2022-05-21T08:43:11 CST" name="beforeClass" finished-at="2022-05-21T08:43:11 CST" duration-ms="35" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.CheckoutOrder@51e69659]" started-at="2022-05-20T22:44:09 CST" name="beforeTest" finished-at="2022-05-20T22:44:19 CST" duration-ms="9667" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.Auth@4b8ee4de]" started-at="2022-05-21T08:43:11 CST" name="beforeTest" finished-at="2022-05-21T08:43:23 CST" duration-ms="12614" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -32,19 +32,159 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="TestCaseCheckoutOrderAddNewAddress()[pri:0, instance:TestCases.CheckoutOrder@51e69659]" started-at="2022-05-20T22:44:19 CST" name="TestCaseCheckoutOrderAddNewAddress" finished-at="2022-05-20T22:44:38 CST" duration-ms="19730" status="PASS">
+        <test-method signature="TestCaseRegisterWithoutPrivacyPolicy()[pri:0, instance:TestCases.Auth@4b8ee4de]" started-at="2022-05-21T08:43:23 CST" name="TestCaseRegisterWithoutPrivacyPolicy" finished-at="2022-05-21T08:43:34 CST" duration-ms="10310" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestCaseCheckoutOrderAddNewAddress -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.CheckoutOrder@51e69659]" started-at="2022-05-20T22:44:38 CST" name="afterTest" finished-at="2022-05-20T22:44:39 CST" duration-ms="550" status="PASS">
+        </test-method> <!-- TestCaseRegisterWithoutPrivacyPolicy -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.Auth@4b8ee4de]" started-at="2022-05-21T08:43:34 CST" name="afterTest" finished-at="2022-05-21T08:43:36 CST" duration-ms="2138" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestCases.CheckoutOrder@51e69659]" started-at="2022-05-20T22:44:39 CST" name="afterClass" finished-at="2022-05-20T22:44:39 CST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestCases.Auth@4b8ee4de]" started-at="2022-05-21T08:43:36 CST" name="afterClass" finished-at="2022-05-21T08:43:36 CST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- TestCases.CheckoutOrder -->
-    </test> <!-- Pruebas Validar Orden -->
+      </class> <!-- TestCases.Auth -->
+    </test> <!-- Pruebas Registro -->
+    <test started-at="2022-05-21T08:43:36 CST" name="Pruebas Iniciar Sesion" finished-at="2022-05-21T08:44:07 CST" duration-ms="31140">
+      <class name="TestCases.Auth">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:TestCases.Auth@6574a52c]" started-at="2022-05-21T08:43:36 CST" name="beforeClass" finished-at="2022-05-21T08:43:36 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.Auth@6574a52c]" started-at="2022-05-21T08:43:36 CST" name="beforeTest" finished-at="2022-05-21T08:43:44 CST" duration-ms="7695" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[C:\\Drivers\\chromedriver.exe]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://tutorialsninja.com/demo/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCaseLoginIncorrect()[pri:0, instance:TestCases.Auth@6574a52c]" started-at="2022-05-21T08:43:44 CST" name="TestCaseLoginIncorrect" finished-at="2022-05-21T08:43:51 CST" duration-ms="6859" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseLoginIncorrect -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.Auth@6574a52c]" started-at="2022-05-21T08:43:51 CST" name="afterTest" finished-at="2022-05-21T08:43:52 CST" duration-ms="1729" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.Auth@6574a52c]" started-at="2022-05-21T08:43:52 CST" name="beforeTest" finished-at="2022-05-21T08:43:59 CST" duration-ms="7108" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[C:\\Drivers\\chromedriver.exe]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://tutorialsninja.com/demo/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCaseLoginSuccess()[pri:0, instance:TestCases.Auth@6574a52c]" started-at="2022-05-21T08:43:59 CST" name="TestCaseLoginSuccess" finished-at="2022-05-21T08:44:06 CST" duration-ms="7055" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseLoginSuccess -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.Auth@6574a52c]" started-at="2022-05-21T08:44:06 CST" name="afterTest" finished-at="2022-05-21T08:44:07 CST" duration-ms="686" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestCases.Auth@6574a52c]" started-at="2022-05-21T08:44:07 CST" name="afterClass" finished-at="2022-05-21T08:44:07 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- TestCases.Auth -->
+    </test> <!-- Pruebas Iniciar Sesion -->
+    <test started-at="2022-05-21T08:44:07 CST" name="Pruebas Pagina Principal - Verificar Productos" finished-at="2022-05-21T08:44:32 CST" duration-ms="25131">
+      <class name="TestCases.ProductHomePage">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:TestCases.ProductHomePage@3e27aa33]" started-at="2022-05-21T08:44:07 CST" name="beforeClass" finished-at="2022-05-21T08:44:07 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.ProductHomePage@3e27aa33]" started-at="2022-05-21T08:44:07 CST" name="beforeTest" finished-at="2022-05-21T08:44:14 CST" duration-ms="7124" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[C:\\Drivers\\chromedriver.exe]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://tutorialsninja.com/demo/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCaseSelectCurrency()[pri:0, instance:TestCases.ProductHomePage@3e27aa33]" started-at="2022-05-21T08:44:14 CST" name="TestCaseSelectCurrency" finished-at="2022-05-21T08:44:18 CST" duration-ms="4024" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseSelectCurrency -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.ProductHomePage@3e27aa33]" started-at="2022-05-21T08:44:18 CST" name="afterTest" finished-at="2022-05-21T08:44:19 CST" duration-ms="794" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.ProductHomePage@3e27aa33]" started-at="2022-05-21T08:44:19 CST" name="beforeTest" finished-at="2022-05-21T08:44:27 CST" duration-ms="7580" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[C:\\Drivers\\chromedriver.exe]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://tutorialsninja.com/demo/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCaseProductAddToCart()[pri:0, instance:TestCases.ProductHomePage@3e27aa33]" started-at="2022-05-21T08:44:27 CST" name="TestCaseProductAddToCart" finished-at="2022-05-21T08:44:31 CST" duration-ms="4044" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseProductAddToCart -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.ProductHomePage@3e27aa33]" started-at="2022-05-21T08:44:31 CST" name="afterTest" finished-at="2022-05-21T08:44:32 CST" duration-ms="1542" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestCases.ProductHomePage@3e27aa33]" started-at="2022-05-21T08:44:32 CST" name="afterClass" finished-at="2022-05-21T08:44:32 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- TestCases.ProductHomePage -->
+    </test> <!-- Pruebas Pagina Principal - Verificar Productos -->
   </suite> <!-- Test Cases - Primer Entrega -->
 </testng-results>
