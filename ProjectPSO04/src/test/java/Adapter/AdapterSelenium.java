@@ -1,9 +1,14 @@
 package Adapter;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,6 +20,7 @@ public class AdapterSelenium {
 
 	private WebDriver driver;
 	private static AdapterSelenium adapter = null;
+	int counter = 0;
 
 	public static AdapterSelenium getAdapter(String browser, String driverPath) {
 		if (adapter == null) {
@@ -99,6 +105,28 @@ public class AdapterSelenium {
 
 	public boolean isContainsPageSource(String text) {
 		return driver.getPageSource().contains(text);
+	}
+
+	public void captureScreen(String path) {
+		try {
+			String nameCapture = "img" + getCounter() + ".png";
+			// Convert web driver object to TakeScreenshot
+			TakesScreenshot screenShot = ((TakesScreenshot) driver);
+			// Call getScreenshotAs method to create image file
+			File srcFile = screenShot.getScreenshotAs(OutputType.FILE);
+			// Move image file to new destination
+			File destinationFile = new File(path + "\\" + nameCapture);
+			// Copy file at destination
+			FileUtils.copyFile(srcFile, destinationFile);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	private int getCounter() {
+		counter++;
+		return counter;
 	}
 
 }

@@ -13,26 +13,20 @@ public class Register {
 	By byLastName = By.id("input-lastname");
 	By byEmail = By.id("input-email");
 	By byPhone = By.id("input-telephone");
-
 	// Password
 	By byPassword = By.id("input-password");
 	By byPassConfirm = By.id("input-confirm");
-
 	// Register
 	By byPrivacyPolicy = By.xpath("//input[@type='checkbox'][@name='agree']");
 	By byButtonContinue = By.xpath("//input[@type='submit'][@value='Continue']");
-
 	// ToLogin
 	By byLoginPage = By.xpath("//a[contains(text(),'login page')]");
-
 	// Register Completed
 	By byTitleCreated = By.xpath("//h1[contains(text(), 'Your Account Has Been Created!')]");
 	By byBtnContinueCreated = By.xpath("//a[contains(text(),'Continue')]");
-
 	// Message Register Error
 	By byMessagePrivacyPolicy = By.xpath("//div[@class='alert alert-danger alert-dismissible']");
 	By byMessageEmailExist = By.xpath("//div[@class='alert alert-danger alert-dismissible']");
-
 	// Title and Text Page
 	By byTitlePageRegister = By.xpath("//h1[contains(text(), 'Register Account')]");
 	By byTextAlreadyAccount = By.xpath("//div[@id='content']//following-sibling::p");
@@ -40,7 +34,7 @@ public class Register {
 	private AdapterSelenium adapter;
 
 	public Register(String browser, String driverPath) {
-		adapter = AdapterSelenium.getAdapter(browser, driverPath);
+		adapter = AdapterSelenium.getAdapter(browser, driverPath);	
 	}
 
 	public void enterFirstName(String firstName) {

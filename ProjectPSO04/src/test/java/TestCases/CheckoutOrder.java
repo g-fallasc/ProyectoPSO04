@@ -38,13 +38,13 @@ public class CheckoutOrder {
 	String email;
 	String password;
 
-	@Parameters({ "browser", "driverPath", "dataPath" })
+	@Parameters({ "browser", "driverPath", "dataPath", "evidencePath" })
 	@BeforeClass
-	public void beforeClass(String browser, String driverPath, String dataPath) {
+	public void beforeClass(String browser, String driverPath, String dataPath, String evidencePath) {
 		// Read data from JSON {dataCheckout.json}
 		readData = new ReadData(dataPath);
 		// Instance Navigation class
-		Navigation = new Navigation(browser, driverPath);
+		Navigation = new Navigation(browser, driverPath, evidencePath);
 
 		// Pages Instances
 		PagCheckout = new Checkout(browser, driverPath);
