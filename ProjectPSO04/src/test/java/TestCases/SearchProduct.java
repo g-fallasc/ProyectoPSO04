@@ -31,13 +31,13 @@ public class SearchProduct {
 	String selectShow;
 	String optionViewProduct;
 
-	@Parameters({ "browser", "driverPath", "dataPath" })
+	@Parameters({ "browser", "driverPath", "dataPath", "evidencePath" })
 	@BeforeClass
-	public void beforeClass(String browser, String driverPath, String dataPath) {
+	public void beforeClass(String browser, String driverPath, String dataPath, String evidencePath) {
 		// Read data from JSON {dataSearch.json}
 		readData = new ReadData(dataPath);
 		// Instance Navigation class
-		Navigation = new Navigation(browser, driverPath);
+		Navigation = new Navigation(browser, driverPath, evidencePath);
 
 		// Pages Instances
 		PagSearch = new Search(browser, driverPath);

@@ -35,13 +35,13 @@ public class Auth {
 	String passwordConfirm;
 	String subscribe;
 
-	@Parameters({ "browser", "driverPath", "dataPath" })
+	@Parameters({ "browser", "driverPath", "dataPath", "evidencePath" })
 	@BeforeClass
-	public void beforeClass(String browser, String driverPath, String dataPath) {
+	public void beforeClass(String browser, String driverPath, String dataPath, String evidencePath) {
 		// Read data from JSON {dataAuth.json}
 		readData = new ReadData(dataPath);
 		// Instance Navigation class
-		Navigation = new Navigation(browser, driverPath);
+		Navigation = new Navigation(browser, driverPath, evidencePath);
 		// Pages Instances
 		PagRegister = new Register(browser, driverPath);
 		PagLogin = new Login(browser, driverPath);
@@ -56,16 +56,20 @@ public class Auth {
 
 	@Test
 	public void TestCaseOptionRegister() throws InterruptedException {
+		Navigation.setEvidencePath("ValidateOptionRegister");
 		Navigation.navToRegister();
 		PagRegister.validateTitlePageRegister();
 		PagRegister.validateTextPageRegister();
+		Navigation.takeScreenshot();
 	}
 
 	@Test
 	public void TestCaseRegisterSuccess() throws InterruptedException {
+		Navigation.setEvidencePath("RegisterSucess");
 		readDataForRegister("registerSuccess");
 		Navigation.navToRegister();
 
+		Navigation.takeScreenshot();
 		PagRegister.enterFirstName(firstName);
 		PagRegister.enterLastName(lastName);
 		Random randomGenerator = new Random();
@@ -76,10 +80,13 @@ public class Auth {
 		PagRegister.enterPasswordConfirm(passwordConfirm);
 		PagRegister.selectSubscribe(subscribe);
 		PagRegister.clickPrivayPolicy();
+		Navigation.takeScreenshot();
 		PagRegister.clickContinue();
 
+		Navigation.takeScreenshot();
 		PagRegister.validateRegister();
 		PagRegister.clickBtnContinueCreate();
+		Navigation.takeScreenshot();
 		logout();
 	}
 
@@ -117,25 +124,30 @@ public class Auth {
 		PagRegister.validateMessageEmailExist();
 	}
 
-	/*
+	/**
 	 * ------------- Login test cases -------------
 	 */
 	@Test
 	public void TestCaseOptionLogin() throws InterruptedException {
+		Navigation.setEvidencePath("ValidateOptionLogin");
 		Navigation.navToLogin();
 		PagLogin.validateTitlePageLogin();
+		Navigation.takeScreenshot();
 	}
 
 	@Test
 	public void TestCaseLoginSuccess() throws InterruptedException {
+		Navigation.setEvidencePath("LoginSucess");
 		readDataForLogin("loginSuccess");
 		Navigation.navToLogin();
 
 		PagLogin.enterEmail(email);
 		PagLogin.enterPassword(password);
+		Navigation.takeScreenshot();
 
 		PagLogin.clickLogin();
 		PagMyAccount.verifyLogin();
+		Navigation.takeScreenshot();
 		logout();
 	}
 
@@ -168,14 +180,14 @@ public class Auth {
 
 	@AfterMethod
 	public void afterTest() {
-		
+
 	}
 
 	@AfterClass
 	public void afterClass() {
 		Navigation.closeDriver();
 	}
-	
+
 	private void logout() {
 		Navigation.navToLogout();
 		PagLogin.verifyLogout();

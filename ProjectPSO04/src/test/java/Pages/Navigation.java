@@ -18,25 +18,31 @@ public class Navigation {
 	By byTransactions = By.xpath("//a[contains(text(),'Transactions')]");
 	By byDownloads = By.xpath("//a[contains(text(),'Downloads')]");
 	By byLogout = By.xpath("//a[contains(text(),'Logout')]");
-
 	// Select currency type
 	By byBtnCurrency = By.id("form-currency");
-
 	// Options
 	By byWishList = By.id("wishlist-total");
 	By byShoppingCart = By.xpath("//a[@title='Shopping Cart']");
 	By byCheckout = By.xpath("//a[@title='Checkout']");
-
-	// Search bar
+	/*
+	 * Search
+	 */
 	By bySearchBar = By.xpath("//input[@type='text'][@name='search']");
 	By byButtonSearch = By.xpath("//button[@type='button'][@class='btn btn-default btn-lg']");
 
+	String evidencePath;
+	String defaultPath;
 	private AdapterSelenium adapter;
 
-	public Navigation(String browser, String driverPath) {
+	public Navigation(String browser, String driverPath, String evidencePath) {
 		adapter = AdapterSelenium.getAdapter(browser, driverPath);
+		this.evidencePath = evidencePath;
+		this.defaultPath = evidencePath;
 	}
 
+	/**
+	 ** -------- Options Adapter --------**
+	 */
 	public void openURL(String URL) {
 		adapter.openURL(URL);
 	}
@@ -45,6 +51,17 @@ public class Navigation {
 		adapter.closeDriver();
 	}
 
+	public void takeScreenshot() {
+		adapter.captureScreen(evidencePath);
+	}
+
+	public void setEvidencePath(String nameTestCase) {
+		this.evidencePath = this.defaultPath + "\\" + nameTestCase;
+	}
+
+	/**
+	 ** -------- NavBar Top --------**
+	 */
 	// Open menu 'Currency'
 	public void navToCurrency() {
 		adapter.clickElement(byBtnCurrency);
@@ -106,6 +123,9 @@ public class Navigation {
 		adapter.clickElement(byCheckout);
 	}
 
+	/**
+	 ** -------- Search Bar --------**
+	 */
 	public void enterValueSearch(String value) {
 		adapter.enterText(bySearchBar, value);
 	}
