@@ -4,9 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class Navigation {
-	WebDriver driver;
+import Adapter.AdapterSelenium;
 
+public class Navigation {
 	/*
 	 * TopNavBar
 	 */
@@ -31,17 +31,23 @@ public class Navigation {
 	By bySearchBar = By.xpath("//input[@type='text'][@name='search']");
 	By byButtonSearch = By.xpath("//button[@type='button'][@class='btn btn-default btn-lg']");
 
-	public Navigation(WebDriver driver, String URL) {
-		this.driver = driver;
-		this.driver.manage().window().maximize();
-		this.driver.manage().deleteAllCookies();
-		this.driver.get(URL);
+	private AdapterSelenium adapter;
+
+	public Navigation(String browser, String driverPath) {
+		adapter = AdapterSelenium.getAdapter(browser, driverPath);
+	}
+
+	public void openURL(String URL) {
+		adapter.openURL(URL);
+	}
+
+	public void closeDriver() {
+		adapter.closeDriver();
 	}
 
 	// Open menu 'Currency'
 	public void navToCurrency() {
-		WebElement currency = driver.findElement(byBtnCurrency);
-		currency.click();
+		adapter.clickElement(byBtnCurrency);
 	}
 
 	/**
@@ -49,77 +55,62 @@ public class Navigation {
 	 */
 	public void selectCurrency(String currency) {
 		navToCurrency();
-		By byBtnCurrency = By.name(currency);
-		WebElement selectType = driver.findElement(byBtnCurrency);
-		selectType.click();
+		By byCurrency = By.name(currency);
+		adapter.clickElement(byCurrency);
 	}
 
 	// Open menu 'My Account'
 	private void navToMyAccount() {
-		WebElement dropdownMyAccount = driver.findElement(byMyAccount);
-		dropdownMyAccount.click();
+		adapter.clickElement(byMyAccount);
 	}
 
 	public void navToRegister() {
 		navToMyAccount();
-		WebElement toRegister = driver.findElement(byRegister);
-		toRegister.click();
+		adapter.clickElement(byRegister);
 	}
 
 	public void navToLogin() {
 		navToMyAccount();
-		WebElement toLogin = driver.findElement(byLogin);
-		toLogin.click();
+		adapter.clickElement(byLogin);
 	}
 
 	public void navToOrderHistory() {
 		navToMyAccount();
-		WebElement toOrderHistory = driver.findElement(byOrderHistory);
-		toOrderHistory.click();
+		adapter.clickElement(byOrderHistory);
 	}
 
 	public void navToTransactions() {
 		navToMyAccount();
-		WebElement toTransactions = driver.findElement(byTransactions);
-		toTransactions.click();
+		adapter.clickElement(byTransactions);
 	}
 
 	public void navToDownloads() {
 		navToMyAccount();
-		WebElement toDownloads = driver.findElement(byDownloads);
-		toDownloads.click();
+		adapter.clickElement(byDownloads);
 	}
 
 	public void navToLogout() {
 		navToMyAccount();
-		WebElement toLogout = driver.findElement(byLogout);
-		toLogout.click();
+		adapter.clickElement(byLogout);
 	}
 
 	public void navToWishList() {
-		WebElement toWishList = driver.findElement(byWishList);
-		toWishList.click();
+		adapter.clickElement(byWishList);
 	}
 
 	public void navToShoppingCart() {
-		WebElement toShoppingCart = driver.findElement(byShoppingCart);
-		toShoppingCart.click();
+		adapter.clickElement(byShoppingCart);
 	}
 
 	public void navToCheckout() {
-		WebElement toCheckout = driver.findElement(byCheckout);
-		toCheckout.click();
+		adapter.clickElement(byCheckout);
 	}
 
 	public void enterValueSearch(String value) {
-		WebElement input = driver.findElement(bySearchBar);
-		input.clear();
-		input.sendKeys(value);
+		adapter.enterText(bySearchBar, value);
 	}
 
 	public void clickButtonSearch() {
-		WebElement button = driver.findElement(byButtonSearch);
-		button.click();
+		adapter.clickElement(byButtonSearch);
 	}
-
 }

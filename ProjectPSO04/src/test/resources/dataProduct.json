@@ -1,0 +1,32 @@
+{
+	"selectCurrency": {
+		"productName": "MacBook",
+		"productDetail": "MacBook Intel Core 2 Duo processor Powered by an Intel Core 2 Duo processor at speeds up to 2.1.. 472.33€ Ex Tax: 392.30€",
+		"selectCurrency": "EUR"
+	},
+	"validateProduct": {
+		"productName": "iPhone",
+		"productDetail": "iPhone iPhone is a revolutionary new mobile phone that allows you to make a call by simply tapping a nam.. $123.20 Ex Tax: $101.00",
+		"selectCurrency": "USD"
+	},
+	"validateProductNotExist": {
+		"productName": "iPhone",
+		"productDetail": "iPhone 13XL iPhone.. $555.20 Ex Tax: $110.99",
+		"selectCurrency": "USD"
+	},
+	"productAddToCart": {
+		"productName": "MacBook",
+		"productDetail": "MacBook Intel Core 2 Duo processor Powered by an Intel Core 2 Duo processor at speeds up to 2.1.. 472.33€ Ex Tax: 392.30€",
+		"selectCurrency": "EUR"
+	},
+	"productAddToWishList": {
+		"productName": "iPhone",
+		"productDetail": "iPhone iPhone is a revolutionary new mobile phone that allows you to make a call by simply tapping a name o.. $123.20 Ex Tax: $101.00",
+		"selectCurrency": "USD"
+	},
+	"productAddToCompare": {
+		"productName": "iPhone",
+		"productDetail": "",
+		"selectCurrency": "USD"
+	}
+}

@@ -1,0 +1,30 @@
+{
+	"checkoutOrder": {
+		"firstName": "Pedrito",
+		"lastName": "Okayama",
+		"company": "Cenfotec 2",
+		"address1": "Calle 123",
+		"address2": " ",
+		"city": "Heredia",
+		"postCode": "12345",
+		"country": "Costa Rica",
+		"region": "Heredia",
+		"comment": "Orden de prueba",
+		"email": "gfallasc@ucenfotec.ac.cr",
+		"password": "12345678"
+	},
+	"checkoutOrderAddNewAddress": {
+		"firstName": "Raul",
+		"lastName": "Salas",
+		"company": "Cenfotec",
+		"address1": "Calle 1",
+		"address2": "Avenida 12",
+		"city": "San Jose",
+		"postCode": "12345",
+		"country": "Costa Rica",
+		"region": "San Jose",
+		"comment": "Orden de prueba, con nueva dirección",
+		"email": "gus@email.com",
+		"password": "1234A"
+	}
+}
