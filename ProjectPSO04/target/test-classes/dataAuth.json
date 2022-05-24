@@ -1,0 +1,37 @@
+{
+	"registerSuccess": {
+		"firstName": "Raul",
+		"lastName": "Salas",
+		"email": "email@qamail",
+		"phone": "+50689875654",
+		"password": "1234A",
+		"passwordConfirm": "1234A",
+		"subscribe": "Yes"
+	},
+	"registerRepeatedEmail": {
+		"firstName": "Juanito",
+		"lastName": "Gomez",
+		"email": "gus@email.com",
+		"phone": "+50689875654",
+		"password": "1234567A",
+		"passwordConfirm": "1234567A",
+		"subscribe": "Yes"
+	},
+	"registerWithoutPrivacyPolicy": {
+		"firstName": "Juan",
+		"lastName": "G",
+		"email": "testing@email.com",
+		"phone": "+50689875654",
+		"password": "qwerty",
+		"passwordConfirm": "qwerty",
+		"subscribe": "Yes"
+	},
+	"loginSuccess": {
+		"email": "gfallasc@ucenfotec.ac.cr",
+		"password": "12345678"
+	},
+	"logout": {
+		"email": "gfallasc@ucenfotec.ac.cr",
+		"password": "12345678"
+	}
+}

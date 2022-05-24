@@ -5,9 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
-public class Register {
-	WebDriver driver;
+import Adapter.AdapterSelenium;
 
+public class Register {
 	// Personal details
 	By byFirstName = By.id("input-firstname");
 	By byLastName = By.id("input-lastname");
@@ -37,44 +37,34 @@ public class Register {
 	By byTitlePageRegister = By.xpath("//h1[contains(text(), 'Register Account')]");
 	By byTextAlreadyAccount = By.xpath("//div[@id='content']//following-sibling::p");
 
-	public Register(WebDriver driver) {
-		this.driver = driver;
+	private AdapterSelenium adapter;
+
+	public Register(String browser, String driverPath) {
+		adapter = AdapterSelenium.getAdapter(browser, driverPath);
 	}
 
 	public void enterFirstName(String firstName) {
-		WebElement inputFirstName = driver.findElement(byFirstName);
-		inputFirstName.clear();
-		inputFirstName.sendKeys(firstName);
+		adapter.enterText(byFirstName, firstName);
 	}
 
 	public void enterLastName(String lastName) {
-		WebElement inputLastName = driver.findElement(byLastName);
-		inputLastName.clear();
-		inputLastName.sendKeys(lastName);
+		adapter.enterText(byLastName, lastName);
 	}
 
 	public void enterEmail(String email) {
-		WebElement inputEmail = driver.findElement(byEmail);
-		inputEmail.clear();
-		inputEmail.sendKeys(email);
+		adapter.enterText(byEmail, email);
 	}
 
 	public void enterPhone(String telephone) {
-		WebElement inputPhone = driver.findElement(byPhone);
-		inputPhone.clear();
-		inputPhone.sendKeys(telephone);
+		adapter.enterText(byPhone, telephone);
 	}
 
 	public void enterPassword(String password) {
-		WebElement inputPassword = driver.findElement(byPassword);
-		inputPassword.clear();
-		inputPassword.sendKeys(password);
+		adapter.enterText(byPassword, password);
 	}
 
 	public void enterPasswordConfirm(String passwordConfirm) {
-		WebElement inputPasswordConfirm = driver.findElement(byPassConfirm);
-		inputPasswordConfirm.clear();
-		inputPasswordConfirm.sendKeys(passwordConfirm);
+		adapter.enterText(byPassConfirm, passwordConfirm);
 	}
 
 	/**
@@ -86,56 +76,49 @@ public class Register {
 			value = "1";
 		}
 		By bySubscribe = By.xpath("//input[@name='newsletter'][@value='" + value + "']");
-		WebElement inputNewSletter = driver.findElement(bySubscribe);
-		inputNewSletter.click();
+		adapter.clickElement(bySubscribe);
 	}
 
 	public void clickPrivayPolicy() {
-		WebElement checkboxPolicy = driver.findElement(byPrivacyPolicy);
-		checkboxPolicy.click();
+		adapter.clickElement(byPrivacyPolicy);
 	}
 
 	public void clickContinue() {
-		WebElement buttonContinue = driver.findElement(byButtonContinue);
-		buttonContinue.click();
+		adapter.clickElement(byButtonContinue);
 	}
 
 	public void clickToLoginPage() {
-		WebElement linkLoginPage = driver.findElement(byLoginPage);
-		linkLoginPage.click();
+		adapter.clickElement(byLoginPage);
 	}
 
 	public void validateRegister() {
-		WebElement title = driver.findElement(byTitleCreated);
-		Assert.assertTrue(title.isDisplayed(), "El titulo es incorrecto");
+		Assert.assertTrue(adapter.isElementExisting(byTitleCreated), "Elemento no existe");
 	}
 
 	public void clickBtnContinueCreate() {
-		WebElement btnContinue = driver.findElement(byBtnContinueCreated);
-		btnContinue.click();
+		adapter.clickElement(byBtnContinueCreated);
 	}
 
 	public void validateMessagePrivacyPolicy() {
-		WebElement alertWarning = driver.findElement(byMessagePrivacyPolicy);
-		Assert.assertEquals(alertWarning.getText().equals("Warning: You must agree to the Privacy Policy!"), true,
+		Assert.assertEquals(
+				adapter.getText(byMessagePrivacyPolicy).equals("Warning: You must agree to the Privacy Policy!"), true,
 				"El mensaje de alerta no se desplego correctamente");
 	}
 
 	public void validateMessageEmailExist() {
-		WebElement alertWarning = driver.findElement(byMessageEmailExist);
-		Assert.assertEquals(alertWarning.getText().equals("Warning: E-Mail Address is already registered!"), true,
+		Assert.assertEquals(
+				adapter.getText(byMessageEmailExist).equals("Warning: E-Mail Address is already registered!"), true,
 				"El mensaje de alerta no se desplego correctamente");
 	}
 
 	public void validateTitlePageRegister() {
-		WebElement title = driver.findElement(byTitlePageRegister);
-		Assert.assertTrue(title.isDisplayed(), "El titulo es incorrecto");
+		Assert.assertTrue(adapter.isElementExisting(byTitlePageRegister), "El titulo es incorrecto");
 	}
 
 	public void validateTextPageRegister() {
-		WebElement text = driver.findElement(byTextAlreadyAccount);
 		Assert.assertEquals(
-				text.getText().equals("If you already have an account with us, please login at the login page."), true,
-				"El texto no es el correcto");
+				adapter.getText(byTextAlreadyAccount)
+						.equals("If you already have an account with us, please login at the login page."),
+				true, "El texto no es el correcto");
 	}
 }

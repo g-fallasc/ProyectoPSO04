@@ -5,9 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
-public class MyAccount {
-	WebDriver driver;
+import Adapter.AdapterSelenium;
 
+public class MyAccount {
 	// My Account
 	public By byEditAccountInfo = By.xpath("//a[contains(text(), 'Edit your account information')]");
 	public By byChangePass = By.xpath("//a[contains(text(), 'Change your password')]");
@@ -32,16 +32,17 @@ public class MyAccount {
 	public By byEditNewsletter = By.xpath("//a[contains(text(), 'Subscribe / unsubscribe to newsletter')]");
 	By byTitleNewsletter = By.xpath("//h2[contains(text(), 'Newsletter')]");
 
-	public MyAccount(WebDriver driver) {
-		this.driver = driver;
+	private AdapterSelenium adapter;
+
+	public MyAccount(String browser, String driverPath) {
+		adapter = AdapterSelenium.getAdapter(browser, driverPath);
 	}
 
 	/**
 	 * @param byToLink name link to open
 	 */
 	public void clickToLink(By byToLink) {
-		WebElement link = driver.findElement(byToLink);
-		link.click();
+		adapter.clickElement(byToLink);
 	}
 
 	/**
@@ -84,8 +85,7 @@ public class MyAccount {
 	 **/
 
 	public void verifyLogin() {
-		WebElement title = driver.findElement(byTitleMyAccount);
-		Assert.assertEquals(title.getText().equals("My Account"), true, "El login fue incorrecto");
+		Assert.assertEquals(adapter.getText(byTitleMyAccount).equals("My Account"), true, "El login fue incorrecto");
 	}
 
 }

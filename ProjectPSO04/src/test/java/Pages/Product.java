@@ -8,19 +8,23 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
+import Adapter.AdapterSelenium;
+
 public class Product {
-
-	WebDriver driver;
-
+	// Product all detail
 	By byProductDetail = By.xpath("//div[@class='caption']");
+	// Message alert
+	By byAlertMessage = By.xpath("//div[@class='alert alert-success alert-dismissible']");
 
-	public Product(WebDriver driver) {
-		this.driver = driver;
+	private AdapterSelenium adapter;
+
+	public Product(String browser, String driverPath) {
+		adapter = AdapterSelenium.getAdapter(browser, driverPath);
 	}
 
 	public void validateProducto(String description, boolean expectedResult) {
 		boolean isEquals = false;
-		List<WebElement> listDescriptions = driver.findElements(byProductDetail);
+		List<WebElement> listDescriptions = adapter.getListElements(byProductDetail);
 		for (int i = 0; i < listDescriptions.size(); i++) {
 			String textProductDetail = listDescriptions.get(i).getText();
 			textProductDetail = textProductDetail.replaceAll("\n", " ");
@@ -34,15 +38,11 @@ public class Product {
 	public void addProductToCart(String productName) {
 		try {
 			By byProductName = By.xpath("//div[@class='caption']//a[contains(text(), '" + productName + "')]");
-			WebElement product = driver.findElement(byProductName);
-			String productId = getProductId(product);
+			String productId = getProductId(byProductName);
 
-			if (product.isDisplayed()) {
+			if (adapter.isElementExisting(byProductName)) {
 				By byBtnAddCart = By.xpath("//button[@type='button' and contains(@onclick, '" + productId + "')]");
-				WebElement buttonAddProductCart = driver.findElement(byBtnAddCart);
-				buttonAddProductCart.click();
-			} else {
-				Assert.fail("El producto no fue encontrado");
+				adapter.clickElement(byBtnAddCart);
 			}
 		} catch (NoSuchElementException e) {
 			System.out.println(e);
@@ -51,63 +51,60 @@ public class Product {
 	}
 
 	public void addProductToWishList(String productName) {
-		By byProductName = By.xpath("//div[@class='caption']//a[contains(text(), '" + productName + "')]");
-		WebElement product = driver.findElement(byProductName);
-		String productId = getProductId(product);
+		try {
+			By byProductName = By.xpath("//div[@class='caption']//a[contains(text(), '" + productName + "')]");
+			String productId = getProductId(byProductName);
 
-		if (product.isDisplayed()) {
-			By byBtnAddWishList = By.xpath("//button[@type='button' and contains(@onclick, '" + productId
-					+ "')][@data-original-title='Add to Wish List']");
-			WebElement buttonAdd = driver.findElement(byBtnAddWishList);
-			buttonAdd.click();
-		} else {
-			Assert.fail("El producto no fue encontrado");
+			if (adapter.isElementExisting(byProductName)) {
+				By byBtnAddWishList = By.xpath("//button[@type='button' and contains(@onclick, '" + productId
+						+ "')][@data-original-title='Add to Wish List']");
+				adapter.clickElement(byBtnAddWishList);
+			}
+		} catch (NoSuchElementException e) {
+			System.out.println(e);
+			Assert.fail("El producto: " + productName + " no fue encontrado");
 		}
+
 	}
 
 	public void addProductToCompare(String productName) {
-		By byProductName = By.xpath("//div[@class='caption']//a[contains(text(), '" + productName + "')]");
-		WebElement product = driver.findElement(byProductName);
-		String productId = getProductId(product);
+		try {
+			By byProductName = By.xpath("//div[@class='caption']//a[contains(text(), '" + productName + "')]");
+			String productId = getProductId(byProductName);
 
-		if (product.isDisplayed()) {
-			By byBtnAddCompare = By.xpath("//button[@type='button' and contains(@onclick, '" + productId
-					+ "')][@data-original-title='Compare this Product']");
-			WebElement buttonAdd = driver.findElement(byBtnAddCompare);
-			buttonAdd.click();
-		} else {
-			Assert.fail("El producto no fue encontrado");
+			if (adapter.isElementExisting(byProductName)) {
+				By byBtnAddCompare = By.xpath("//button[@type='button' and contains(@onclick, '" + productId
+						+ "')][@data-original-title='Compare this Product']");
+				adapter.clickElement(byBtnAddCompare);
+			}
+		} catch (NoSuchElementException e) {
+			System.out.println(e);
+			Assert.fail("El producto: " + productName + " no fue encontrado");
 		}
 	}
 
 	// Get product id
-	private String getProductId(WebElement product) {
-		String id = product.getAttribute("href").split("product_id=", 2)[1];
-		return id;
+	private String getProductId(By byProductName) {
+		return adapter.getAttribute(byProductName, "href").split("product_id=", 2)[1];
 	}
 
 	public void verifyProductToCart(String nameProduct) {
-		By byAlertMessage = By.xpath("//div[@class='alert alert-success alert-dismissible']");
-		WebElement alertMessage = driver.findElement(byAlertMessage);
 		Assert.assertEquals(
-				alertMessage.getText().equals("Success: You have added " + nameProduct + " to your shopping cart!\n×"),
+				adapter.getText(byAlertMessage)
+						.equals("Success: You have added " + nameProduct + " to your shopping cart!\n×"),
 				true, "El mensaje de alerta no se desplego correctamente");
 	}
 
 	public void verifyProductToWishList(String nameProduct) {
-		By byAlertMessage = By.xpath("//div[@class='alert alert-success alert-dismissible']");
-		WebElement alertMessage = driver.findElement(byAlertMessage);
 		Assert.assertEquals(
-				alertMessage.getText().equals(
+				adapter.getText(byAlertMessage).equals(
 						"You must login or create an account to save " + nameProduct + " to your wish list!\n×"),
 				true, "El mensaje de alerta no se desplego correctamente");
 	}
 
 	public void verifyProductToCompare(String nameProduct) {
-		By byAlertMessage = By.xpath("//div[@class='alert alert-success alert-dismissible']");
-		WebElement alertMessage = driver.findElement(byAlertMessage);
 		Assert.assertEquals(
-				alertMessage.getText()
+				adapter.getText(byAlertMessage)
 						.equals("Success: You have added " + nameProduct + " to your product comparison!\n×"),
 				true, "El mensaje de alerta no se desplego correctamente");
 	}

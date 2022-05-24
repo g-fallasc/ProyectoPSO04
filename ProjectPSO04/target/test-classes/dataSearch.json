@@ -1,0 +1,17 @@
+{
+	"searchProductExist": {
+		"productName": "iPhone",
+		"productDetail": "iPhone iPhone is a revolutionary new mobile phone that allows you to make a call by simply tapping a name o.. $123.20 Ex Tax: $101.00"
+	},
+	"searchProductNotExist": {
+		"productName": "iPhone 13 XXLL",
+		"productDetail": "iPhone is new mobile phone $12300.99 Ex Tax: $2500.15"
+	},
+	"searchChangeCriteria": {
+		"productName": "iPhone",
+		"productDetail": "detail product",
+		"selectSort": "Model (A - Z)",
+		"selectShow": "100",
+		"optionViewProduct": "list"
+	}
+}

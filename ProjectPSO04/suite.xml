@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Test Cases - Primer Entrega">
+<suite name="Test Cases - Segunda Entrega">
 	<!-- Test Cases for Register -->
 	<test name="Pruebas Registro">
 		<parameter name="browser" value="Chrome"></parameter>
 		<parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"></parameter>
 		<parameter name="URL" value="http://tutorialsninja.com/demo/"></parameter>
+		<parameter name="dataPath" value="src/test/resources/dataAuth.json"></parameter>
 		<classes>
 			<class name="TestCases.Auth">
 				<methods>
@@ -24,6 +25,7 @@
 		<parameter name="browser" value="Chrome"></parameter>
 		<parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"></parameter>
 		<parameter name="URL" value="http://tutorialsninja.com/demo/"></parameter>
+		<parameter name="dataPath" value="src/test/resources/dataAuth.json"></parameter>
 		<classes>
 			<class name="TestCases.Auth">
 				<methods>
@@ -41,6 +43,7 @@
 		<parameter name="browser" value="Chrome"></parameter>
 		<parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"></parameter>
 		<parameter name="URL" value="http://tutorialsninja.com/demo/"></parameter>
+		<parameter name="dataPath" value="src/test/resources/dataProduct.json"></parameter>
 		<classes>
 			<class name="TestCases.ProductHomePage">
 				<methods>
@@ -60,6 +63,7 @@
 		<parameter name="browser" value="Chrome"></parameter>
 		<parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"></parameter>
 		<parameter name="URL" value="http://tutorialsninja.com/demo/"></parameter>
+		<parameter name="dataPath" value="src/test/resources/dataSearch.json"></parameter>
 		<classes>
 			<class name="TestCases.SearchProduct">
 				<methods>
@@ -76,6 +80,7 @@
 		<parameter name="browser" value="Chrome"></parameter>
 		<parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"></parameter>
 		<parameter name="URL" value="http://tutorialsninja.com/demo/"></parameter>
+		<parameter name="dataPath" value="src/test/resources/dataCheckout.json"></parameter>
 		<classes>
 			<class name="TestCases.CheckoutOrder">
 				<methods>
