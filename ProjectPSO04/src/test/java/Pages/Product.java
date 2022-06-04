@@ -82,6 +82,16 @@ public class Product {
 			Assert.fail("El producto: " + productName + " no fue encontrado");
 		}
 	}
+	
+	public void openDetailProduct(String productName) {
+		try {
+			By byProductName = By.xpath("//div[@class='caption']//a[contains(text(), '" + productName + "')]");
+			adapter.clickElement(byProductName);
+		} catch (NoSuchElementException e) {
+			System.out.println(e);
+			Assert.fail("El producto: " + productName + " no fue encontrado");
+		}
+	}
 
 	// Get product id
 	private String getProductId(By byProductName) {

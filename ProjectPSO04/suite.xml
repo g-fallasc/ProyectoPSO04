@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="Test Cases - Segunda Entrega">
-  <!-- Test Cases for Register -->
+	<!-- Test Cases for Register -->
 	<test name="Pruebas Registro">
 		<parameter name="browser" value="Chrome"></parameter>
 		<parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"></parameter>
@@ -21,7 +21,7 @@
 		</classes>
 	</test>
 
-<!-- Test Cases for Login Logout -->
+	<!-- Test Cases for Login Logout -->
 	<test name="Pruebas Iniciar Sesion">
 		<parameter name="browser" value="Chrome"></parameter>
 		<parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"></parameter>
@@ -40,7 +40,7 @@
 		</classes>
 	</test>
 
-<!-- Test Cases for Verify Product Home Page -->
+	<!-- Test Cases for Verify Product Home Page -->
 	<test name="Pruebas Pagina Principal - Verificar Productos">
 		<parameter name="browser" value="Chrome"></parameter>
 		<parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"></parameter>
@@ -61,7 +61,7 @@
 		</classes>
 	</test>
 
-<!-- Test Cases for Search -->
+	<!-- Test Cases for Search -->
 	<test name="Pruebas Busqueda">
 		<parameter name="browser" value="Chrome"></parameter>
 		<parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"></parameter>
@@ -79,7 +79,7 @@
 		</classes>
 	</test>
 
-<!-- Test Cases for CheckOrder -->
+	<!-- Test Cases for CheckOrder -->
 	<test name="Pruebas Validar Orden">
 		<parameter name="browser" value="Chrome"></parameter>
 		<parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"></parameter>
@@ -95,9 +95,9 @@
 			</class>
 		</classes>
 	</test>
-  
-  	<!-- Test Cases for Categories -->
-<test name="Pruebas Categorias">
+
+	<!-- Test Cases for Categories -->
+	<test name="Pruebas Categorias">
 		<parameter name="browser" value="Chrome"></parameter>
 		<parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"></parameter>
 		<parameter name="URL" value="http://tutorialsninja.com/demo/"></parameter>
@@ -106,7 +106,23 @@
 		<classes>
 			<class name="TestCases.CategoryOptions">
 				<methods>
-					<include name="TestCaseSelectCategory"></include>	
+					<include name="TestCaseSelectCategory"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<!-- Test Cases for Review -->
+	<test name="Pruebas Reseñas">
+		<parameter name="browser" value="Chrome"></parameter>
+		<parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"></parameter>
+		<parameter name="URL" value="http://tutorialsninja.com/demo/"></parameter>
+		<parameter name="dataPath" value="src/test/resources/dataReview.json"></parameter>
+		<parameter name="evidencePath" value="C:\\Evidencia\\Reviews"></parameter>
+		<classes>
+			<class name="TestCases.ReviewProduct">
+				<methods>
+					<include name="TestCaseReviewProduct"></include>
 				</methods>
 			</class>
 		</classes>

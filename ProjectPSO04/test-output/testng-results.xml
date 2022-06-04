@@ -1,13 +1,472 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="8" total="29" passed="21" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-06-03T20:58:03 CST" name="Test Cases - Segunda Entrega" finished-at="2022-06-03T20:58:53 CST" duration-ms="50056">
+  <suite started-at="2022-06-04T00:13:48 CST" name="Test Cases - Segunda Entrega" finished-at="2022-06-04T00:15:57 CST" duration-ms="128401">
     <groups>
     </groups>
-    <test started-at="2022-06-03T20:58:03 CST" name="Pruebas Validar Orden" finished-at="2022-06-03T20:58:53 CST" duration-ms="50056">
+    <test started-at="2022-06-04T00:13:48 CST" name="Pruebas Registro" finished-at="2022-06-04T00:14:13 CST" duration-ms="24981">
+      <class name="TestCases.Auth">
+        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.Auth@1b11171f]" started-at="2022-06-04T00:13:49 CST" name="beforeClass" finished-at="2022-06-04T00:13:53 CST" duration-ms="4656" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[C:\\Drivers\\chromedriver.exe]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[src/test/resources/dataAuth.json]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[C:\\Evidencia\\Register]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.Auth@1b11171f]" started-at="2022-06-04T00:13:53 CST" name="beforeTest" finished-at="2022-06-04T00:13:57 CST" duration-ms="3301" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://tutorialsninja.com/demo/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCaseOptionRegister()[pri:0, instance:TestCases.Auth@1b11171f]" started-at="2022-06-04T00:13:57 CST" name="TestCaseOptionRegister" finished-at="2022-06-04T00:13:59 CST" duration-ms="2316" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseOptionRegister -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.Auth@1b11171f]" started-at="2022-06-04T00:13:59 CST" name="afterTest" finished-at="2022-06-04T00:13:59 CST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.Auth@1b11171f]" started-at="2022-06-04T00:13:59 CST" name="beforeTest" finished-at="2022-06-04T00:13:59 CST" duration-ms="572" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://tutorialsninja.com/demo/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCaseRegisterWithoutPrivacyPolicy()[pri:0, instance:TestCases.Auth@1b11171f]" started-at="2022-06-04T00:13:59 CST" name="TestCaseRegisterWithoutPrivacyPolicy" finished-at="2022-06-04T00:14:03 CST" duration-ms="3234" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseRegisterWithoutPrivacyPolicy -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.Auth@1b11171f]" started-at="2022-06-04T00:14:03 CST" name="afterTest" finished-at="2022-06-04T00:14:03 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.Auth@1b11171f]" started-at="2022-06-04T00:14:03 CST" name="beforeTest" finished-at="2022-06-04T00:14:03 CST" duration-ms="537" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://tutorialsninja.com/demo/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCaseRegisterSuccess()[pri:0, instance:TestCases.Auth@1b11171f]" started-at="2022-06-04T00:14:03 CST" name="TestCaseRegisterSuccess" finished-at="2022-06-04T00:14:09 CST" duration-ms="6162" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseRegisterSuccess -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.Auth@1b11171f]" started-at="2022-06-04T00:14:09 CST" name="afterTest" finished-at="2022-06-04T00:14:09 CST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.Auth@1b11171f]" started-at="2022-06-04T00:14:09 CST" name="beforeTest" finished-at="2022-06-04T00:14:10 CST" duration-ms="569" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://tutorialsninja.com/demo/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCaseRegisterRepeatedEmail()[pri:0, instance:TestCases.Auth@1b11171f]" started-at="2022-06-04T00:14:10 CST" name="TestCaseRegisterRepeatedEmail" finished-at="2022-06-04T00:14:13 CST" duration-ms="2907" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseRegisterRepeatedEmail -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.Auth@1b11171f]" started-at="2022-06-04T00:14:13 CST" name="afterTest" finished-at="2022-06-04T00:14:13 CST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestCases.Auth@1b11171f]" started-at="2022-06-04T00:14:13 CST" name="afterClass" finished-at="2022-06-04T00:14:13 CST" duration-ms="624" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- TestCases.Auth -->
+    </test> <!-- Pruebas Registro -->
+    <test started-at="2022-06-04T00:14:14 CST" name="Pruebas Iniciar Sesion" finished-at="2022-06-04T00:14:35 CST" duration-ms="20975">
+      <class name="TestCases.Auth">
+        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.Auth@71ba6d4e]" started-at="2022-06-04T00:14:14 CST" name="beforeClass" finished-at="2022-06-04T00:14:15 CST" duration-ms="1637" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[C:\\Drivers\\chromedriver.exe]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[src/test/resources/dataAuth.json]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[C:\\Evidencia\\Login_Logout]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.Auth@71ba6d4e]" started-at="2022-06-04T00:14:15 CST" name="beforeTest" finished-at="2022-06-04T00:14:19 CST" duration-ms="4185" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://tutorialsninja.com/demo/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCaseOptionLogin()[pri:0, instance:TestCases.Auth@71ba6d4e]" started-at="2022-06-04T00:14:19 CST" name="TestCaseOptionLogin" finished-at="2022-06-04T00:14:21 CST" duration-ms="1300" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseOptionLogin -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.Auth@71ba6d4e]" started-at="2022-06-04T00:14:21 CST" name="afterTest" finished-at="2022-06-04T00:14:21 CST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.Auth@71ba6d4e]" started-at="2022-06-04T00:14:21 CST" name="beforeTest" finished-at="2022-06-04T00:14:21 CST" duration-ms="634" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://tutorialsninja.com/demo/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCaseLoginIncorrect()[pri:0, instance:TestCases.Auth@71ba6d4e]" started-at="2022-06-04T00:14:21 CST" name="TestCaseLoginIncorrect" finished-at="2022-06-04T00:14:24 CST" duration-ms="2606" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseLoginIncorrect -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.Auth@71ba6d4e]" started-at="2022-06-04T00:14:24 CST" name="afterTest" finished-at="2022-06-04T00:14:24 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.Auth@71ba6d4e]" started-at="2022-06-04T00:14:24 CST" name="beforeTest" finished-at="2022-06-04T00:14:24 CST" duration-ms="564" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://tutorialsninja.com/demo/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCaseLoginSuccess()[pri:0, instance:TestCases.Auth@71ba6d4e]" started-at="2022-06-04T00:14:24 CST" name="TestCaseLoginSuccess" finished-at="2022-06-04T00:14:29 CST" duration-ms="4355" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseLoginSuccess -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.Auth@71ba6d4e]" started-at="2022-06-04T00:14:29 CST" name="afterTest" finished-at="2022-06-04T00:14:29 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.Auth@71ba6d4e]" started-at="2022-06-04T00:14:29 CST" name="beforeTest" finished-at="2022-06-04T00:14:29 CST" duration-ms="582" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://tutorialsninja.com/demo/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCaseLogout()[pri:0, instance:TestCases.Auth@71ba6d4e]" started-at="2022-06-04T00:14:29 CST" name="TestCaseLogout" finished-at="2022-06-04T00:14:34 CST" duration-ms="4551" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseLogout -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.Auth@71ba6d4e]" started-at="2022-06-04T00:14:34 CST" name="afterTest" finished-at="2022-06-04T00:14:34 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestCases.Auth@71ba6d4e]" started-at="2022-06-04T00:14:34 CST" name="afterClass" finished-at="2022-06-04T00:14:35 CST" duration-ms="547" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- TestCases.Auth -->
+    </test> <!-- Pruebas Iniciar Sesion -->
+    <test started-at="2022-06-04T00:14:35 CST" name="Pruebas Pagina Principal - Verificar Productos" finished-at="2022-06-04T00:14:49 CST" duration-ms="14674">
+      <class name="TestCases.ProductHomePage">
+        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.ProductHomePage@2ddc9a9f]" started-at="2022-06-04T00:14:35 CST" name="beforeClass" finished-at="2022-06-04T00:14:36 CST" duration-ms="1632" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[C:\\Drivers\\chromedriver.exe]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[src/test/resources/dataProduct.json]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[C:\\Evidencia\\HomePage]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.ProductHomePage@2ddc9a9f]" started-at="2022-06-04T00:14:36 CST" name="beforeTest" finished-at="2022-06-04T00:14:40 CST" duration-ms="3846" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://tutorialsninja.com/demo/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCaseValidateProduct()[pri:0, instance:TestCases.ProductHomePage@2ddc9a9f]" started-at="2022-06-04T00:14:40 CST" name="TestCaseValidateProduct" finished-at="2022-06-04T00:14:40 CST" duration-ms="429" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseValidateProduct -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.ProductHomePage@2ddc9a9f]" started-at="2022-06-04T00:14:40 CST" name="afterTest" finished-at="2022-06-04T00:14:40 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.ProductHomePage@2ddc9a9f]" started-at="2022-06-04T00:14:40 CST" name="beforeTest" finished-at="2022-06-04T00:14:41 CST" duration-ms="537" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://tutorialsninja.com/demo/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCaseValidateProductNotExist()[pri:0, instance:TestCases.ProductHomePage@2ddc9a9f]" started-at="2022-06-04T00:14:41 CST" name="TestCaseValidateProductNotExist" finished-at="2022-06-04T00:14:41 CST" duration-ms="449" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseValidateProductNotExist -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.ProductHomePage@2ddc9a9f]" started-at="2022-06-04T00:14:41 CST" name="afterTest" finished-at="2022-06-04T00:14:41 CST" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.ProductHomePage@2ddc9a9f]" started-at="2022-06-04T00:14:41 CST" name="beforeTest" finished-at="2022-06-04T00:14:42 CST" duration-ms="540" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://tutorialsninja.com/demo/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCaseSelectCurrency()[pri:0, instance:TestCases.ProductHomePage@2ddc9a9f]" started-at="2022-06-04T00:14:42 CST" name="TestCaseSelectCurrency" finished-at="2022-06-04T00:14:44 CST" duration-ms="1786" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseSelectCurrency -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.ProductHomePage@2ddc9a9f]" started-at="2022-06-04T00:14:44 CST" name="afterTest" finished-at="2022-06-04T00:14:44 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.ProductHomePage@2ddc9a9f]" started-at="2022-06-04T00:14:44 CST" name="beforeTest" finished-at="2022-06-04T00:14:44 CST" duration-ms="581" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://tutorialsninja.com/demo/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCaseProductAddToCart()[pri:0, instance:TestCases.ProductHomePage@2ddc9a9f]" started-at="2022-06-04T00:14:44 CST" name="TestCaseProductAddToCart" finished-at="2022-06-04T00:14:45 CST" duration-ms="1115" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseProductAddToCart -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.ProductHomePage@2ddc9a9f]" started-at="2022-06-04T00:14:45 CST" name="afterTest" finished-at="2022-06-04T00:14:45 CST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.ProductHomePage@2ddc9a9f]" started-at="2022-06-04T00:14:45 CST" name="beforeTest" finished-at="2022-06-04T00:14:46 CST" duration-ms="534" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://tutorialsninja.com/demo/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCaseProductAddToWishList()[pri:0, instance:TestCases.ProductHomePage@2ddc9a9f]" started-at="2022-06-04T00:14:46 CST" name="TestCaseProductAddToWishList" finished-at="2022-06-04T00:14:47 CST" duration-ms="1010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseProductAddToWishList -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.ProductHomePage@2ddc9a9f]" started-at="2022-06-04T00:14:47 CST" name="afterTest" finished-at="2022-06-04T00:14:47 CST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.ProductHomePage@2ddc9a9f]" started-at="2022-06-04T00:14:47 CST" name="beforeTest" finished-at="2022-06-04T00:14:48 CST" duration-ms="550" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://tutorialsninja.com/demo/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCaseProductAddToCompare()[pri:0, instance:TestCases.ProductHomePage@2ddc9a9f]" started-at="2022-06-04T00:14:48 CST" name="TestCaseProductAddToCompare" finished-at="2022-06-04T00:14:49 CST" duration-ms="1031" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseProductAddToCompare -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.ProductHomePage@2ddc9a9f]" started-at="2022-06-04T00:14:49 CST" name="afterTest" finished-at="2022-06-04T00:14:49 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestCases.ProductHomePage@2ddc9a9f]" started-at="2022-06-04T00:14:49 CST" name="afterClass" finished-at="2022-06-04T00:14:49 CST" duration-ms="585" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- TestCases.ProductHomePage -->
+    </test> <!-- Pruebas Pagina Principal - Verificar Productos -->
+    <test started-at="2022-06-04T00:14:49 CST" name="Pruebas Busqueda" finished-at="2022-06-04T00:15:08 CST" duration-ms="18380">
+      <class name="TestCases.SearchProduct">
+        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.SearchProduct@54c5a2ff]" started-at="2022-06-04T00:14:49 CST" name="beforeClass" finished-at="2022-06-04T00:14:51 CST" duration-ms="1586" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[C:\\Drivers\\chromedriver.exe]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[src/test/resources/dataSearch.json]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[C:\\Evidencia\\Search]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.SearchProduct@54c5a2ff]" started-at="2022-06-04T00:14:51 CST" name="beforeTest" finished-at="2022-06-04T00:14:54 CST" duration-ms="3578" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://tutorialsninja.com/demo/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCaseSearchProductExist()[pri:0, instance:TestCases.SearchProduct@54c5a2ff]" started-at="2022-06-04T00:14:54 CST" name="TestCaseSearchProductExist" finished-at="2022-06-04T00:14:57 CST" duration-ms="2588" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseSearchProductExist -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.SearchProduct@54c5a2ff]" started-at="2022-06-04T00:14:57 CST" name="afterTest" finished-at="2022-06-04T00:14:57 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.SearchProduct@54c5a2ff]" started-at="2022-06-04T00:14:57 CST" name="beforeTest" finished-at="2022-06-04T00:14:58 CST" duration-ms="623" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://tutorialsninja.com/demo/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCaseSearchChangeCriteria()[pri:0, instance:TestCases.SearchProduct@54c5a2ff]" started-at="2022-06-04T00:14:58 CST" name="TestCaseSearchChangeCriteria" finished-at="2022-06-04T00:15:04 CST" duration-ms="6599" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseSearchChangeCriteria -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.SearchProduct@54c5a2ff]" started-at="2022-06-04T00:15:04 CST" name="afterTest" finished-at="2022-06-04T00:15:04 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.SearchProduct@54c5a2ff]" started-at="2022-06-04T00:15:04 CST" name="beforeTest" finished-at="2022-06-04T00:15:05 CST" duration-ms="641" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://tutorialsninja.com/demo/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCaseSearchProductNotExist()[pri:0, instance:TestCases.SearchProduct@54c5a2ff]" started-at="2022-06-04T00:15:05 CST" name="TestCaseSearchProductNotExist" finished-at="2022-06-04T00:15:07 CST" duration-ms="2204" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseSearchProductNotExist -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.SearchProduct@54c5a2ff]" started-at="2022-06-04T00:15:07 CST" name="afterTest" finished-at="2022-06-04T00:15:07 CST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestCases.SearchProduct@54c5a2ff]" started-at="2022-06-04T00:15:07 CST" name="afterClass" finished-at="2022-06-04T00:15:08 CST" duration-ms="550" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- TestCases.SearchProduct -->
+    </test> <!-- Pruebas Busqueda -->
+    <test started-at="2022-06-04T00:15:08 CST" name="Pruebas Validar Orden" finished-at="2022-06-04T00:15:34 CST" duration-ms="26040">
       <class name="TestCases.CheckoutOrder">
-        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.CheckoutOrder@61001b64]" started-at="2022-06-03T20:58:03 CST" name="beforeClass" finished-at="2022-06-03T20:58:08 CST" duration-ms="4663" status="PASS">
+        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.CheckoutOrder@1530c739]" started-at="2022-06-04T00:15:08 CST" name="beforeClass" finished-at="2022-06-04T00:15:09 CST" duration-ms="1603" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -33,8 +492,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.CheckoutOrder@61001b64]" started-at="2022-06-03T20:58:08 CST" name="beforeTest" finished-at="2022-06-03T20:58:12 CST" duration-ms="4743" status="PASS">
-
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.CheckoutOrder@1530c739]" started-at="2022-06-04T00:15:09 CST" name="beforeTest" finished-at="2022-06-04T00:15:13 CST" duration-ms="3499" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -45,15 +503,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="TestCaseCheckoutOrder()[pri:0, instance:TestCases.CheckoutOrder@61001b64]" started-at="2022-06-03T20:58:12 CST" name="TestCaseCheckoutOrder" finished-at="2022-06-03T20:58:28 CST" duration-ms="15324" status="PASS">
+        <test-method signature="TestCaseCheckoutOrder()[pri:0, instance:TestCases.CheckoutOrder@1530c739]" started-at="2022-06-04T00:15:13 CST" name="TestCaseCheckoutOrder" finished-at="2022-06-04T00:15:21 CST" duration-ms="8478" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCaseCheckoutOrder -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.CheckoutOrder@61001b64]" started-at="2022-06-03T20:58:28 CST" name="afterTest" finished-at="2022-06-03T20:58:28 CST" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.CheckoutOrder@1530c739]" started-at="2022-06-04T00:15:21 CST" name="afterTest" finished-at="2022-06-04T00:15:21 CST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.CheckoutOrder@61001b64]" started-at="2022-06-03T20:58:28 CST" name="beforeTest" finished-at="2022-06-03T20:58:31 CST" duration-ms="3196" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.CheckoutOrder@1530c739]" started-at="2022-06-04T00:15:21 CST" name="beforeTest" finished-at="2022-06-04T00:15:22 CST" duration-ms="674" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -64,19 +522,125 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="TestCaseCheckoutOrderAddNewAddress()[pri:0, instance:TestCases.CheckoutOrder@61001b64]" started-at="2022-06-03T20:58:31 CST" name="TestCaseCheckoutOrderAddNewAddress" finished-at="2022-06-03T20:58:52 CST" duration-ms="20962" status="PASS">
+        <test-method signature="TestCaseCheckoutOrderAddNewAddress()[pri:0, instance:TestCases.CheckoutOrder@1530c739]" started-at="2022-06-04T00:15:22 CST" name="TestCaseCheckoutOrderAddNewAddress" finished-at="2022-06-04T00:15:32 CST" duration-ms="10549" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCaseCheckoutOrderAddNewAddress -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.CheckoutOrder@61001b64]" started-at="2022-06-03T20:58:52 CST" name="afterTest" finished-at="2022-06-03T20:58:52 CST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.CheckoutOrder@1530c739]" started-at="2022-06-04T00:15:32 CST" name="afterTest" finished-at="2022-06-04T00:15:32 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestCases.CheckoutOrder@61001b64]" started-at="2022-06-03T20:58:52 CST" name="afterClass" finished-at="2022-06-03T20:58:53 CST" duration-ms="1058" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestCases.CheckoutOrder@1530c739]" started-at="2022-06-04T00:15:32 CST" name="afterClass" finished-at="2022-06-04T00:15:34 CST" duration-ms="1228" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- TestCases.CheckoutOrder -->
     </test> <!-- Pruebas Validar Orden -->
+    <test started-at="2022-06-04T00:15:34 CST" name="Pruebas Categorias" finished-at="2022-06-04T00:15:42 CST" duration-ms="8415">
+      <class name="TestCases.CategoryOptions">
+        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.CategoryOptions@2eae8e6e]" started-at="2022-06-04T00:15:34 CST" name="beforeClass" finished-at="2022-06-04T00:15:36 CST" duration-ms="1861" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[C:\\Drivers\\chromedriver.exe]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[src/test/resources/dataProduct.json]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[C:\\Evidencia\\Category]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.CategoryOptions@2eae8e6e]" started-at="2022-06-04T00:15:36 CST" name="beforeTest" finished-at="2022-06-04T00:15:39 CST" duration-ms="3546" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://tutorialsninja.com/demo/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCaseSelectCategory()[pri:0, instance:TestCases.CategoryOptions@2eae8e6e]" started-at="2022-06-04T00:15:39 CST" name="TestCaseSelectCategory" finished-at="2022-06-04T00:15:41 CST" duration-ms="2429" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseSelectCategory -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.CategoryOptions@2eae8e6e]" started-at="2022-06-04T00:15:41 CST" name="afterTest" finished-at="2022-06-04T00:15:41 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestCases.CategoryOptions@2eae8e6e]" started-at="2022-06-04T00:15:41 CST" name="afterClass" finished-at="2022-06-04T00:15:42 CST" duration-ms="574" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- TestCases.CategoryOptions -->
+    </test> <!-- Pruebas Categorias -->
+    <test started-at="2022-06-04T00:15:42 CST" name="Pruebas Reseñas" finished-at="2022-06-04T00:15:57 CST" duration-ms="14818">
+      <class name="TestCases.ReviewProduct">
+        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.ReviewProduct@25ce9dc4]" started-at="2022-06-04T00:15:42 CST" name="beforeClass" finished-at="2022-06-04T00:15:44 CST" duration-ms="1660" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[C:\\Drivers\\chromedriver.exe]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[src/test/resources/dataReview.json]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[C:\\Evidencia\\Reviews]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.ReviewProduct@25ce9dc4]" started-at="2022-06-04T00:15:44 CST" name="beforeTest" finished-at="2022-06-04T00:15:47 CST" duration-ms="3536" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://tutorialsninja.com/demo/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCaseReviewProduct()[pri:0, instance:TestCases.ReviewProduct@25ce9dc4]" started-at="2022-06-04T00:15:47 CST" name="TestCaseReviewProduct" finished-at="2022-06-04T00:15:56 CST" duration-ms="8982" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseReviewProduct -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.ReviewProduct@25ce9dc4]" started-at="2022-06-04T00:15:56 CST" name="afterTest" finished-at="2022-06-04T00:15:56 CST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestCases.ReviewProduct@25ce9dc4]" started-at="2022-06-04T00:15:56 CST" name="afterClass" finished-at="2022-06-04T00:15:57 CST" duration-ms="634" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- TestCases.ReviewProduct -->
+    </test> <!-- Pruebas Reseñas -->
   </suite> <!-- Test Cases - Segunda Entrega -->
 </testng-results>

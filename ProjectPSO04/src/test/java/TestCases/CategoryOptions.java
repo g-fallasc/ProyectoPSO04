@@ -1,8 +1,5 @@
 package TestCases;
 
-
-
-
 import org.json.simple.JSONObject;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -11,26 +8,23 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import Adapter.ReadData;
+import Utils.ReadData;
 import Pages.Categories;
-//import Pages.MyAccount;
 import Pages.Navigation;
-//import Pages.Register;
 import Pages.Product;
 
 public class CategoryOptions {
 	Categories Category;
 	Navigation Navigation;
 	ReadData readData;
-	Product PProduct;
+	Product Product;
 
 	/**
 	 * Data
 	 */
-	String categoriName;
+	String categoryName;
 	String typeName;
 	String detail;
-
 
 	@Parameters({ "browser", "driverPath", "dataPath", "evidencePath" })
 	@BeforeClass
@@ -41,7 +35,7 @@ public class CategoryOptions {
 		Navigation = new Navigation(browser, driverPath, evidencePath);
 		// Pages Instances
 		Category = new Categories(browser, driverPath);
-		PProduct = new Product(browser, driverPath);
+		Product = new Product(browser, driverPath);
 
 	}
 
@@ -56,14 +50,12 @@ public class CategoryOptions {
 		readDataForCategory("selectCategory");
 		Navigation.setEvidencePath("TestCaseSelectCategory");
 		Navigation.takeScreenshot();
-		Category.clickCategory(categoriName);
+		Category.clickCategory(categoryName);
 		Navigation.takeScreenshot();
-		Category.clicktype(typeName);
+		Category.clickType(typeName);
 		Navigation.takeScreenshot();
-		PProduct.validateProducto(detail,true);
+		Product.validateProducto(detail, true);
 	}
-
-	
 
 	@AfterMethod
 	public void afterTest() {
@@ -73,16 +65,14 @@ public class CategoryOptions {
 	@AfterClass
 	public void afterClass() {
 		Navigation.closeDriver();
-		
+
 	}
 
 	private void readDataForCategory(String nameTestCase) {
 		JSONObject data = readData.readNode(nameTestCase);
-		categoriName = data.get("categoriName").toString();
+		categoryName = data.get("categoryName").toString();
 		typeName = data.get("typeName").toString();
 		detail = data.get("detail").toString();
 	}
-
-
 
 }
