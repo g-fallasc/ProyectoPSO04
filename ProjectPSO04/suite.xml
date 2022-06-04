@@ -3,38 +3,25 @@
 
 <suite name="Test Cases - Segunda Entrega">
 	<!-- Test Cases for Register -->
-	<test name="Pruebas Registro">
+<test name="Pruebas Registro">
 		<parameter name="browser" value="Chrome"></parameter>
 		<parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"></parameter>
 		<parameter name="URL" value="http://tutorialsninja.com/demo/"></parameter>
-		<parameter name="dataPath" value="src/test/resources/dataAuth.json"></parameter>
-		<parameter name="evidencePath" value="C:\\Evidencia\\Register"></parameter>
+		<parameter name="dataPath" value="src/test/resources/dataProduct.json"></parameter>
+		<parameter name="evidencePath" value="C:\\Evidencia\\Category"></parameter>
 		<classes>
-			<class name="TestCases.Auth">
+			<class name="TestCases.CategoryOptions">
 				<methods>
-					<include name="TestCaseOptionRegister"></include>
-					<include name="TestCaseRegisterSuccess"></include>
+					<include name="TestCaseSelectCategory"></include>
+					
+					
 				</methods>
 			</class>
 		</classes>
 	</test>
 
-	<!-- Test Cases for Login / Logout -->	
-	<test name="Pruebas Iniciar Sesion">
-		<parameter name="browser" value="Chrome"></parameter>
-		<parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"></parameter>
-		<parameter name="URL" value="http://tutorialsninja.com/demo/"></parameter>
-		<parameter name="dataPath" value="src/test/resources/dataAuth.json"></parameter>
-		<parameter name="evidencePath" value="C:\\Evidencia\\Login-Logut"></parameter>
-		<classes>
-			<class name="TestCases.Auth">
-				<methods>
-					<include name="TestCaseOptionLogin"></include>
-					<include name="TestCaseLoginSuccess"></include>
-				</methods>
-			</class>
-		</classes>
-	</test>
+
+
 </suite>
 
 
