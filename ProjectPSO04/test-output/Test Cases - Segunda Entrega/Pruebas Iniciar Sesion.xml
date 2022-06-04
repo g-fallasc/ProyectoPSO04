@@ -17,4 +17,5 @@
   <testcase classname="TestCases.Auth" name="TestCaseRegisterWithoutPrivacyPolicy" time="0.0">
     <ignored/>
   </testcase> <!-- TestCaseRegisterWithoutPrivacyPolicy -->
+
 </testsuite> <!-- Pruebas Iniciar Sesion -->

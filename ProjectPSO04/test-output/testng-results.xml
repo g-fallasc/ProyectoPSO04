@@ -34,6 +34,7 @@
           </reporter-output>
         </test-method> <!-- beforeClass -->
         <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.CheckoutOrder@61001b64]" started-at="2022-06-03T20:58:08 CST" name="beforeTest" finished-at="2022-06-03T20:58:12 CST" duration-ms="4743" status="PASS">
+
           <params>
             <param index="0">
               <value>
