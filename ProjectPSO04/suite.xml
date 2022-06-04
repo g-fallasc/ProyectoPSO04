@@ -2,43 +2,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="Test Cases - Segunda Entrega">
-	<!-- Test Cases for Register -->
-<test name="Pruebas Registro">
-		<parameter name="browser" value="Chrome"></parameter>
-		<parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"></parameter>
-		<parameter name="URL" value="http://tutorialsninja.com/demo/"></parameter>
-		<parameter name="dataPath" value="src/test/resources/dataProduct.json"></parameter>
-		<parameter name="evidencePath" value="C:\\Evidencia\\Category"></parameter>
-		<classes>
-			<class name="TestCases.CategoryOptions">
-				<methods>
-					<include name="TestCaseSelectCategory"></include>
-					
-					
-				</methods>
-			</class>
-		</classes>
-	</test>
-
-
-
-</suite>
-
-
-
-<!-- 
-[
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-
-<suite name="Test Cases - Segunda Entrega">
-	
+  <!-- Test Cases for Register -->
 	<test name="Pruebas Registro">
 		<parameter name="browser" value="Chrome"></parameter>
 		<parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"></parameter>
 		<parameter name="URL" value="http://tutorialsninja.com/demo/"></parameter>
 		<parameter name="dataPath" value="src/test/resources/dataAuth.json"></parameter>
-		<parameter name="evidencePath" value="C:\\Evidencia\\Auth"></parameter>
+		<parameter name="evidencePath" value="C:\\Evidencia\\Register"></parameter>
 		<classes>
 			<class name="TestCases.Auth">
 				<methods>
@@ -51,13 +21,13 @@
 		</classes>
 	</test>
 
-	
+<!-- Test Cases for Login Logout -->
 	<test name="Pruebas Iniciar Sesion">
 		<parameter name="browser" value="Chrome"></parameter>
 		<parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"></parameter>
 		<parameter name="URL" value="http://tutorialsninja.com/demo/"></parameter>
 		<parameter name="dataPath" value="src/test/resources/dataAuth.json"></parameter>
-		<parameter name="evidencePath" value="C:\\Evidencia\\Auth"></parameter>
+		<parameter name="evidencePath" value="C:\\Evidencia\\Login_Logout"></parameter>
 		<classes>
 			<class name="TestCases.Auth">
 				<methods>
@@ -70,7 +40,7 @@
 		</classes>
 	</test>
 
-	
+<!-- Test Cases for Verify Product Home Page -->
 	<test name="Pruebas Pagina Principal - Verificar Productos">
 		<parameter name="browser" value="Chrome"></parameter>
 		<parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"></parameter>
@@ -91,7 +61,7 @@
 		</classes>
 	</test>
 
-	
+<!-- Test Cases for Search -->
 	<test name="Pruebas Busqueda">
 		<parameter name="browser" value="Chrome"></parameter>
 		<parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"></parameter>
@@ -109,7 +79,7 @@
 		</classes>
 	</test>
 
-	
+<!-- Test Cases for CheckOrder -->
 	<test name="Pruebas Validar Orden">
 		<parameter name="browser" value="Chrome"></parameter>
 		<parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"></parameter>
@@ -125,7 +95,20 @@
 			</class>
 		</classes>
 	</test>
+  
+  	<!-- Test Cases for Categories -->
+<test name="Pruebas Categorias">
+		<parameter name="browser" value="Chrome"></parameter>
+		<parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"></parameter>
+		<parameter name="URL" value="http://tutorialsninja.com/demo/"></parameter>
+		<parameter name="dataPath" value="src/test/resources/dataProduct.json"></parameter>
+		<parameter name="evidencePath" value="C:\\Evidencia\\Category"></parameter>
+		<classes>
+			<class name="TestCases.CategoryOptions">
+				<methods>
+					<include name="TestCaseSelectCategory"></include>	
+				</methods>
+			</class>
+		</classes>
+	</test>
 </suite>
-
-]
--->

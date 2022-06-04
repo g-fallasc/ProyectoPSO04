@@ -8,10 +8,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import Adapter.ReadData;
 import Pages.Checkout;
 import Pages.Login;
 import Pages.Navigation;
+import Utils.ReadData;
 
 public class CheckoutOrder {
 	Navigation Navigation;
@@ -59,15 +59,19 @@ public class CheckoutOrder {
 
 	@Test
 	public void TestCaseCheckoutOrder() throws InterruptedException {
+		Navigation.setEvidencePath("CheckoutOrder");
 		readDataTestCase("checkoutOrder");
 		// Login Account
 		LoginUser(email, password);
 		// Navigation to register page
 		Navigation.navToCheckout();
+		Navigation.takeScreenshot();
 
 		if (PagCheckout.isExistingAddress()) {
+			Navigation.takeScreenshot();
 			PagCheckout.clickContinue(PagCheckout.byButtonContinueBilling);
 		} else {
+			Navigation.takeScreenshot();
 			// Enter personal details
 			PagCheckout.enterFirstName(firstName);
 			PagCheckout.enterLastName(lastName);
@@ -77,26 +81,35 @@ public class CheckoutOrder {
 			PagCheckout.enterPostCode(postCode);
 			PagCheckout.selectCounty(country);
 			PagCheckout.selectRegionState(region);
+			Navigation.takeScreenshot();
 			PagCheckout.clickContinue(PagCheckout.byButtonContinueBilling);
 		}
+		Navigation.takeScreenshot();
 		// Payment Method
 		PagCheckout.enterCommentOrder(comment);
 		PagCheckout.checkTermsConditions();
+		Navigation.takeScreenshot();
 		PagCheckout.clickContinue(PagCheckout.byButtonContinuePayment);
+		Navigation.takeScreenshot();
 		logout();
+		Navigation.takeScreenshot();
 	}
 
 	@Test
 	public void TestCaseCheckoutOrderAddNewAddress() throws InterruptedException {
+		Navigation.setEvidencePath("CheckoutOrderAddNewAddress");
 		readDataTestCase("checkoutOrderAddNewAddress");
 		// Login Account
 		LoginUser(email, password);
 		// Navigation to register page
 		Navigation.navToCheckout();
 
+		Navigation.takeScreenshot();
 		if (PagCheckout.isExistingAddress()) {
+			Navigation.takeScreenshot();
 			PagCheckout.checkNewAddress();
 		}
+		Navigation.takeScreenshot();
 		// Enter personal details
 		PagCheckout.enterFirstName(firstName);
 		PagCheckout.enterLastName(lastName);
@@ -107,12 +120,17 @@ public class CheckoutOrder {
 		PagCheckout.enterPostCode(postCode);
 		PagCheckout.selectCounty(country);
 		PagCheckout.selectRegionState(region);
+		Navigation.takeScreenshot();
 		PagCheckout.clickContinue(PagCheckout.byButtonContinueBilling);
 		// Payment Method
+		Navigation.takeScreenshot();
 		PagCheckout.enterCommentOrder(comment);
 		PagCheckout.checkTermsConditions();
+		Navigation.takeScreenshot();
 		PagCheckout.clickContinue(PagCheckout.byButtonContinuePayment);
+		Navigation.takeScreenshot();
 		logout();
+		Navigation.takeScreenshot();
 	}
 
 	@AfterMethod

@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,7 +104,12 @@
                     <div class="method-list-content passed suite-Test_Cases___Segunda_Entrega">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Test_Cases___Segunda_Entrega" title="TestCases.CategoryOptions" class="method navigator-link" hash-for-method="TestCaseSelectCategory">TestCaseSelectCategory</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Test_Cases___Segunda_Entrega" title="TestCases.CheckoutOrder" class="method navigator-link" hash-for-method="TestCaseCheckoutOrder">TestCaseCheckoutOrder</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Test_Cases___Segunda_Entrega" title="TestCases.CheckoutOrder" class="method navigator-link" hash-for-method="TestCaseCheckoutOrderAddNewAddress">TestCaseCheckoutOrderAddNewAddress</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Test_Cases___Segunda_Entrega -->
@@ -122,14 +127,21 @@
           <div class="suite-Test_Cases___Segunda_Entrega-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">TestCases.CategoryOptions</span>
+              <span class="class-name">TestCases.CheckoutOrder</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TestCaseSelectCategory">
-                  </a> <!-- TestCaseSelectCategory -->
-                  <span class="method-name">TestCaseSelectCategory</span>
+                  <a name="TestCaseCheckoutOrder">
+                  </a> <!-- TestCaseCheckoutOrder -->
+                  <span class="method-name">TestCaseCheckoutOrder</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TestCaseCheckoutOrderAddNewAddress">
+                  </a> <!-- TestCaseCheckoutOrderAddNewAddress -->
+                  <span class="method-name">TestCaseCheckoutOrderAddNewAddress</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -144,20 +156,21 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Test Cases - Segunda Entrega&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Pruebas Registro&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Pruebas Validar Orden&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
     &lt;parameter name=&quot;driverPath&quot; value=&quot;C:\\Drivers\\chromedriver.exe&quot;/&gt;
-    &lt;parameter name=&quot;evidencePath&quot; value=&quot;C:\\Evidencia\\Category&quot;/&gt;
+    &lt;parameter name=&quot;evidencePath&quot; value=&quot;C:\\Evidencia\\Checkout&quot;/&gt;
     &lt;parameter name=&quot;URL&quot; value=&quot;http://tutorialsninja.com/demo/&quot;/&gt;
-    &lt;parameter name=&quot;dataPath&quot; value=&quot;src/test/resources/dataProduct.json&quot;/&gt;
+    &lt;parameter name=&quot;dataPath&quot; value=&quot;src/test/resources/dataCheckout.json&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;TestCases.CategoryOptions&quot;&gt;
+      &lt;class name=&quot;TestCases.CheckoutOrder&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;TestCaseSelectCategory&quot;/&gt;
+          &lt;include name=&quot;TestCaseCheckoutOrder&quot;/&gt;
+          &lt;include name=&quot;TestCaseCheckoutOrderAddNewAddress&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- TestCases.CategoryOptions --&gt;
+      &lt;/class&gt; &lt;!-- TestCases.CheckoutOrder --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Pruebas Registro --&gt;
+  &lt;/test&gt; &lt;!-- Pruebas Validar Orden --&gt;
 &lt;/suite&gt; &lt;!-- Test Cases - Segunda Entrega --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -169,7 +182,8 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Pruebas Registro (1 class)</span>
+                <span class="test-name">Pruebas Validar Orden (1 class)</span>
+
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -195,16 +209,22 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TestCaseSelectCategory')
-data.setCell(0, 2, 'TestCases.CategoryOptions')
-data.setCell(0, 3, 1384);
+data.setCell(0, 1, 'TestCaseCheckoutOrderAddNewAddress')
+data.setCell(0, 2, 'TestCases.CheckoutOrder')
+data.setCell(0, 3, 20962);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'TestCaseCheckoutOrder')
+data.setCell(1, 2, 'TestCases.CheckoutOrder')
+data.setCell(1, 3, 15324);
+
 window.suiteTableData['Test_Cases___Segunda_Entrega']= { tableData: data, tableDiv: 'times-div-Test_Cases___Segunda_Entrega'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 36 seconds</span>
+
               <div id="times-div-Test_Cases___Segunda_Entrega">
               </div> <!-- times-div-Test_Cases___Segunda_Entrega -->
             </div> <!-- times-div -->
@@ -230,26 +250,39 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.CategoryOptions</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">TestCases.CheckoutOrder</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">beforeClass(Chrome, C:\\Drivers\\chromedriver.exe, src/test/resources/dataProduct.json, C:\\Evidencia\\Category)</span>
+                <span class="method-name">beforeClass(Chrome, C:\\Drivers\\chromedriver.exe, src/test/resources/dataCheckout.json, C:\\Evidencia\\Checkout)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTest(http://tutorialsninja.com/demo/)</span>
-                <span class="method-start">1548 ms</span>
+                <span class="method-start">4689 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">TestCaseSelectCategory</span>
-                <span class="method-start">5243 ms</span>
+                <span class="method-name">TestCaseCheckoutOrder</span>
+                <span class="method-start">9434 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">6629 ms</span>
+                <span class="method-start">24783 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeTest(http://tutorialsninja.com/demo/)</span>
+                <span class="method-start">24797 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TestCaseCheckoutOrderAddNewAddress</span>
+                <span class="method-start">27993 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">48957 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">6630 ms</span>
+                <span class="method-start">48959 ms</span>
+
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
