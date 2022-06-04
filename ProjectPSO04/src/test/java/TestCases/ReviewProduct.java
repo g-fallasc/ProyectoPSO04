@@ -1,6 +1,8 @@
 package TestCases;
 
 import org.json.simple.JSONObject;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
@@ -25,10 +27,9 @@ public class ReviewProduct {
 	 * Data for Search product
 	 */
 	String productName;
-	String productDetail;
-	String selectSort;
-	String selectShow;
-	String optionViewProduct;
+	String userName;
+	String review;
+	String rating;
 
 	@Parameters({ "browser", "driverPath", "dataPath", "evidencePath" })
 	@BeforeClass
@@ -52,19 +53,52 @@ public class ReviewProduct {
 
 	@Test
 	public void TestCaseReviewProduct() throws InterruptedException {
-		readDataForProduct("searchProductExist");
+		Navigation.setEvidencePath("ReviewProduct");
+		readDataForProduct("addReviewProduct");
 		// Enter value and search
-		// searchProduct(productName);
+		searchProduct(productName);
 		// Validate search
 		PagSearch.validateSearch(productName);
-		// Validate product detail in home page
-		Product.validateProducto(productDetail, true);
+		// Open Page Detail Product
+		Product.openDetailProduct(productName);
+		Navigation.takeScreenshot();
+		// Add Review
+		PagReview.openReviews();
+		Navigation.takeScreenshot();
+		PagReview.enterYourName(userName);
+		PagReview.enterReview(review);
+		PagReview.enterRating(rating);
+		Navigation.takeScreenshot();
+		PagReview.clickContinue();
+		// Validate Review
+		PagReview.validateSubmittedReview();
+	}
+
+	@AfterMethod
+	public void afterTest() {
+
+	}
+
+	@AfterClass
+	public void afterClass() {
+		Navigation.closeDriver();
 	}
 
 	private void readDataForProduct(String nameTestCase) {
 		JSONObject data = readData.readNode(nameTestCase);
 		productName = data.get("productName").toString();
-		productDetail = data.get("productDetail").toString();
+		userName = data.get("userName").toString();
+		review = data.get("review").toString();
+		rating = data.get("rating").toString();
+	}
+
+	public void searchProduct(String name) {
+		Navigation.takeScreenshot();
+		// Enter search from home page
+		Navigation.enterValueSearch(name);
+		Navigation.takeScreenshot();
+		Navigation.clickButtonSearch();
+		Navigation.takeScreenshot();
 	}
 
 }

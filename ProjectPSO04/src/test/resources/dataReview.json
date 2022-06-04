@@ -1,0 +1,14 @@
+{
+	"addReviewProduct": {
+		"productName": "HTC Touch HD",
+		"userName": "Proyecto PSO04",
+		"review": "El curso ha sido de un gran aprendizaje",
+		"rating": "3"
+	},
+	"errorReviewProduct": {
+		"productName": "MacBook",
+		"userName": "MacBook Intel Core 2 Duo processor Powered by an Intel Core 2 Duo processor at speeds up to 2.1.. 472.33€ Ex Tax: 392.30€",
+		"review": "EUR",
+		"rating": "3"
+	}
+}

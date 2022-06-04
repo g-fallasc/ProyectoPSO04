@@ -119,7 +119,13 @@ public class AdapterSelenium {
 	}
 
 	public List<WebElement> getListElements(By byLocator) {
-		return driver.findElements(byLocator);
+		List<WebElement> listElements = null;
+		try {
+			listElements = driver.findElements(byLocator);
+		} catch (NoSuchElementException e) {
+			Assert.fail(e.getMessage());
+		}
+		return listElements;
 	}
 
 	public void selectElement(By byLocator, String typeSelect, String value) {
