@@ -72,6 +72,7 @@ public class ReviewProduct {
 		PagReview.clickContinue();
 		// Validate Review
 		PagReview.validateSubmittedReview();
+		Navigation.takeScreenshot();
 	}
 
 	@AfterMethod

@@ -49,6 +49,7 @@ public class ProductHomePage {
 		Navigation.takeScreenshot();
 		// Select currency type
 		Navigation.selectCurrency(selectCurrency);
+		Navigation.takeScreenshot();
 		// Validate product detail in home page
 		Product.validateProducto(productDetail, true);
 		Navigation.takeScreenshot();
