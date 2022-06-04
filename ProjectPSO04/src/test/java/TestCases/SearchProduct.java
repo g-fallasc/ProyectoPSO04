@@ -9,11 +9,11 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import Adapter.ReadData;
 import Pages.Login;
 import Pages.Navigation;
 import Pages.Product;
 import Pages.Search;
+import Utils.ReadData;
 
 public class SearchProduct {
 	Navigation Navigation;
@@ -52,22 +52,26 @@ public class SearchProduct {
 
 	@Test
 	public void TestCaseSearchProductExist() throws InterruptedException {
+		Navigation.setEvidencePath("SearchProductExist");
 		readDataForProduct("searchProductExist");
 		// Enter value and search
 		searchProduct(productName);
 		// Validate search
 		PagSearch.validateSearch(productName);
+		Navigation.takeScreenshot();
 		// Validate product detail in home page
 		Product.validateProducto(productDetail, true);
 	}
 
 	@Test
 	public void TestCaseSearchProductNotExist() throws InterruptedException {
+		Navigation.setEvidencePath("SearchProductNotExist");
 		readDataForProduct("searchProductNotExist");
 		// Enter value and search
 		searchProduct(productName);
 		// Validate search
 		PagSearch.validateSearch(productName);
+		Navigation.takeScreenshot();
 		// Validate if not exist
 		if (PagSearch.isMatchProduct()) {
 			Assert.fail("El producto: " + productName + " si existe.");
@@ -76,16 +80,23 @@ public class SearchProduct {
 
 	@Test
 	public void TestCaseSearchChangeCriteria() throws InterruptedException {
+		Navigation.setEvidencePath("SearchChangeCriteria");
 		readDataForChangeCriteria();
 		// Enter value and search
 		searchProduct(productName);
 		// Validate search
 		PagSearch.validateSearch(productName);
+		Navigation.takeScreenshot();
 		PagSearch.clickCheckProductDescriptions();
+		Navigation.takeScreenshot();
 		PagSearch.clickSearchButton();
+		Navigation.takeScreenshot();
 		PagSearch.selectSortBy(selectSort);
+		Navigation.takeScreenshot();
 		PagSearch.selectShow(selectShow);
+		Navigation.takeScreenshot();
 		PagSearch.selectViewProductResult(optionViewProduct);
+		Navigation.takeScreenshot();
 	}
 
 	@AfterMethod
@@ -99,9 +110,12 @@ public class SearchProduct {
 	}
 
 	public void searchProduct(String name) {
+		Navigation.takeScreenshot();
 		// Enter search from home page
 		Navigation.enterValueSearch(name);
+		Navigation.takeScreenshot();
 		Navigation.clickButtonSearch();
+		Navigation.takeScreenshot();
 	}
 
 	public void LoginUser(String email, String password) throws InterruptedException {
@@ -111,7 +125,6 @@ public class SearchProduct {
 		PagLogin.enterPassword(password);
 		PagLogin.clickLogin();
 	}
-	
 
 	private void readDataForProduct(String nameTestCase) {
 		JSONObject data = readData.readNode(nameTestCase);

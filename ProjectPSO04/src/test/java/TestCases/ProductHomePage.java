@@ -8,9 +8,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import Adapter.ReadData;
 import Pages.Navigation;
 import Pages.Product;
+import Utils.ReadData;
 
 public class ProductHomePage {
 	Navigation Navigation;
@@ -44,52 +44,68 @@ public class ProductHomePage {
 
 	@Test
 	public void TestCaseSelectCurrency() throws InterruptedException {
+		Navigation.setEvidencePath("SelectCurrency");
 		readDataForTestCase("selectCurrency");
+		Navigation.takeScreenshot();
 		// Select currency type
 		Navigation.selectCurrency(selectCurrency);
 		// Validate product detail in home page
 		Product.validateProducto(productDetail, true);
+		Navigation.takeScreenshot();
 	}
 
 	@Test
 	public void TestCaseValidateProduct() throws InterruptedException {
+		Navigation.setEvidencePath("ValidateProduct");
 		readDataForTestCase("validateProduct");
 		// Validate product detail in home page
 		Product.validateProducto(productDetail, true);
+		Navigation.takeScreenshot();
 	}
 
 	@Test
 	public void TestCaseValidateProductNotExist() throws InterruptedException {
+		Navigation.setEvidencePath("ValidateProductNotExist");
 		readDataForTestCase("validateProductNotExist");
 		// Validate product detail in home page
 		Product.validateProducto(productDetail, false);
+		Navigation.takeScreenshot();
 	}
 
 	@Test
 	public void TestCaseProductAddToCart() throws InterruptedException {
+		Navigation.setEvidencePath("ProductAddToCart");
 		readDataForTestCase("productAddToCart");
 		// Find product 'productName' and add to cart
 		Product.addProductToCart(productName);
+		Navigation.takeScreenshot();
 		// Verify if product add to cart
 		Product.verifyProductToCart(productName);
+		Navigation.takeScreenshot();
 	}
 
 	@Test
 	public void TestCaseProductAddToWishList() throws InterruptedException {
+		Navigation.setEvidencePath("ProductAddToWishList");
 		readDataForTestCase("productAddToWishList");
 		// Find product 'productName' and add to cart
 		Product.addProductToWishList(productName);
+		Navigation.takeScreenshot();
 		// Verify if product add to Wish list
 		Product.verifyProductToWishList(productName);
+		Navigation.takeScreenshot();
 	}
 
 	@Test
 	public void TestCaseProductAddToCompare() throws InterruptedException {
+		Navigation.setEvidencePath("ProductAddToCompare");
 		readDataForTestCase("productAddToCompare");
 		// Find product 'productName' and add to cart
 		Product.addProductToCompare(productName);
+		Navigation.takeScreenshot();
 		// Verify if product add to Compare List
 		Product.verifyProductToCompare(productName);
+		Navigation.takeScreenshot();
 	}
 
 	@AfterMethod

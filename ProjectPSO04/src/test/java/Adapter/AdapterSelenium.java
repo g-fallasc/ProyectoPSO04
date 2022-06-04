@@ -7,14 +7,21 @@ import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.ElementNotInteractableException;
+import org.openqa.selenium.InvalidSelectorException;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public class AdapterSelenium {
 
@@ -30,16 +37,25 @@ public class AdapterSelenium {
 	}
 
 	public AdapterSelenium(String browser, String driverPath) {
-		if (browser.equals("Chrome")) {
-			System.setProperty("webdriver.chrome.driver", driverPath);
-			driver = new ChromeDriver();
-		} else if (browser.equals("Firefox")) {
-			System.setProperty("webdriver.geckod.driver", driverPath);
-			// driver = new FirefoxDriver();
+		try {
+			if (browser.equals("Chrome")) {
+				System.setProperty("webdriver.chrome.driver", driverPath);
+				driver = new ChromeDriver();
+			} else if (browser.equals("Firefox")) {
+				System.setProperty("webdriver.geckod.driver", driverPath);
+				// driver = new FirefoxDriver();
+			}
+			driver.manage().window().maximize();
+			driver.manage().deleteAllCookies();
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		} catch (WebDriverException e) {
+			Assert.fail(e.getMessage());
 		}
-		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+
+	}
+
+	public WebDriver getDriver() {
+		return this.driver;
 	}
 
 	public void openURL(String URL) {
@@ -52,18 +68,22 @@ public class AdapterSelenium {
 	}
 
 	public WebElement createElement(By byLocator, String action) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		WebElement element = null;
-		if (action.equals("CLICK")) {
-			element = wait.until(ExpectedConditions.elementToBeClickable(byLocator));
-		} else if (action.equals("INGRESAR")) {
-			element = wait.until(ExpectedConditions.presenceOfElementLocated(byLocator));
-		} else if (action.equals("OBTENER")) {
-			element = wait.until(ExpectedConditions.visibilityOfElementLocated(byLocator));
-		} else if (action.equals("SELECCIONAR")) {
-			element = wait.until(ExpectedConditions.visibilityOfElementLocated(byLocator));
-		} else {
-			element = wait.until(ExpectedConditions.visibilityOfElementLocated(byLocator));
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+			if (action.equals("CLICK")) {
+				element = wait.until(ExpectedConditions.elementToBeClickable(byLocator));
+			} else if (action.equals("INGRESAR")) {
+				element = wait.until(ExpectedConditions.presenceOfElementLocated(byLocator));
+			} else if (action.equals("OBTENER")) {
+				element = wait.until(ExpectedConditions.visibilityOfElementLocated(byLocator));
+			} else if (action.equals("SELECCIONAR")) {
+				element = wait.until(ExpectedConditions.visibilityOfElementLocated(byLocator));
+			} else {
+				element = wait.until(ExpectedConditions.visibilityOfElementLocated(byLocator));
+			}
+		} catch (NoSuchElementException e) {
+			Assert.fail(e.getMessage());
 		}
 		return element;
 	}
@@ -75,11 +95,27 @@ public class AdapterSelenium {
 	}
 
 	public void clickElement(By byLocator) {
-		createElement(byLocator, "CLICK").click();
+		WebElement element = null;
+		try {
+			element = createElement(byLocator, "CLICK");
+			element.click();
+		} catch (ElementClickInterceptedException e) {
+			Assert.fail(e.getMessage());
+
+			JavascriptExecutor exe = (JavascriptExecutor) driver;
+			exe.executeScript("arguments[0].click()", element);
+		}
+
 	}
 
 	public String getText(By byLocator) {
-		return createElement(byLocator, "OBTENER").getText();
+		String text = "";
+		try {
+			text = createElement(byLocator, "OBTENER").getText();
+		} catch (ElementNotInteractableException e) {
+			Assert.fail(e.getMessage());
+		}
+		return text;
 	}
 
 	public List<WebElement> getListElements(By byLocator) {
@@ -87,12 +123,17 @@ public class AdapterSelenium {
 	}
 
 	public void selectElement(By byLocator, String typeSelect, String value) {
-		Select select = new Select(createElement(byLocator, "SELECCIONAR"));
-		if (typeSelect.equals("value")) {
-			select.selectByValue(value);
-		} else if (typeSelect.equals("text")) {
-			select.selectByVisibleText(value);
+		try {
+			Select select = new Select(createElement(byLocator, "SELECCIONAR"));
+			if (typeSelect.equals("value")) {
+				select.selectByValue(value);
+			} else if (typeSelect.equals("text")) {
+				select.selectByVisibleText(value);
+			}
+		} catch (InvalidSelectorException e) {
+			Assert.fail(e.getMessage());
 		}
+
 	}
 
 	public String getAttribute(By byLocator, String attribute) {

@@ -11,8 +11,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import Adapter.ReadData;
 import Pages.Register;
+import Utils.ReadData;
 import Pages.Login;
 import Pages.MyAccount;
 import Pages.Navigation;
@@ -92,22 +92,27 @@ public class Auth {
 
 	@Test
 	public void TestCaseRegisterWithoutPrivacyPolicy() throws InterruptedException {
+		Navigation.setEvidencePath("RegisterWithoutPrivacyPolicy");
 		readDataForRegister("registerWithoutPrivacyPolicy");
 		Navigation.navToRegister();
 
+		Navigation.takeScreenshot();
 		PagRegister.enterFirstName(firstName);
 		PagRegister.enterLastName(lastName);
 		PagRegister.enterEmail(email);
 		PagRegister.enterPhone(phone);
 		PagRegister.enterPassword(password);
 		PagRegister.enterPasswordConfirm(passwordConfirm);
+		Navigation.takeScreenshot();
 
 		PagRegister.clickContinue();
 		PagRegister.validateMessagePrivacyPolicy();
+		Navigation.takeScreenshot();
 	}
 
 	@Test
 	public void TestCaseRegisterRepeatedEmail() throws InterruptedException {
+		Navigation.setEvidencePath("RegisterRepeatedEmail");
 		readDataForRegister("registerRepeatedEmail");
 		Navigation.navToRegister();
 
@@ -119,9 +124,11 @@ public class Auth {
 		PagRegister.enterPasswordConfirm(passwordConfirm);
 		PagRegister.selectSubscribe(subscribe);
 		PagRegister.clickPrivayPolicy();
+		Navigation.takeScreenshot();
 		PagRegister.clickContinue();
 
 		PagRegister.validateMessageEmailExist();
+		Navigation.takeScreenshot();
 	}
 
 	/**
@@ -153,29 +160,36 @@ public class Auth {
 
 	@Test
 	public void TestCaseLoginIncorrect() throws InterruptedException {
+		Navigation.setEvidencePath("LoginIncorrect");
 		Navigation.navToLogin();
 
 		Random randomGenerator = new Random();
 		int randomInt = randomGenerator.nextInt(1000);
 		PagLogin.enterEmail("email" + randomInt + "@no.existe");
 		PagLogin.enterPassword("12345678");
+		Navigation.takeScreenshot();
 
 		PagLogin.clickLogin();
 
 		PagLogin.validateMessageErrorLogin();
+		Navigation.takeScreenshot();
 	}
 
 	@Test
 	public void TestCaseLogout() throws InterruptedException {
 		readDataForLogin("logout");
+		Navigation.setEvidencePath("Logout");
 		Navigation.navToLogin();
 
+		Navigation.takeScreenshot();
 		PagLogin.enterEmail(email);
 		PagLogin.enterPassword(password);
 		PagLogin.clickLogin();
 
+		Navigation.takeScreenshot();
 		PagMyAccount.verifyLogin();
 		logout();
+		Navigation.takeScreenshot();
 	}
 
 	@AfterMethod
