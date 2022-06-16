@@ -1,91 +1,113 @@
 package Pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import Adapter.AdapterSelenium;
 
 public class MyAccount {
 	// My Account
-	public By byEditAccountInfo = By.xpath("//a[contains(text(), 'Edit your account information')]");
-	public By byChangePass = By.xpath("//a[contains(text(), 'Change your password')]");
-	public By byEditAdressBook = By.xpath("//a[contains(text(), 'Modify your address book entries')]");
-	public By byEditWishList = By.xpath("//a[contains(text(), 'Modify your wish list')]");
-	By byTitleMyAccount = By.xpath("//h2[contains(text(), 'My Account')]");
-
+	@FindBy(xpath = "//a[contains(text(), 'Edit your account information')]")
+	WebElement linkToEditAccountInfo;
+	@FindBy(xpath = "//a[contains(text(), 'Change your password')]")
+	WebElement linkToChangePass;
+	@FindBy(xpath = "//a[contains(text(), 'Modify your address book entries')]")
+	WebElement linkToEditAdressBook;
+	@FindBy(xpath = "//a[contains(text(), 'Modify your wish list')]")
+	WebElement linkToEditWishList;
+	@FindBy(xpath = "//h2[contains(text(), 'My Account')]")
+	WebElement textTitleMyAccount;
 	// My Orders
-	public By byViewOrderHistory = By.xpath("//a[contains(text(), 'View your order history')]");
-	public By byDownloads = By.xpath("//a[contains(text(), 'Downloads')]");
-	public By byRewardPoints = By.xpath("//a[contains(text(), 'Your Reward Points')]");
-	public By byRequests = By.xpath("//a[contains(text(), 'View your return requests')]");
-	public By byTransactions = By.xpath("//a[contains(text(), 'Your Transactions')]");
-	public By byPayments = By.xpath("//a[contains(text(), 'Recurring payments')]");
-	By byTitleMyOrders = By.xpath("//h2[contains(text(), 'My Orders')]");
-
+	@FindBy(xpath = "//a[contains(text(), 'View your order history')]")
+	WebElement linkToViewOrderHistory;
+	@FindBy(xpath = "//a[contains(text(), 'Downloads')]")
+	WebElement linkToDownloads;
+	@FindBy(xpath = "//a[contains(text(), 'Your Reward Points')]")
+	WebElement linkToRewardPoints;
+	@FindBy(xpath = "//a[contains(text(), 'View your return requests')]")
+	WebElement linkToRequests;
+	@FindBy(xpath = "//a[contains(text(), 'Your Transactions')]")
+	WebElement linkToTransactions;
+	@FindBy(xpath = "//a[contains(text(), 'Recurring payments')]")
+	WebElement linkToPayments;
+	@FindBy(xpath = "//h2[contains(text(), 'My Orders')]")
+	WebElement textTitleMyOrders;
 	// My Affiliate Account
-	public By byAffiliateAccount = By.xpath("//a[contains(text(), 'Register for an affiliate account')]");
-	By byTitleMyAffiliate = By.xpath("//h2[contains(text(), 'My Affiliate Account')]");
+	@FindBy(xpath = "//a[contains(text(), 'Register for an affiliate account')]")
+	WebElement linkToAffiliateAccount;
+	@FindBy(xpath = "//h2[contains(text(), 'My Affiliate Account')]")
+	WebElement textTitleMyAffiliate;
+
+	By byEditAffiliateInfo = By.xpath("//a[contains(text(), 'Edit your affiliate information')]");
+	By byCustomTrackingCode = By.xpath("//a[contains(text(), 'Custom Affiliate Tracking Code')]");
 
 	// Newsletter
-	public By byEditNewsletter = By.xpath("//a[contains(text(), 'Subscribe / unsubscribe to newsletter')]");
-	By byTitleNewsletter = By.xpath("//h2[contains(text(), 'Newsletter')]");
+	@FindBy(xpath = "//a[contains(text(), 'Subscribe / unsubscribe to newsletter')]")
+	WebElement linkToEditNewsletter;
+	@FindBy(xpath = "//h2[contains(text(), 'Newsletter')]")
+	WebElement textTitleNewsletter;
 
 	private AdapterSelenium adapter;
 
 	public MyAccount(String browser, String driverPath) {
 		adapter = AdapterSelenium.getAdapter(browser, driverPath);
+		PageFactory.initElements(adapter.getDriver(), this);
 	}
 
-	/**
-	 * @param byToLink name link to open
-	 */
-	public void clickToLink(By byToLink) {
-		adapter.clickElement(byToLink);
+	public void clickToEditAccountInfo() {
+		adapter.clickByWebElement(linkToEditAccountInfo);
 	}
 
-	/**
-	 * public void clickToEditAccountInfo() { WebElement link =
-	 * driver.findElement(byEditAccountInfo); link.click(); }
-	 * 
-	 * public void clickToChangePassword() { WebElement link =
-	 * driver.findElement(byChangePass); link.click(); }
-	 * 
-	 * public void clickToEditAdressBook() { WebElement link =
-	 * driver.findElement(byEditAdressBook); link.click(); }
-	 * 
-	 * public void clickToEditWhisList() { WebElement link =
-	 * driver.findElement(byEditWishList); link.click(); }
-	 * 
-	 * public void clickToOrderHistory() { WebElement link =
-	 * driver.findElement(byViewOrderHistory); link.click(); }
-	 * 
-	 * public void clickToDownloads() { WebElement link =
-	 * driver.findElement(byDownloads); link.click(); }
-	 * 
-	 * public void clickToRewardPoints() { WebElement link =
-	 * driver.findElement(byRewardPoints); link.click(); }
-	 * 
-	 * public void clickToRequests() { WebElement link =
-	 * driver.findElement(byRequests); link.click(); }
-	 * 
-	 * public void clickToTransactions() { WebElement link =
-	 * driver.findElement(byTransactions); link.click(); }
-	 * 
-	 * public void clickToPayments() { WebElement link =
-	 * driver.findElement(byPayments); link.click(); }
-	 * 
-	 * public void clickToAffiliateAccount() { WebElement link =
-	 * driver.findElement(byAffiliateAccount); link.click(); }
-	 * 
-	 * public void clickToEditNewsletter() { WebElement link =
-	 * driver.findElement(byEditNewsletter); link.click(); }
-	 * 
-	 **/
+	public void clickToChangePassword() {
+		adapter.clickByWebElement(linkToChangePass);
+	}
+
+	public void clickToEditAdressBook() {
+		adapter.clickByWebElement(linkToEditAccountInfo);
+	}
+
+	public void clickToEditWhisList() {
+		adapter.clickByWebElement(linkToEditWishList);
+	}
+
+	public void clickToOrderHistory() {
+		adapter.clickByWebElement(linkToViewOrderHistory);
+	}
+
+	public void clickToDownloads() {
+		adapter.clickByWebElement(linkToDownloads);
+	}
+
+	public void clickToRewardPoints() {
+		adapter.clickByWebElement(linkToRewardPoints);
+	}
+
+	public void clickToRequests() {
+		adapter.clickByWebElement(linkToRequests);
+	}
+
+	public void clickToTransactions() {
+		adapter.clickByWebElement(linkToTransactions);
+	}
+
+	public void clickToPayments() {
+		adapter.clickByWebElement(linkToPayments);
+	}
+
+	public void clickToAffiliateAccount() {
+		adapter.clickByWebElement(linkToAffiliateAccount);
+	}
+
+	public void clickToEditNewsletter() {
+		adapter.clickByWebElement(linkToEditNewsletter);
+	}
 
 	public void verifyLogin() {
-		Assert.assertEquals(adapter.getText(byTitleMyAccount).equals("My Account"), true, "El login fue incorrecto");
+		Assert.assertEquals(adapter.getTextByWebElement(textTitleMyAccount).equals("My Account"), true,
+				"El login fue incorrecto");
 	}
 
 }

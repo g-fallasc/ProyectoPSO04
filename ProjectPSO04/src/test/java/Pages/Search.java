@@ -1,32 +1,40 @@
 package Pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import Adapter.AdapterSelenium;
 
 public class Search {
 	// Inputs
-	By byKeywords = By.id("input-search");
-	By bySelectCategories = By.xpath("//select[@name='category_id']");
+	@FindBy(id = "input-search")
+	WebElement inputKeywords;
+	@FindBy(xpath = "//select[@name='category_id']")
+	WebElement selectCategories;
+	@FindBy(id = "description")
+	WebElement checkInDescriptions;
 	By byCheckInSubCategories = By.xpath("//input[@type='checkbox'][@name='sub_category']");
-	By byCheckInDescriptions = By.xpath("//input[@type='checkbox'][@name='description']");
 	// Button search
 	By byBtnSearch = By.xpath("//input[@type='button'][@value='Search']");
 	// Result
-	By byTitleProducts = By.xpath("//h2[contains(text(), 'Products meeting the search criteria')]");
+	@FindBy(xpath = "//h2[contains(text(), 'Products meeting the search criteria')]")
+	WebElement textTitleProducts;
+	@FindBy(id = "input-sort")
+	WebElement selectSort;
+	@FindBy(id = "input-limit")
+	WebElement selectShow;
+	@FindBy(id = "compare-total")
+	WebElement linkToProductCompare;
 	By byTextNoResulMatch = By.xpath("//p[contains(text(), 'There is no product that matches the search criteria.')]");
-	By bySelectSort = By.id("input-sort");
-	By bySelectShow = By.id("input-limit");
-	By byProductCompare = By.id("compare-total");
 
 	private AdapterSelenium adapter;
 
 	public Search(String browser, String driverPath) {
 		adapter = AdapterSelenium.getAdapter(browser, driverPath);
+		PageFactory.initElements(adapter.getDriver(), this);
 	}
 
 	public void validateSearch(String value) {
@@ -35,41 +43,37 @@ public class Search {
 	}
 
 	public boolean isMatchProduct() {
-		if (adapter.isContainsPageSource("There is no product that matches the search criteria.")) {
-			Assert.assertTrue(adapter.isElementExisting(byTextNoResulMatch), "No se encontro el producto");
-			return false;
-		} else {
-			return true;
-		}
+		boolean isVisibleText = adapter.isElementExisting(byTextNoResulMatch);
+		return !isVisibleText;
 	}
 
 	public void enterKeywords(String value) {
-		adapter.enterText(byKeywords, value);
+		adapter.enterTextByWebElement(inputKeywords, value);
 	}
 
 	public void selectCategory(String category) {
-		adapter.selectElement(bySelectCategories, "text", category);
+		adapter.selectElementByWebElement(selectCategories, "text", category);
 	}
 
 	public void clickCheckSubcagetories() {
-		adapter.clickElement(byCheckInSubCategories);
+		adapter.clickByLocator(byCheckInSubCategories);
 	}
 
 	public void clickCheckProductDescriptions() {
-		adapter.clickElement(byCheckInDescriptions);
+		adapter.clickByWebElement(checkInDescriptions);
 	}
 
 	// Product exist
 	public void clickProductCompare() {
-		adapter.clickElement(byProductCompare);
+		adapter.clickByWebElement(linkToProductCompare);
 	}
 
 	public void selectSortBy(String sortValue) {
-		adapter.selectElement(bySelectSort, "text", sortValue);
+		adapter.selectElementByWebElement(selectSort, "text", sortValue);
 	}
 
 	public void selectShow(String viewValue) {
-		adapter.selectElement(bySelectShow, "text", viewValue);
+		adapter.selectElementByWebElement(selectShow, "text", viewValue);
 
 	}
 
@@ -78,11 +82,11 @@ public class Search {
 	 */
 	public void selectViewProductResult(String view) {
 		By bySelectView = By.id(view + "-view"); // grid-view or list-view
-		adapter.clickElement(bySelectView);
+		adapter.clickByLocator(bySelectView);
 	}
 
 	public void clickSearchButton() {
-		adapter.clickElement(byBtnSearch);
+		adapter.clickByLocator(byBtnSearch);
 	}
 
 }

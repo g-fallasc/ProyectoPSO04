@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Test Cases - Segunda Entrega]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Pruebas Reseñas(failed)">
+  <test thread-count="5" name="Pruebas Busqueda(failed)">
     <parameter name="browser" value="Chrome"/>
     <parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"/>
-    <parameter name="evidencePath" value="C:\\Evidencia\\Reviews"/>
+    <parameter name="evidencePath" value="C:\\Evidencia\\Search"/>
     <parameter name="URL" value="http://tutorialsninja.com/demo/"/>
-    <parameter name="dataPath" value="src/test/resources/dataReview.json"/>
+    <parameter name="dataPath" value="src/test/resources/dataSearch.json"/>
     <classes>
-      <class name="TestCases.ReviewProduct">
+      <class name="TestCases.SearchProduct">
         <methods>
-          <include name="beforeTest"/>
-          <include name="TestCaseReviewProduct"/>
           <include name="beforeClass"/>
+          <include name="TestCaseSearchChangeCriteria"/>
+          <include name="afterClass"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="TestCaseSearchProductNotExist"/>
         </methods>
-      </class> <!-- TestCases.ReviewProduct -->
+      </class> <!-- TestCases.SearchProduct -->
     </classes>
-  </test> <!-- Pruebas Reseñas(failed) -->
+  </test> <!-- Pruebas Busqueda(failed) -->
 </suite> <!-- Failed suite [Test Cases - Segunda Entrega] -->

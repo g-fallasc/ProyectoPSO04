@@ -22,7 +22,7 @@ public class Auth {
 	Navigation Navigation;
 	Login PagLogin;
 	MyAccount PagMyAccount;
-	ReadData readData;
+	ReadData dataFile;
 
 	/**
 	 * Data for Register & Login/Logout
@@ -39,7 +39,7 @@ public class Auth {
 	@BeforeClass
 	public void beforeClass(String browser, String driverPath, String dataPath, String evidencePath) {
 		// Read data from JSON {dataAuth.json}
-		readData = new ReadData(dataPath);
+		dataFile = new ReadData(dataPath);
 		// Instance Navigation class
 		Navigation = new Navigation(browser, driverPath, evidencePath);
 		// Pages Instances
@@ -209,7 +209,7 @@ public class Auth {
 	}
 
 	private void readDataForRegister(String nameTestCase) {
-		JSONObject data = readData.readNode(nameTestCase);
+		JSONObject data = dataFile.readNode(nameTestCase);
 		firstName = data.get("firstName").toString();
 		lastName = data.get("lastName").toString();
 		email = data.get("email").toString();
@@ -220,7 +220,7 @@ public class Auth {
 	}
 
 	private void readDataForLogin(String nameTestCase) {
-		JSONObject data = readData.readNode(nameTestCase);
+		JSONObject data = dataFile.readNode(nameTestCase);
 		email = data.get("email").toString();
 		password = data.get("password").toString();
 	}

@@ -15,7 +15,7 @@ import Utils.ReadData;
 public class ProductHomePage {
 	Navigation Navigation;
 	Product Product;
-	ReadData readData;
+	ReadData dataFile;
 
 	/**
 	 * Data for Verify product
@@ -28,7 +28,7 @@ public class ProductHomePage {
 	@BeforeClass
 	public void beforeClass(String browser, String driverPath, String dataPath, String evidencePath) {
 		// Read data from JSON {dataProduct.json}
-		readData = new ReadData(dataPath);
+		dataFile = new ReadData(dataPath);
 		// Instance Navigation class
 		Navigation = new Navigation(browser, driverPath, evidencePath);
 
@@ -120,7 +120,7 @@ public class ProductHomePage {
 	}
 
 	private void readDataForTestCase(String nameTestCase) {
-		JSONObject data = readData.readNode(nameTestCase);
+		JSONObject data = dataFile.readNode(nameTestCase);
 		productName = data.get("productName").toString();
 		productDetail = data.get("productDetail").toString();
 		selectCurrency = data.get("selectCurrency").toString();

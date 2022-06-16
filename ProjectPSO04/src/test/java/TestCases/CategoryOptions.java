@@ -16,7 +16,7 @@ import Pages.Product;
 public class CategoryOptions {
 	Categories Category;
 	Navigation Navigation;
-	ReadData readData;
+	ReadData dataFile;
 	Product Product;
 
 	/**
@@ -30,7 +30,7 @@ public class CategoryOptions {
 	@BeforeClass
 	public void beforeClass(String browser, String driverPath, String dataPath, String evidencePath) {
 		// Read data from JSON {dataAuth.json}
-		readData = new ReadData(dataPath);
+		dataFile = new ReadData(dataPath);
 		// Instance Navigation class
 		Navigation = new Navigation(browser, driverPath, evidencePath);
 		// Pages Instances
@@ -69,7 +69,7 @@ public class CategoryOptions {
 	}
 
 	private void readDataForCategory(String nameTestCase) {
-		JSONObject data = readData.readNode(nameTestCase);
+		JSONObject data = dataFile.readNode(nameTestCase);
 		categoryName = data.get("categoryName").toString();
 		typeName = data.get("typeName").toString();
 		detail = data.get("detail").toString();

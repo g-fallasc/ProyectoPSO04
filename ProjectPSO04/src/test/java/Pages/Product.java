@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
@@ -42,7 +41,7 @@ public class Product {
 
 			if (adapter.isElementExisting(byProductName)) {
 				By byBtnAddCart = By.xpath("//button[@type='button' and contains(@onclick, '" + productId + "')]");
-				adapter.clickElement(byBtnAddCart);
+				adapter.clickByLocator(byBtnAddCart);
 			}
 		} catch (NoSuchElementException e) {
 			System.out.println(e);
@@ -58,7 +57,7 @@ public class Product {
 			if (adapter.isElementExisting(byProductName)) {
 				By byBtnAddWishList = By.xpath("//button[@type='button' and contains(@onclick, '" + productId
 						+ "')][@data-original-title='Add to Wish List']");
-				adapter.clickElement(byBtnAddWishList);
+				adapter.clickByLocator(byBtnAddWishList);
 			}
 		} catch (NoSuchElementException e) {
 			System.out.println(e);
@@ -75,7 +74,7 @@ public class Product {
 			if (adapter.isElementExisting(byProductName)) {
 				By byBtnAddCompare = By.xpath("//button[@type='button' and contains(@onclick, '" + productId
 						+ "')][@data-original-title='Compare this Product']");
-				adapter.clickElement(byBtnAddCompare);
+				adapter.clickByLocator(byBtnAddCompare);
 			}
 		} catch (NoSuchElementException e) {
 			System.out.println(e);
@@ -86,7 +85,7 @@ public class Product {
 	public void openDetailProduct(String productName) {
 		try {
 			By byProductName = By.xpath("//div[@class='caption']//a[contains(text(), '" + productName + "')]");
-			adapter.clickElement(byProductName);
+			adapter.clickByLocator(byProductName);
 		} catch (NoSuchElementException e) {
 			System.out.println(e);
 			Assert.fail("El producto: " + productName + " no fue encontrado");

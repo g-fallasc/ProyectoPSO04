@@ -3,14 +3,26 @@ package Pages;
 import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 import Adapter.AdapterSelenium;
 
 public class Checkout {
+	// Page without login
+	By byTextCartEmpty = By.xpath("//p[contains(text(), 'Your shopping cart is empty!')]");
+	By byButtonContinueCartEmpy = By.xpath("//a[contains(text(), 'Continue')]");
+	// Checkout options
+	By inputEmailLogin = By.id("input-email");
+	By inputPasswordLogin = By.id("input-password");
+	By buttonLogin = By.id("button-login");
+	By optionRegisterAccount = By.xpath("//input[@value='register']");
+	By optionGuestCheckout = By.xpath("//input[@value='guest']");
+	By byButtonContinueNewCustomer = By.id("button-account");
+	// Register details
+	By byEmail = By.id("input-payment-email");
+	By byTelephone = By.id("placeholder");
+	By byPasswordRegister = By.id("input-payment-password");
+	By byConfirmPassRegister = By.id("input-payment-confirm");
 	// Billing details
 	By byFirstName = By.id("input-payment-firstname");
 	By byLastName = By.id("input-payment-lastname");
@@ -31,9 +43,9 @@ public class Checkout {
 	// Confirm Order
 	By byMessagePrivacyPolicy = By.xpath("//div[@class='alert alert-danger alert-dismissible']");
 	// Button Continue
-	public By byButtonContinueCheckout = By.xpath("//input[@type='button'][@value='Continue']");
-	public By byButtonContinueBilling = By.xpath("//input[@type='button'][@value='Continue']");
-	public By byButtonContinuePayment = By.id("button-payment-method");
+	By byButtonContinueCheckout = By.xpath("//input[@type='button'][@value='Continue']");
+	By byButtonContinueBilling = By.xpath("//input[@type='button'][@value='Continue']");
+	By byButtonContinuePayment = By.id("button-payment-method");
 
 	private AdapterSelenium adapter;
 
@@ -59,7 +71,7 @@ public class Checkout {
 	}
 
 	public void checkNewAddress() {
-		adapter.clickElement(byIsNewAddress);
+		adapter.clickByLocator(byIsNewAddress);
 	}
 
 	public void enterFirstName(String firstName) {
@@ -103,7 +115,7 @@ public class Checkout {
 	}
 
 	public void checkTermsConditions() {
-		adapter.clickElement(byCheckTermsConditions);
+		adapter.clickByLocator(byCheckTermsConditions);
 	}
 
 	public void validateMessageTermsConditions() {
@@ -112,8 +124,24 @@ public class Checkout {
 				true, "El mensaje de alerta no se desplego correctamente");
 	}
 
-	public void clickContinue(By byStep) {
-		adapter.clickElement(byStep);
+	public void validateCartEmpty() {
+		Assert.assertTrue(adapter.isElementExisting(byTextCartEmpty), "El carrito si tiene productos!");
+	}
+
+	public void clickContinueCartEmpty() {
+		adapter.clickByLocator(byButtonContinueCartEmpy);
+	}
+
+	public void clickContinueCheckout() {
+		adapter.clickByLocator(byButtonContinueCheckout);
+	}
+
+	public void clickContinueBilling() {
+		adapter.clickByLocator(byButtonContinueBilling);
+	}
+
+	public void clickContinuePayment() {
+		adapter.clickByLocator(byButtonContinuePayment);
 	}
 
 }

@@ -20,7 +20,7 @@ public class SearchProduct {
 	Search PagSearch;
 	Login PagLogin;
 	Product Product;
-	ReadData readData;
+	ReadData dataFile;
 
 	/**
 	 * Data for Search product
@@ -35,7 +35,7 @@ public class SearchProduct {
 	@BeforeClass
 	public void beforeClass(String browser, String driverPath, String dataPath, String evidencePath) {
 		// Read data from JSON {dataSearch.json}
-		readData = new ReadData(dataPath);
+		dataFile = new ReadData(dataPath);
 		// Instance Navigation class
 		Navigation = new Navigation(browser, driverPath, evidencePath);
 
@@ -127,13 +127,13 @@ public class SearchProduct {
 	}
 
 	private void readDataForProduct(String nameTestCase) {
-		JSONObject data = readData.readNode(nameTestCase);
+		JSONObject data = dataFile.readNode(nameTestCase);
 		productName = data.get("productName").toString();
 		productDetail = data.get("productDetail").toString();
 	}
 
 	private void readDataForChangeCriteria() {
-		JSONObject data = readData.readNode("searchChangeCriteria");
+		JSONObject data = dataFile.readNode("searchChangeCriteria");
 		productName = data.get("productName").toString();
 		productDetail = data.get("productDetail").toString();
 		selectSort = data.get("selectSort").toString();
