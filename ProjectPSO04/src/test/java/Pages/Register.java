@@ -1,26 +1,36 @@
 package Pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import Adapter.AdapterSelenium;
 
 public class Register {
 	// Personal details
-	By byFirstName = By.id("input-firstname");
-	By byLastName = By.id("input-lastname");
-	By byEmail = By.id("input-email");
-	By byPhone = By.id("input-telephone");
+	@FindBy(id = "input-firstname")
+	WebElement inputFirstName;
+	@FindBy(id = "input-lastname")
+	WebElement inputLastName;
+	@FindBy(id = "input-email")
+	WebElement inputEmail;
+	@FindBy(id = "input-telephone")
+	WebElement inputPhone;
 	// Password
-	By byPassword = By.id("input-password");
-	By byPassConfirm = By.id("input-confirm");
+	@FindBy(id = "input-password")
+	WebElement inputPassword;
+	@FindBy(id = "input-confirm")
+	WebElement inputConfirmPass;
 	// Register
-	By byPrivacyPolicy = By.xpath("//input[@type='checkbox'][@name='agree']");
-	By byButtonContinue = By.xpath("//input[@type='submit'][@value='Continue']");
+	@FindBy(xpath = "//input[@type='checkbox'][@name='agree']")
+	WebElement checkBoxPrivacyPolicy;
+	@FindBy(xpath = "//input[@type='submit'][@value='Continue']")
+	WebElement buttonContinue;
 	// ToLogin
-	By byLoginPage = By.xpath("//a[contains(text(),'login page')]");
+	@FindBy(xpath = "//a[contains(text(),'login page')]")
+	WebElement linkToLoginPage;
 	// Register Completed
 	By byTitleCreated = By.xpath("//h1[contains(text(), 'Your Account Has Been Created!')]");
 	By byBtnContinueCreated = By.xpath("//a[contains(text(),'Continue')]");
@@ -34,31 +44,32 @@ public class Register {
 	private AdapterSelenium adapter;
 
 	public Register(String browser, String driverPath) {
-		adapter = AdapterSelenium.getAdapter(browser, driverPath);	
+		adapter = AdapterSelenium.getAdapter(browser, driverPath);
+		PageFactory.initElements(adapter.getDriver(), this);
 	}
 
 	public void enterFirstName(String firstName) {
-		adapter.enterText(byFirstName, firstName);
+		adapter.enterTextByWebElement(inputFirstName, firstName);
 	}
 
 	public void enterLastName(String lastName) {
-		adapter.enterText(byLastName, lastName);
+		adapter.enterTextByWebElement(inputLastName, lastName);
 	}
 
 	public void enterEmail(String email) {
-		adapter.enterText(byEmail, email);
+		adapter.enterTextByWebElement(inputEmail, email);
 	}
 
 	public void enterPhone(String telephone) {
-		adapter.enterText(byPhone, telephone);
+		adapter.enterTextByWebElement(inputPhone, telephone);
 	}
 
 	public void enterPassword(String password) {
-		adapter.enterText(byPassword, password);
+		adapter.enterTextByWebElement(inputPassword, password);
 	}
 
 	public void enterPasswordConfirm(String passwordConfirm) {
-		adapter.enterText(byPassConfirm, passwordConfirm);
+		adapter.enterTextByWebElement(inputConfirmPass, passwordConfirm);
 	}
 
 	/**
@@ -70,19 +81,19 @@ public class Register {
 			value = "1";
 		}
 		By bySubscribe = By.xpath("//input[@name='newsletter'][@value='" + value + "']");
-		adapter.clickElement(bySubscribe);
+		adapter.clickByLocator(bySubscribe);
 	}
 
 	public void clickPrivayPolicy() {
-		adapter.clickElement(byPrivacyPolicy);
+		adapter.clickByWebElement(checkBoxPrivacyPolicy);
 	}
 
 	public void clickContinue() {
-		adapter.clickElement(byButtonContinue);
+		adapter.clickByWebElement(buttonContinue);
 	}
 
 	public void clickToLoginPage() {
-		adapter.clickElement(byLoginPage);
+		adapter.clickByWebElement(linkToLoginPage);
 	}
 
 	public void validateRegister() {
@@ -90,7 +101,7 @@ public class Register {
 	}
 
 	public void clickBtnContinueCreate() {
-		adapter.clickElement(byBtnContinueCreated);
+		adapter.clickByLocator(byBtnContinueCreated);
 	}
 
 	public void validateMessagePrivacyPolicy() {

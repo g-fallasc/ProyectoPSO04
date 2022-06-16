@@ -1,27 +1,31 @@
 package Pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import Adapter.AdapterSelenium;
 
 public class Login {
 	// Login
-	By byEmail = By.id("input-email");
-	By byPassword = By.id("input-password");
-	By byForgottenPassword = By.xpath("//a[contains(text(), 'Forgotten Password')]");
-	By byButtonLogin = By.xpath("//input[@type='submit'][@value='Login']");
+	@FindBy(id = "input-email")
+	WebElement inputEmail;
+	@FindBy(id = "input-password")
+	WebElement inputPassword;
+	@FindBy(xpath = "//a[contains(text(), 'Forgotten Password')]")
+	WebElement linkToForgottenPassword;
+	@FindBy(xpath = "//input[@type='submit'][@value='Login']")
+	WebElement buttonLogin;
 	// Title Page Login
-	By byTitlePageLogin = By.xpath("//h2[contains(text(), 'Returning Customer')]");
-
+	@FindBy(xpath = "//h2[contains(text(), 'Returning Customer')]")
+	WebElement textTitlePageLogin;
 	// ToRegister
-	By byRegisterPage = By.xpath("//a[contains(text(), 'Continue')]");
-
+	@FindBy(xpath = "//a[contains(text(), 'Continue')]")
+	WebElement buttonToRegisterPage;
 	// Error Login
 	By byMessageErrorLogin = By.xpath("//div[@class='alert alert-danger alert-dismissible']");
-
 	// Logout
 	By byTitleLogout = By.xpath("//h1[contains(text(), 'Account Logout')]");
 	By byMessageLogout = By.xpath(
@@ -32,26 +36,27 @@ public class Login {
 
 	public Login(String browser, String driverPath) {
 		adapter = AdapterSelenium.getAdapter(browser, driverPath);
+		PageFactory.initElements(adapter.getDriver(), this);
 	}
 
 	public void enterEmail(String email) {
-		adapter.enterText(byEmail, email);
+		adapter.enterTextByWebElement(inputEmail, email);
 	}
 
 	public void enterPassword(String password) {
-		adapter.enterText(byPassword, password);
+		adapter.enterTextByWebElement(inputPassword, password);
 	}
 
 	public void clickForgottenPassword() {
-		adapter.clickElement(byForgottenPassword);
+		adapter.clickByWebElement(linkToForgottenPassword);
 	}
 
 	public void clickLogin() {
-		adapter.clickElement(byButtonLogin);
+		adapter.clickByWebElement(buttonLogin);
 	}
 
 	public void clickToRegisterPage() {
-		adapter.clickElement(byRegisterPage);
+		adapter.clickByWebElement(buttonToRegisterPage);
 	}
 
 	public void validateMessageErrorLogin() {
@@ -66,11 +71,11 @@ public class Login {
 	}
 
 	public void clickBtnContinueLogout() {
-		adapter.clickElement(byBtnContinueLogout);
+		adapter.clickByLocator(byBtnContinueLogout);
 	}
 
 	public void validateTitlePageLogin() {
-		Assert.assertTrue(adapter.isElementExisting(byTitlePageLogin), "El titulo es incorrecto");
+		Assert.assertTrue(adapter.isElementExistingByWebElement(textTitlePageLogin), "El titulo es incorrecto");
 	}
 
 }

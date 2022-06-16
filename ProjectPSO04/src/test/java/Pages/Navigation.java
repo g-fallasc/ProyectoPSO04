@@ -1,8 +1,9 @@
 package Pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import Adapter.AdapterSelenium;
 
@@ -11,7 +12,8 @@ public class Navigation {
 	 * TopNavBar
 	 */
 	// Select My Account
-	By byMyAccount = By.xpath("//a[@title='My Account']");
+	@FindBy(xpath = "//a[@title='My Account']")
+	WebElement dropdownMyAccount;
 	By byRegister = By.xpath("//a[contains(text(),'Register')]");
 	By byLogin = By.xpath("//a[contains(text(),'Login')]");
 	By byOrderHistory = By.xpath("//a[contains(text(),'Order History')]");
@@ -19,16 +21,22 @@ public class Navigation {
 	By byDownloads = By.xpath("//a[contains(text(),'Downloads')]");
 	By byLogout = By.xpath("//a[contains(text(),'Logout')]");
 	// Select currency type
-	By byBtnCurrency = By.id("form-currency");
+	@FindBy(id = "form-currency")
+	WebElement dropdownCurrency;
 	// Options
-	By byWishList = By.id("wishlist-total");
-	By byShoppingCart = By.xpath("//a[@title='Shopping Cart']");
-	By byCheckout = By.xpath("//a[@title='Checkout']");
+	@FindBy(id = "wishlist-total")
+	WebElement linkToWishList;
+	@FindBy(xpath = "//a[@title='Shopping Cart']")
+	WebElement linkToShoppingCart;
+	@FindBy(xpath = "//a[@title='Checkout']")
+	WebElement linkToCheckout;
 	/*
 	 * Search
 	 */
-	By bySearchBar = By.xpath("//input[@type='text'][@name='search']");
-	By byButtonSearch = By.xpath("//button[@type='button'][@class='btn btn-default btn-lg']");
+	@FindBy(xpath = "//input[@type='text'][@name='search']")
+	WebElement inputSearchBar;
+	@FindBy(xpath = "//button[@type='button'][@class='btn btn-default btn-lg']")
+	WebElement buttonSearch;
 
 	String evidencePath;
 	String defaultPath;
@@ -36,6 +44,7 @@ public class Navigation {
 
 	public Navigation(String browser, String driverPath, String evidencePath) {
 		adapter = AdapterSelenium.getAdapter(browser, driverPath);
+		PageFactory.initElements(adapter.getDriver(), this);
 		this.evidencePath = evidencePath;
 		this.defaultPath = evidencePath;
 	}
@@ -64,7 +73,7 @@ public class Navigation {
 	 */
 	// Open menu 'Currency'
 	public void navToCurrency() {
-		adapter.clickElement(byBtnCurrency);
+		adapter.clickByWebElement(dropdownCurrency);
 	}
 
 	/**
@@ -73,64 +82,64 @@ public class Navigation {
 	public void selectCurrency(String currency) {
 		navToCurrency();
 		By byCurrency = By.name(currency);
-		adapter.clickElement(byCurrency);
+		adapter.clickByLocator(byCurrency);
 	}
 
 	// Open menu 'My Account'
 	private void navToMyAccount() {
-		adapter.clickElement(byMyAccount);
+		adapter.clickByWebElement(dropdownMyAccount);
 	}
 
 	public void navToRegister() {
 		navToMyAccount();
-		adapter.clickElement(byRegister);
+		adapter.clickByLocator(byRegister);
 	}
 
 	public void navToLogin() {
 		navToMyAccount();
-		adapter.clickElement(byLogin);
+		adapter.clickByLocator(byLogin);
 	}
 
 	public void navToOrderHistory() {
 		navToMyAccount();
-		adapter.clickElement(byOrderHistory);
+		adapter.clickByLocator(byOrderHistory);
 	}
 
 	public void navToTransactions() {
 		navToMyAccount();
-		adapter.clickElement(byTransactions);
+		adapter.clickByLocator(byTransactions);
 	}
 
 	public void navToDownloads() {
 		navToMyAccount();
-		adapter.clickElement(byDownloads);
+		adapter.clickByLocator(byDownloads);
 	}
 
 	public void navToLogout() {
 		navToMyAccount();
-		adapter.clickElement(byLogout);
+		adapter.clickByLocator(byLogout);
 	}
 
 	public void navToWishList() {
-		adapter.clickElement(byWishList);
+		adapter.clickByWebElement(linkToWishList);
 	}
 
 	public void navToShoppingCart() {
-		adapter.clickElement(byShoppingCart);
+		adapter.clickByWebElement(linkToShoppingCart);
 	}
 
 	public void navToCheckout() {
-		adapter.clickElement(byCheckout);
+		adapter.clickByWebElement(linkToCheckout);
 	}
 
 	/**
 	 ** -------- Search Bar --------**
 	 */
 	public void enterValueSearch(String value) {
-		adapter.enterText(bySearchBar, value);
+		adapter.enterTextByWebElement(inputSearchBar, value);
 	}
 
 	public void clickButtonSearch() {
-		adapter.clickElement(byButtonSearch);
+		adapter.clickByWebElement(buttonSearch);
 	}
 }

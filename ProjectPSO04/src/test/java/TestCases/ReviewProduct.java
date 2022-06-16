@@ -21,7 +21,7 @@ public class ReviewProduct {
 	Review PagReview;
 	Login PagLogin;
 	Product Product;
-	ReadData readData;
+	ReadData dataFile;
 
 	/**
 	 * Data for Search product
@@ -35,7 +35,7 @@ public class ReviewProduct {
 	@BeforeClass
 	public void beforeClass(String browser, String driverPath, String dataPath, String evidencePath) {
 		// Read data from JSON {dataSearch.json}
-		readData = new ReadData(dataPath);
+		dataFile = new ReadData(dataPath);
 		// Instance Navigation class
 		Navigation = new Navigation(browser, driverPath, evidencePath);
 
@@ -86,7 +86,7 @@ public class ReviewProduct {
 	}
 
 	private void readDataForProduct(String nameTestCase) {
-		JSONObject data = readData.readNode(nameTestCase);
+		JSONObject data = dataFile.readNode(nameTestCase);
 		productName = data.get("productName").toString();
 		userName = data.get("userName").toString();
 		review = data.get("review").toString();

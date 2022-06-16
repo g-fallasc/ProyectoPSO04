@@ -17,7 +17,7 @@ public class CheckoutOrder {
 	Navigation Navigation;
 	Checkout PagCheckout;
 	Login PagLogin;
-	ReadData readData;
+	ReadData dataFile;
 
 	/**
 	 * Data for Checkout order
@@ -42,7 +42,7 @@ public class CheckoutOrder {
 	@BeforeClass
 	public void beforeClass(String browser, String driverPath, String dataPath, String evidencePath) {
 		// Read data from JSON {dataCheckout.json}
-		readData = new ReadData(dataPath);
+		dataFile = new ReadData(dataPath);
 		// Instance Navigation class
 		Navigation = new Navigation(browser, driverPath, evidencePath);
 
@@ -69,7 +69,7 @@ public class CheckoutOrder {
 
 		if (PagCheckout.isExistingAddress()) {
 			Navigation.takeScreenshot();
-			PagCheckout.clickContinue(PagCheckout.byButtonContinueBilling);
+			PagCheckout.clickContinueBilling();
 		} else {
 			Navigation.takeScreenshot();
 			// Enter personal details
@@ -82,14 +82,14 @@ public class CheckoutOrder {
 			PagCheckout.selectCounty(country);
 			PagCheckout.selectRegionState(region);
 			Navigation.takeScreenshot();
-			PagCheckout.clickContinue(PagCheckout.byButtonContinueBilling);
+			PagCheckout.clickContinueBilling();
 		}
 		Navigation.takeScreenshot();
 		// Payment Method
 		PagCheckout.enterCommentOrder(comment);
 		PagCheckout.checkTermsConditions();
 		Navigation.takeScreenshot();
-		PagCheckout.clickContinue(PagCheckout.byButtonContinuePayment);
+		PagCheckout.clickContinuePayment();
 		Navigation.takeScreenshot();
 		logout();
 		Navigation.takeScreenshot();
@@ -121,13 +121,13 @@ public class CheckoutOrder {
 		PagCheckout.selectCounty(country);
 		PagCheckout.selectRegionState(region);
 		Navigation.takeScreenshot();
-		PagCheckout.clickContinue(PagCheckout.byButtonContinueBilling);
+		PagCheckout.clickContinueBilling();
 		// Payment Method
 		Navigation.takeScreenshot();
 		PagCheckout.enterCommentOrder(comment);
 		PagCheckout.checkTermsConditions();
 		Navigation.takeScreenshot();
-		PagCheckout.clickContinue(PagCheckout.byButtonContinuePayment);
+		PagCheckout.clickContinuePayment();
 		Navigation.takeScreenshot();
 		logout();
 		Navigation.takeScreenshot();
@@ -158,7 +158,7 @@ public class CheckoutOrder {
 	}
 
 	private void readDataTestCase(String nameTestCase) {
-		JSONObject data = readData.readNode(nameTestCase);
+		JSONObject data = dataFile.readNode(nameTestCase);
 		firstName = data.get("firstName").toString();
 		lastName = data.get("lastName").toString();
 		company = data.get("company").toString();

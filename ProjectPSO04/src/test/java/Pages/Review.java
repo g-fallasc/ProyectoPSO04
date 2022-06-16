@@ -24,7 +24,7 @@ public class Review {
 	}
 
 	public void openReviews() {
-		adapter.clickElement(byTabReview);
+		adapter.clickByLocator(byTabReview);
 	}
 
 	public void enterYourName(String name) {
@@ -41,11 +41,11 @@ public class Review {
 	public void enterRating(String rating) {
 		By byRating = By.xpath("//input[@name='rating'][@value='" + rating + "']");
 
-		adapter.clickElement(byRating);
+		adapter.clickByLocator(byRating);
 	}
 
 	public void clickContinue() {
-		adapter.clickElement(byBtnContinue);
+		adapter.clickByLocator(byBtnContinue);
 	}
 
 	public void validateSubmittedReview() {
