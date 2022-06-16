@@ -4,19 +4,16 @@ package TestCases;
 import java.util.Random;
 
 import org.json.simple.JSONObject;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import Pages.Register;
 import Utils.ReadData;
+import Utils.WriteLog;
 import Pages.Login;
 import Pages.MyAccount;
 import Pages.Navigation;
 
+@Listeners(Listener.ListenerTestNG.class)
 public class Auth {
 	Register PagRegister;
 	Navigation Navigation;
@@ -56,6 +53,9 @@ public class Auth {
 
 	@Test
 	public void TestCaseOptionRegister() throws InterruptedException {
+		// Initialize log file
+		WriteLog log = new WriteLog();
+		log.addLog("Logs");
 		Navigation.setEvidencePath("ValidateOptionRegister");
 		Navigation.navToRegister();
 		PagRegister.validateTitlePageRegister();
