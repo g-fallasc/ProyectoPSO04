@@ -23,6 +23,9 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import Listener.EventFiringDecorator;
+import Listener.WebDriverListener;
+
 public class AdapterSelenium {
 
 	private WebDriver driver;
@@ -54,6 +57,9 @@ public class AdapterSelenium {
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+
+			WebDriverListener listener = new WebDriverListener();
+			driver = new EventFiringDecorator(listener).decorate(driver);
 		} catch (WebDriverException e) {
 			Assert.fail(e.getMessage());
 		}
