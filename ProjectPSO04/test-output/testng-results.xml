@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="8" total="29" passed="21" failed="0" skipped="0">
+<testng-results ignored="9" total="31" passed="22" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-06-16T10:27:05 CST" name="Test Cases - Segunda Entrega" finished-at="2022-06-16T10:30:52 CST" duration-ms="227787">
+  <suite started-at="2022-06-17T20:19:03 CST" name="Test Cases - Segunda Entrega" finished-at="2022-06-17T20:22:57 CST" duration-ms="234781">
     <groups>
     </groups>
-    <test started-at="2022-06-16T10:27:05 CST" name="Pruebas Registro" finished-at="2022-06-16T10:27:55 CST" duration-ms="50028">
+    <test started-at="2022-06-17T20:19:03 CST" name="Pruebas Registro" finished-at="2022-06-17T20:19:58 CST" duration-ms="55231">
       <class name="TestCases.Auth">
-        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.Auth@4659191b]" started-at="2022-06-16T10:27:05 CST" name="beforeClass" finished-at="2022-06-16T10:27:16 CST" duration-ms="11551" status="PASS">
+        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.Auth@4659191b]" started-at="2022-06-17T20:19:03 CST" name="beforeClass" finished-at="2022-06-17T20:19:10 CST" duration-ms="7038" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -33,7 +33,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.Auth@4659191b]" started-at="2022-06-16T10:27:16 CST" name="beforeTest" finished-at="2022-06-16T10:27:20 CST" duration-ms="4052" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.Auth@4659191b]" started-at="2022-06-17T20:19:10 CST" name="beforeTest" finished-at="2022-06-17T20:19:16 CST" duration-ms="6477" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -44,15 +44,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="TestCaseOptionRegister()[pri:0, instance:TestCases.Auth@4659191b]" started-at="2022-06-16T10:27:20 CST" name="TestCaseOptionRegister" finished-at="2022-06-16T10:27:25 CST" duration-ms="4850" status="PASS">
+        <test-method signature="TestCaseOptionRegister()[pri:0, instance:TestCases.Auth@4659191b]" started-at="2022-06-17T20:19:16 CST" name="TestCaseOptionRegister" finished-at="2022-06-17T20:19:22 CST" duration-ms="5654" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCaseOptionRegister -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.Auth@4659191b]" started-at="2022-06-16T10:27:25 CST" name="afterTest" finished-at="2022-06-16T10:27:25 CST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.Auth@4659191b]" started-at="2022-06-17T20:19:22 CST" name="afterTest" finished-at="2022-06-17T20:19:22 CST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.Auth@4659191b]" started-at="2022-06-16T10:27:25 CST" name="beforeTest" finished-at="2022-06-16T10:27:27 CST" duration-ms="1539" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.Auth@4659191b]" started-at="2022-06-17T20:19:22 CST" name="beforeTest" finished-at="2022-06-17T20:19:23 CST" duration-ms="1265" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -63,15 +63,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="TestCaseRegisterWithoutPrivacyPolicy()[pri:0, instance:TestCases.Auth@4659191b]" started-at="2022-06-16T10:27:27 CST" name="TestCaseRegisterWithoutPrivacyPolicy" finished-at="2022-06-16T10:27:37 CST" duration-ms="10551" status="PASS">
+        <test-method signature="TestCaseRegisterWithoutPrivacyPolicy()[pri:0, instance:TestCases.Auth@4659191b]" started-at="2022-06-17T20:19:23 CST" name="TestCaseRegisterWithoutPrivacyPolicy" finished-at="2022-06-17T20:19:35 CST" duration-ms="11749" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCaseRegisterWithoutPrivacyPolicy -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.Auth@4659191b]" started-at="2022-06-16T10:27:37 CST" name="afterTest" finished-at="2022-06-16T10:27:37 CST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.Auth@4659191b]" started-at="2022-06-17T20:19:35 CST" name="afterTest" finished-at="2022-06-17T20:19:35 CST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.Auth@4659191b]" started-at="2022-06-16T10:27:37 CST" name="beforeTest" finished-at="2022-06-16T10:27:38 CST" duration-ms="663" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.Auth@4659191b]" started-at="2022-06-17T20:19:35 CST" name="beforeTest" finished-at="2022-06-17T20:19:36 CST" duration-ms="803" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -82,11 +82,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="TestCaseRegisterSuccess()[pri:0, instance:TestCases.Auth@4659191b]" started-at="2022-06-16T10:27:38 CST" name="TestCaseRegisterSuccess" finished-at="2022-06-16T10:27:48 CST" duration-ms="9561" status="PASS">
+        <test-method signature="TestCaseRegisterSuccess()[pri:0, instance:TestCases.Auth@4659191b]" started-at="2022-06-17T20:19:36 CST" name="TestCaseRegisterSuccess" finished-at="2022-06-17T20:19:50 CST" duration-ms="14163" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCaseRegisterSuccess -->
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.Auth@4659191b]" started-at="2022-06-16T10:27:48 CST" name="beforeTest" finished-at="2022-06-16T10:27:48 CST" duration-ms="641" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.Auth@4659191b]" started-at="2022-06-17T20:19:50 CST" name="afterTest" finished-at="2022-06-17T20:19:50 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.Auth@4659191b]" started-at="2022-06-17T20:19:50 CST" name="beforeTest" finished-at="2022-06-17T20:19:51 CST" duration-ms="841" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -97,27 +101,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.Auth@4659191b]" started-at="2022-06-16T10:27:48 CST" name="afterTest" finished-at="2022-06-16T10:27:48 CST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method signature="TestCaseRegisterRepeatedEmail()[pri:0, instance:TestCases.Auth@4659191b]" started-at="2022-06-16T10:27:48 CST" name="TestCaseRegisterRepeatedEmail" finished-at="2022-06-16T10:27:52 CST" duration-ms="4234" status="PASS">
+        <test-method signature="TestCaseRegisterRepeatedEmail()[pri:0, instance:TestCases.Auth@4659191b]" started-at="2022-06-17T20:19:51 CST" name="TestCaseRegisterRepeatedEmail" finished-at="2022-06-17T20:19:57 CST" duration-ms="6247" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCaseRegisterRepeatedEmail -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.Auth@4659191b]" started-at="2022-06-16T10:27:52 CST" name="afterTest" finished-at="2022-06-16T10:27:52 CST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.Auth@4659191b]" started-at="2022-06-17T20:19:57 CST" name="afterTest" finished-at="2022-06-17T20:19:57 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestCases.Auth@4659191b]" started-at="2022-06-16T10:27:52 CST" name="afterClass" finished-at="2022-06-16T10:27:55 CST" duration-ms="2190" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestCases.Auth@4659191b]" started-at="2022-06-17T20:19:57 CST" name="afterClass" finished-at="2022-06-17T20:19:58 CST" duration-ms="792" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- TestCases.Auth -->
     </test> <!-- Pruebas Registro -->
-    <test started-at="2022-06-16T10:27:55 CST" name="Pruebas Iniciar Sesion" finished-at="2022-06-16T10:28:29 CST" duration-ms="33964">
+    <test started-at="2022-06-17T20:19:58 CST" name="Pruebas Iniciar Sesion" finished-at="2022-06-17T20:20:24 CST" duration-ms="26474">
       <class name="TestCases.Auth">
-        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.Auth@3e27ba32]" started-at="2022-06-16T10:27:55 CST" name="beforeClass" finished-at="2022-06-16T10:27:59 CST" duration-ms="4387" status="PASS">
+        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.Auth@3e27ba32]" started-at="2022-06-17T20:19:58 CST" name="beforeClass" finished-at="2022-06-17T20:20:00 CST" duration-ms="2479" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -143,7 +143,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.Auth@3e27ba32]" started-at="2022-06-16T10:27:59 CST" name="beforeTest" finished-at="2022-06-16T10:28:05 CST" duration-ms="5456" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.Auth@3e27ba32]" started-at="2022-06-17T20:20:00 CST" name="beforeTest" finished-at="2022-06-17T20:20:05 CST" duration-ms="4798" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -154,15 +154,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="TestCaseOptionLogin()[pri:0, instance:TestCases.Auth@3e27ba32]" started-at="2022-06-16T10:28:05 CST" name="TestCaseOptionLogin" finished-at="2022-06-16T10:28:06 CST" duration-ms="1298" status="PASS">
+        <test-method signature="TestCaseOptionLogin()[pri:0, instance:TestCases.Auth@3e27ba32]" started-at="2022-06-17T20:20:05 CST" name="TestCaseOptionLogin" finished-at="2022-06-17T20:20:07 CST" duration-ms="1678" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCaseOptionLogin -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.Auth@3e27ba32]" started-at="2022-06-16T10:28:06 CST" name="afterTest" finished-at="2022-06-16T10:28:06 CST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.Auth@3e27ba32]" started-at="2022-06-17T20:20:07 CST" name="afterTest" finished-at="2022-06-17T20:20:07 CST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.Auth@3e27ba32]" started-at="2022-06-16T10:28:06 CST" name="beforeTest" finished-at="2022-06-16T10:28:06 CST" duration-ms="600" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.Auth@3e27ba32]" started-at="2022-06-17T20:20:07 CST" name="beforeTest" finished-at="2022-06-17T20:20:08 CST" duration-ms="721" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -173,15 +173,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="TestCaseLoginIncorrect()[pri:0, instance:TestCases.Auth@3e27ba32]" started-at="2022-06-16T10:28:06 CST" name="TestCaseLoginIncorrect" finished-at="2022-06-16T10:28:11 CST" duration-ms="4792" status="PASS">
+        <test-method signature="TestCaseLoginIncorrect()[pri:0, instance:TestCases.Auth@3e27ba32]" started-at="2022-06-17T20:20:08 CST" name="TestCaseLoginIncorrect" finished-at="2022-06-17T20:20:11 CST" duration-ms="3427" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCaseLoginIncorrect -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.Auth@3e27ba32]" started-at="2022-06-16T10:28:11 CST" name="afterTest" finished-at="2022-06-16T10:28:11 CST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.Auth@3e27ba32]" started-at="2022-06-17T20:20:11 CST" name="afterTest" finished-at="2022-06-17T20:20:11 CST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.Auth@3e27ba32]" started-at="2022-06-16T10:28:11 CST" name="beforeTest" finished-at="2022-06-16T10:28:12 CST" duration-ms="873" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.Auth@3e27ba32]" started-at="2022-06-17T20:20:11 CST" name="beforeTest" finished-at="2022-06-17T20:20:12 CST" duration-ms="700" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -192,15 +192,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="TestCaseLoginSuccess()[pri:0, instance:TestCases.Auth@3e27ba32]" started-at="2022-06-16T10:28:12 CST" name="TestCaseLoginSuccess" finished-at="2022-06-16T10:28:18 CST" duration-ms="6127" status="PASS">
+        <test-method signature="TestCaseLoginSuccess()[pri:0, instance:TestCases.Auth@3e27ba32]" started-at="2022-06-17T20:20:12 CST" name="TestCaseLoginSuccess" finished-at="2022-06-17T20:20:18 CST" duration-ms="6142" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCaseLoginSuccess -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.Auth@3e27ba32]" started-at="2022-06-16T10:28:18 CST" name="afterTest" finished-at="2022-06-16T10:28:18 CST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.Auth@3e27ba32]" started-at="2022-06-17T20:20:18 CST" name="afterTest" finished-at="2022-06-17T20:20:18 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.Auth@3e27ba32]" started-at="2022-06-16T10:28:18 CST" name="beforeTest" finished-at="2022-06-16T10:28:19 CST" duration-ms="604" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.Auth@3e27ba32]" started-at="2022-06-17T20:20:18 CST" name="beforeTest" finished-at="2022-06-17T20:20:18 CST" duration-ms="668" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -211,23 +211,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="TestCaseLogout()[pri:0, instance:TestCases.Auth@3e27ba32]" started-at="2022-06-16T10:28:19 CST" name="TestCaseLogout" finished-at="2022-06-16T10:28:26 CST" duration-ms="7078" status="PASS">
+        <test-method signature="TestCaseLogout()[pri:0, instance:TestCases.Auth@3e27ba32]" started-at="2022-06-17T20:20:18 CST" name="TestCaseLogout" finished-at="2022-06-17T20:20:24 CST" duration-ms="5300" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCaseLogout -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.Auth@3e27ba32]" started-at="2022-06-16T10:28:26 CST" name="afterTest" finished-at="2022-06-16T10:28:26 CST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestCases.Auth@3e27ba32]" started-at="2022-06-16T10:28:26 CST" name="afterClass" finished-at="2022-06-16T10:28:29 CST" duration-ms="2725" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestCases.Auth@3e27ba32]" started-at="2022-06-17T20:20:24 CST" name="afterClass" finished-at="2022-06-17T20:20:24 CST" duration-ms="543" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.Auth@3e27ba32]" started-at="2022-06-17T20:20:24 CST" name="afterTest" finished-at="2022-06-17T20:20:24 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
       </class> <!-- TestCases.Auth -->
     </test> <!-- Pruebas Iniciar Sesion -->
-    <test started-at="2022-06-16T10:28:29 CST" name="Pruebas Pagina Principal - Verificar Productos" finished-at="2022-06-16T10:29:11 CST" duration-ms="42177">
+    <test started-at="2022-06-17T20:20:24 CST" name="Pruebas Pagina Principal - Verificar Productos" finished-at="2022-06-17T20:20:46 CST" duration-ms="22078">
       <class name="TestCases.ProductHomePage">
-        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-16T10:28:29 CST" name="beforeClass" finished-at="2022-06-16T10:28:31 CST" duration-ms="2778" status="PASS">
+        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-17T20:20:24 CST" name="beforeClass" finished-at="2022-06-17T20:20:26 CST" duration-ms="1717" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -253,7 +253,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-16T10:28:31 CST" name="beforeTest" finished-at="2022-06-16T10:28:37 CST" duration-ms="5864" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-17T20:20:26 CST" name="beforeTest" finished-at="2022-06-17T20:20:35 CST" duration-ms="9380" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -264,15 +264,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="TestCaseValidateProduct()[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-16T10:28:37 CST" name="TestCaseValidateProduct" finished-at="2022-06-16T10:28:39 CST" duration-ms="1331" status="PASS">
+        <test-method signature="TestCaseValidateProduct()[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-17T20:20:35 CST" name="TestCaseValidateProduct" finished-at="2022-06-17T20:20:36 CST" duration-ms="537" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCaseValidateProduct -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-16T10:28:39 CST" name="afterTest" finished-at="2022-06-16T10:28:39 CST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-17T20:20:36 CST" name="afterTest" finished-at="2022-06-17T20:20:36 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-16T10:28:39 CST" name="beforeTest" finished-at="2022-06-16T10:28:40 CST" duration-ms="902" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-17T20:20:36 CST" name="beforeTest" finished-at="2022-06-17T20:20:37 CST" duration-ms="618" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -283,15 +283,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="TestCaseValidateProductNotExist()[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-16T10:28:40 CST" name="TestCaseValidateProductNotExist" finished-at="2022-06-16T10:28:41 CST" duration-ms="1273" status="PASS">
+        <test-method signature="TestCaseValidateProductNotExist()[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-17T20:20:37 CST" name="TestCaseValidateProductNotExist" finished-at="2022-06-17T20:20:37 CST" duration-ms="498" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCaseValidateProductNotExist -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-16T10:28:41 CST" name="afterTest" finished-at="2022-06-16T10:28:41 CST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-16T10:28:41 CST" name="beforeTest" finished-at="2022-06-16T10:28:42 CST" duration-ms="1305" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-17T20:20:37 CST" name="beforeTest" finished-at="2022-06-17T20:20:38 CST" duration-ms="562" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -302,15 +298,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="TestCaseSelectCurrency()[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-16T10:28:42 CST" name="TestCaseSelectCurrency" finished-at="2022-06-16T10:28:54 CST" duration-ms="11644" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-17T20:20:37 CST" name="afterTest" finished-at="2022-06-17T20:20:37 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method signature="TestCaseSelectCurrency()[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-17T20:20:38 CST" name="TestCaseSelectCurrency" finished-at="2022-06-17T20:20:40 CST" duration-ms="2345" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCaseSelectCurrency -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-16T10:28:54 CST" name="afterTest" finished-at="2022-06-16T10:28:54 CST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-17T20:20:40 CST" name="afterTest" finished-at="2022-06-17T20:20:40 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-16T10:28:54 CST" name="beforeTest" finished-at="2022-06-16T10:28:56 CST" duration-ms="2011" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-17T20:20:40 CST" name="beforeTest" finished-at="2022-06-17T20:20:41 CST" duration-ms="920" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -321,15 +321,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="TestCaseProductAddToCart()[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-16T10:28:56 CST" name="TestCaseProductAddToCart" finished-at="2022-06-16T10:29:02 CST" duration-ms="6005" status="PASS">
+        <test-method signature="TestCaseProductAddToCart()[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-17T20:20:41 CST" name="TestCaseProductAddToCart" finished-at="2022-06-17T20:20:42 CST" duration-ms="1262" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCaseProductAddToCart -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-16T10:29:02 CST" name="afterTest" finished-at="2022-06-16T10:29:02 CST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-17T20:20:42 CST" name="afterTest" finished-at="2022-06-17T20:20:42 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-16T10:29:02 CST" name="beforeTest" finished-at="2022-06-16T10:29:03 CST" duration-ms="1431" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-17T20:20:42 CST" name="beforeTest" finished-at="2022-06-17T20:20:43 CST" duration-ms="633" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -340,15 +340,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="TestCaseProductAddToWishList()[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-16T10:29:03 CST" name="TestCaseProductAddToWishList" finished-at="2022-06-16T10:29:06 CST" duration-ms="3097" status="PASS">
+        <test-method signature="TestCaseProductAddToWishList()[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-17T20:20:43 CST" name="TestCaseProductAddToWishList" finished-at="2022-06-17T20:20:44 CST" duration-ms="1233" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCaseProductAddToWishList -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-16T10:29:06 CST" name="afterTest" finished-at="2022-06-16T10:29:06 CST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-17T20:20:44 CST" name="afterTest" finished-at="2022-06-17T20:20:44 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-16T10:29:06 CST" name="beforeTest" finished-at="2022-06-16T10:29:07 CST" duration-ms="685" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-17T20:20:44 CST" name="beforeTest" finished-at="2022-06-17T20:20:45 CST" duration-ms="568" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -359,23 +359,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="TestCaseProductAddToCompare()[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-16T10:29:07 CST" name="TestCaseProductAddToCompare" finished-at="2022-06-16T10:29:09 CST" duration-ms="1789" status="PASS">
+        <test-method signature="TestCaseProductAddToCompare()[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-17T20:20:45 CST" name="TestCaseProductAddToCompare" finished-at="2022-06-17T20:20:46 CST" duration-ms="1253" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCaseProductAddToCompare -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-16T10:29:09 CST" name="afterTest" finished-at="2022-06-16T10:29:09 CST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-16T10:29:09 CST" name="afterClass" finished-at="2022-06-16T10:29:11 CST" duration-ms="1944" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-17T20:20:46 CST" name="afterClass" finished-at="2022-06-17T20:20:46 CST" duration-ms="535" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.ProductHomePage@1cf6d1be]" started-at="2022-06-17T20:20:46 CST" name="afterTest" finished-at="2022-06-17T20:20:46 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
       </class> <!-- TestCases.ProductHomePage -->
     </test> <!-- Pruebas Pagina Principal - Verificar Productos -->
-    <test started-at="2022-06-16T10:29:11 CST" name="Pruebas Busqueda" finished-at="2022-06-16T10:29:42 CST" duration-ms="30658">
+    <test started-at="2022-06-17T20:20:46 CST" name="Pruebas Busqueda" finished-at="2022-06-17T20:21:16 CST" duration-ms="29132">
       <class name="TestCases.SearchProduct">
-        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.SearchProduct@53fb3dab]" started-at="2022-06-16T10:29:11 CST" name="beforeClass" finished-at="2022-06-16T10:29:13 CST" duration-ms="2013" status="PASS">
+        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.SearchProduct@53fb3dab]" started-at="2022-06-17T20:20:46 CST" name="beforeClass" finished-at="2022-06-17T20:20:48 CST" duration-ms="1926" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -401,7 +401,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.SearchProduct@53fb3dab]" started-at="2022-06-16T10:29:13 CST" name="beforeTest" finished-at="2022-06-16T10:29:18 CST" duration-ms="5244" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.SearchProduct@53fb3dab]" started-at="2022-06-17T20:20:48 CST" name="beforeTest" finished-at="2022-06-17T20:20:55 CST" duration-ms="6249" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -412,15 +412,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="TestCaseSearchProductExist()[pri:0, instance:TestCases.SearchProduct@53fb3dab]" started-at="2022-06-16T10:29:18 CST" name="TestCaseSearchProductExist" finished-at="2022-06-16T10:29:23 CST" duration-ms="4356" status="PASS">
+        <test-method signature="TestCaseSearchProductExist()[pri:0, instance:TestCases.SearchProduct@53fb3dab]" started-at="2022-06-17T20:20:55 CST" name="TestCaseSearchProductExist" finished-at="2022-06-17T20:20:58 CST" duration-ms="3065" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCaseSearchProductExist -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.SearchProduct@53fb3dab]" started-at="2022-06-16T10:29:23 CST" name="afterTest" finished-at="2022-06-16T10:29:23 CST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.SearchProduct@53fb3dab]" started-at="2022-06-17T20:20:58 CST" name="afterTest" finished-at="2022-06-17T20:20:58 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.SearchProduct@53fb3dab]" started-at="2022-06-16T10:29:23 CST" name="beforeTest" finished-at="2022-06-16T10:29:24 CST" duration-ms="1008" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.SearchProduct@53fb3dab]" started-at="2022-06-17T20:20:58 CST" name="beforeTest" finished-at="2022-06-17T20:20:58 CST" duration-ms="701" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -431,15 +431,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="TestCaseSearchChangeCriteria()[pri:0, instance:TestCases.SearchProduct@53fb3dab]" started-at="2022-06-16T10:29:24 CST" name="TestCaseSearchChangeCriteria" finished-at="2022-06-16T10:29:37 CST" duration-ms="13282" status="PASS">
+        <test-method signature="TestCaseSearchChangeCriteria()[pri:0, instance:TestCases.SearchProduct@53fb3dab]" started-at="2022-06-17T20:20:58 CST" name="TestCaseSearchChangeCriteria" finished-at="2022-06-17T20:21:10 CST" duration-ms="11490" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCaseSearchChangeCriteria -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.SearchProduct@53fb3dab]" started-at="2022-06-16T10:29:37 CST" name="afterTest" finished-at="2022-06-16T10:29:37 CST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.SearchProduct@53fb3dab]" started-at="2022-06-17T20:21:10 CST" name="afterTest" finished-at="2022-06-17T20:21:10 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.SearchProduct@53fb3dab]" started-at="2022-06-16T10:29:37 CST" name="beforeTest" finished-at="2022-06-16T10:29:38 CST" duration-ms="952" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.SearchProduct@53fb3dab]" started-at="2022-06-17T20:21:10 CST" name="beforeTest" finished-at="2022-06-17T20:21:11 CST" duration-ms="815" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -450,23 +450,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="TestCaseSearchProductNotExist()[pri:0, instance:TestCases.SearchProduct@53fb3dab]" started-at="2022-06-16T10:29:38 CST" name="TestCaseSearchProductNotExist" finished-at="2022-06-16T10:29:41 CST" duration-ms="2897" status="PASS">
+        <test-method signature="TestCaseSearchProductNotExist()[pri:0, instance:TestCases.SearchProduct@53fb3dab]" started-at="2022-06-17T20:21:11 CST" name="TestCaseSearchProductNotExist" finished-at="2022-06-17T20:21:15 CST" duration-ms="4063" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCaseSearchProductNotExist -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.SearchProduct@53fb3dab]" started-at="2022-06-16T10:29:41 CST" name="afterTest" finished-at="2022-06-16T10:29:41 CST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.SearchProduct@53fb3dab]" started-at="2022-06-17T20:21:15 CST" name="afterTest" finished-at="2022-06-17T20:21:15 CST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestCases.SearchProduct@53fb3dab]" started-at="2022-06-16T10:29:41 CST" name="afterClass" finished-at="2022-06-16T10:29:42 CST" duration-ms="890" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestCases.SearchProduct@53fb3dab]" started-at="2022-06-17T20:21:15 CST" name="afterClass" finished-at="2022-06-17T20:21:16 CST" duration-ms="810" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- TestCases.SearchProduct -->
     </test> <!-- Pruebas Busqueda -->
-    <test started-at="2022-06-16T10:29:42 CST" name="Pruebas Validar Orden" finished-at="2022-06-16T10:30:17 CST" duration-ms="35235">
+    <test started-at="2022-06-17T20:21:16 CST" name="Pruebas Validar Orden" finished-at="2022-06-17T20:21:52 CST" duration-ms="36234">
       <class name="TestCases.CheckoutOrder">
-        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.CheckoutOrder@79e4c792]" started-at="2022-06-16T10:29:42 CST" name="beforeClass" finished-at="2022-06-16T10:29:44 CST" duration-ms="2455" status="PASS">
+        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.CheckoutOrder@79e4c792]" started-at="2022-06-17T20:21:16 CST" name="beforeClass" finished-at="2022-06-17T20:21:17 CST" duration-ms="1845" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -492,7 +492,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.CheckoutOrder@79e4c792]" started-at="2022-06-16T10:29:44 CST" name="beforeTest" finished-at="2022-06-16T10:29:49 CST" duration-ms="5154" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.CheckoutOrder@79e4c792]" started-at="2022-06-17T20:21:17 CST" name="beforeTest" finished-at="2022-06-17T20:21:23 CST" duration-ms="5624" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -503,15 +503,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="TestCaseCheckoutOrder()[pri:0, instance:TestCases.CheckoutOrder@79e4c792]" started-at="2022-06-16T10:29:49 CST" name="TestCaseCheckoutOrder" finished-at="2022-06-16T10:30:00 CST" duration-ms="11165" status="PASS">
+        <test-method signature="TestCaseCheckoutOrder()[pri:0, instance:TestCases.CheckoutOrder@79e4c792]" started-at="2022-06-17T20:21:23 CST" name="TestCaseCheckoutOrder" finished-at="2022-06-17T20:21:38 CST" duration-ms="14977" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCaseCheckoutOrder -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.CheckoutOrder@79e4c792]" started-at="2022-06-16T10:30:00 CST" name="afterTest" finished-at="2022-06-16T10:30:00 CST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.CheckoutOrder@79e4c792]" started-at="2022-06-17T20:21:38 CST" name="afterTest" finished-at="2022-06-17T20:21:38 CST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.CheckoutOrder@79e4c792]" started-at="2022-06-16T10:30:00 CST" name="beforeTest" finished-at="2022-06-16T10:30:03 CST" duration-ms="2234" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.CheckoutOrder@79e4c792]" started-at="2022-06-17T20:21:38 CST" name="beforeTest" finished-at="2022-06-17T20:21:39 CST" duration-ms="974" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -522,23 +522,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="TestCaseCheckoutOrderAddNewAddress()[pri:0, instance:TestCases.CheckoutOrder@79e4c792]" started-at="2022-06-16T10:30:03 CST" name="TestCaseCheckoutOrderAddNewAddress" finished-at="2022-06-16T10:30:16 CST" duration-ms="13514" status="PASS">
+        <test-method signature="TestCaseCheckoutOrderAddNewAddress()[pri:0, instance:TestCases.CheckoutOrder@79e4c792]" started-at="2022-06-17T20:21:39 CST" name="TestCaseCheckoutOrderAddNewAddress" finished-at="2022-06-17T20:21:51 CST" duration-ms="12177" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCaseCheckoutOrderAddNewAddress -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.CheckoutOrder@79e4c792]" started-at="2022-06-16T10:30:16 CST" name="afterTest" finished-at="2022-06-16T10:30:16 CST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.CheckoutOrder@79e4c792]" started-at="2022-06-17T20:21:51 CST" name="afterTest" finished-at="2022-06-17T20:21:51 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestCases.CheckoutOrder@79e4c792]" started-at="2022-06-16T10:30:16 CST" name="afterClass" finished-at="2022-06-16T10:30:17 CST" duration-ms="704" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestCases.CheckoutOrder@79e4c792]" started-at="2022-06-17T20:21:51 CST" name="afterClass" finished-at="2022-06-17T20:21:52 CST" duration-ms="627" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- TestCases.CheckoutOrder -->
     </test> <!-- Pruebas Validar Orden -->
-    <test started-at="2022-06-16T10:30:17 CST" name="Pruebas Categorias" finished-at="2022-06-16T10:30:28 CST" duration-ms="10934">
+    <test started-at="2022-06-17T20:21:52 CST" name="Pruebas Categorias" finished-at="2022-06-17T20:22:03 CST" duration-ms="11691">
       <class name="TestCases.CategoryOptions">
-        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.CategoryOptions@7f485fda]" started-at="2022-06-16T10:30:17 CST" name="beforeClass" finished-at="2022-06-16T10:30:19 CST" duration-ms="1884" status="PASS">
+        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.CategoryOptions@7f485fda]" started-at="2022-06-17T20:21:52 CST" name="beforeClass" finished-at="2022-06-17T20:21:53 CST" duration-ms="1687" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -564,7 +564,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.CategoryOptions@7f485fda]" started-at="2022-06-16T10:30:19 CST" name="beforeTest" finished-at="2022-06-16T10:30:24 CST" duration-ms="5497" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.CategoryOptions@7f485fda]" started-at="2022-06-17T20:21:53 CST" name="beforeTest" finished-at="2022-06-17T20:22:00 CST" duration-ms="6622" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -575,23 +575,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="TestCaseSelectCategory()[pri:0, instance:TestCases.CategoryOptions@7f485fda]" started-at="2022-06-16T10:30:24 CST" name="TestCaseSelectCategory" finished-at="2022-06-16T10:30:27 CST" duration-ms="2770" status="PASS">
+        <test-method signature="TestCaseSelectCategory()[pri:0, instance:TestCases.CategoryOptions@7f485fda]" started-at="2022-06-17T20:22:00 CST" name="TestCaseSelectCategory" finished-at="2022-06-17T20:22:03 CST" duration-ms="2756" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCaseSelectCategory -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.CategoryOptions@7f485fda]" started-at="2022-06-16T10:30:27 CST" name="afterTest" finished-at="2022-06-16T10:30:27 CST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.CategoryOptions@7f485fda]" started-at="2022-06-17T20:22:03 CST" name="afterTest" finished-at="2022-06-17T20:22:03 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestCases.CategoryOptions@7f485fda]" started-at="2022-06-16T10:30:27 CST" name="afterClass" finished-at="2022-06-16T10:30:28 CST" duration-ms="776" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestCases.CategoryOptions@7f485fda]" started-at="2022-06-17T20:22:03 CST" name="afterClass" finished-at="2022-06-17T20:22:03 CST" duration-ms="621" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- TestCases.CategoryOptions -->
     </test> <!-- Pruebas Categorias -->
-    <test started-at="2022-06-16T10:30:28 CST" name="Pruebas Reseñas" finished-at="2022-06-16T10:30:52 CST" duration-ms="24594">
+    <test started-at="2022-06-17T20:22:03 CST" name="Pruebas Resenas" finished-at="2022-06-17T20:22:28 CST" duration-ms="24738">
       <class name="TestCases.ReviewProduct">
-        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.ReviewProduct@3f191845]" started-at="2022-06-16T10:30:28 CST" name="beforeClass" finished-at="2022-06-16T10:30:30 CST" duration-ms="2180" status="PASS">
+        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.ReviewProduct@3f191845]" started-at="2022-06-17T20:22:03 CST" name="beforeClass" finished-at="2022-06-17T20:22:05 CST" duration-ms="1670" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -617,7 +617,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.ReviewProduct@3f191845]" started-at="2022-06-16T10:30:30 CST" name="beforeTest" finished-at="2022-06-16T10:30:34 CST" duration-ms="4047" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.ReviewProduct@3f191845]" started-at="2022-06-17T20:22:05 CST" name="beforeTest" finished-at="2022-06-17T20:22:14 CST" duration-ms="8559" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -628,19 +628,72 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="TestCaseReviewProduct()[pri:0, instance:TestCases.ReviewProduct@3f191845]" started-at="2022-06-16T10:30:34 CST" name="TestCaseReviewProduct" finished-at="2022-06-16T10:30:52 CST" duration-ms="17648" status="PASS">
+        <test-method signature="TestCaseReviewProduct()[pri:0, instance:TestCases.ReviewProduct@3f191845]" started-at="2022-06-17T20:22:14 CST" name="TestCaseReviewProduct" finished-at="2022-06-17T20:22:28 CST" duration-ms="13798" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCaseReviewProduct -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.ReviewProduct@3f191845]" started-at="2022-06-16T10:30:52 CST" name="afterTest" finished-at="2022-06-16T10:30:52 CST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.ReviewProduct@3f191845]" started-at="2022-06-17T20:22:28 CST" name="afterTest" finished-at="2022-06-17T20:22:28 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestCases.ReviewProduct@3f191845]" started-at="2022-06-16T10:30:52 CST" name="afterClass" finished-at="2022-06-16T10:30:52 CST" duration-ms="715" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestCases.ReviewProduct@3f191845]" started-at="2022-06-17T20:22:28 CST" name="afterClass" finished-at="2022-06-17T20:22:28 CST" duration-ms="702" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- TestCases.ReviewProduct -->
-    </test> <!-- Pruebas Reseñas -->
+    </test> <!-- Pruebas Resenas -->
+    <test started-at="2022-06-17T20:22:28 CST" name="Pruebas Producto en el carrito" finished-at="2022-06-17T20:22:57 CST" duration-ms="29080">
+      <class name="TestCases.ShoppingCartProducts">
+        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.ShoppingCartProducts@8458f04]" started-at="2022-06-17T20:22:28 CST" name="beforeClass" finished-at="2022-06-17T20:22:30 CST" duration-ms="1659" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[C:\\Drivers\\chromedriver.exe]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[src/test/resources/dataShoppingCart.json]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[C:\\Evidencia\\ShoppingCart]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:TestCases.ShoppingCartProducts@8458f04]" started-at="2022-06-17T20:22:30 CST" name="beforeTest" finished-at="2022-06-17T20:22:39 CST" duration-ms="9282" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://tutorialsninja.com/demo/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="TestCaseValidateShoppingCartProductList()[pri:0, instance:TestCases.ShoppingCartProducts@8458f04]" started-at="2022-06-17T20:22:39 CST" name="TestCaseValidateShoppingCartProductList" finished-at="2022-06-17T20:22:57 CST" duration-ms="17443" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseValidateShoppingCartProductList -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestCases.ShoppingCartProducts@8458f04]" started-at="2022-06-17T20:22:57 CST" name="afterTest" finished-at="2022-06-17T20:22:57 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestCases.ShoppingCartProducts@8458f04]" started-at="2022-06-17T20:22:57 CST" name="afterClass" finished-at="2022-06-17T20:22:57 CST" duration-ms="692" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- TestCases.ShoppingCartProducts -->
+    </test> <!-- Pruebas Producto en el carrito -->
   </suite> <!-- Test Cases - Segunda Entrega -->
 </testng-results>

@@ -38,11 +38,21 @@ public class Product {
 		try {
 			By byProductName = By.xpath("//div[@class='caption']//a[contains(text(), '" + productName + "')]");
 			String productId = getProductId(byProductName);
-
 			if (adapter.isElementExisting(byProductName)) {
 				By byBtnAddCart = By.xpath("//button[@type='button' and contains(@onclick, '" + productId + "')]");
 				adapter.clickByLocator(byBtnAddCart);
 			}
+		} catch (NoSuchElementException e) {
+			System.out.println(e);
+			Assert.fail("El producto: " + productName + " no fue encontrado");
+		}
+	}
+
+	public void addProductToCartFromSearch(String productName) {
+		try {
+			By byBtnAddToCart = By
+					.xpath("//a[text()='" + productName + "']/parent::*/parent::*/following-sibling::*/button[1]");
+			adapter.clickByLocator(byBtnAddToCart);
 		} catch (NoSuchElementException e) {
 			System.out.println(e);
 			Assert.fail("El producto: " + productName + " no fue encontrado");
@@ -81,7 +91,7 @@ public class Product {
 			Assert.fail("El producto: " + productName + " no fue encontrado");
 		}
 	}
-	
+
 	public void openDetailProduct(String productName) {
 		try {
 			By byProductName = By.xpath("//div[@class='caption']//a[contains(text(), '" + productName + "')]");

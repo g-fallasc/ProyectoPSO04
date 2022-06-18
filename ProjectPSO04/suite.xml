@@ -111,9 +111,9 @@
 			</class>
 		</classes>
 	</test>
-	
+
 	<!-- Test Cases for Review -->
-	<test name="Pruebas Reseñas">
+	<test name="Pruebas Resenas">
 		<parameter name="browser" value="Chrome"></parameter>
 		<parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"></parameter>
 		<parameter name="URL" value="http://tutorialsninja.com/demo/"></parameter>
@@ -123,6 +123,23 @@
 			<class name="TestCases.ReviewProduct">
 				<methods>
 					<include name="TestCaseReviewProduct"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<!-- Test Cases for Shopping Cart -->
+	<test name="Pruebas Producto en el carrito">
+		<parameter name="browser" value="Chrome"></parameter>
+		<parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"></parameter>
+		<parameter name="URL" value="http://tutorialsninja.com/demo/"></parameter>
+		<parameter name="dataPath" value="src/test/resources/dataShoppingCart.json"></parameter>
+		<parameter name="evidencePath" value="C:\\Evidencia\\ShoppingCart"></parameter>
+		<classes>
+			<class name="TestCases.ShoppingCartProducts">
+				<methods>
+					<include name="TestCaseValidateShoppingCart"></include>
+					<include name="TestCaseValidateShoppingCartProductList"></include>
 				</methods>
 			</class>
 		</classes>
