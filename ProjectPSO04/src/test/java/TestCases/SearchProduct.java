@@ -81,8 +81,9 @@ public class SearchProduct {
 	}
 
 	@Test
-	public void TestCaseSearchChangeCriteria() throws InterruptedException {
+	public void TestCaseSearchChangeCriteria() {
 		Navigation.setEvidencePath("SearchChangeCriteria");
+		Navigation.starRecording("SearchChangeCriteria");
 		readDataForChangeCriteria();
 		// Enter value and search
 		searchProduct(productName);
@@ -99,6 +100,8 @@ public class SearchProduct {
 		Navigation.takeScreenshot();
 		PagSearch.selectViewProductResult(optionViewProduct);
 		Navigation.takeScreenshot();
+
+		Navigation.stopRecording();
 	}
 
 	@AfterMethod
