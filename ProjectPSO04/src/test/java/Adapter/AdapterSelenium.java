@@ -56,7 +56,7 @@ public class AdapterSelenium {
 			}
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 			WebDriverListener listener = new WebDriverListener();
 			driver = new EventFiringDecorator(listener).decorate(driver);
@@ -101,7 +101,7 @@ public class AdapterSelenium {
 	public WebElement createElement(By byLocator, String action) {
 		WebElement element = null;
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 			if (action.equals("CLICK")) {
 				element = wait.until(ExpectedConditions.elementToBeClickable(byLocator));
 			} else if (action.equals("INGRESAR")) {

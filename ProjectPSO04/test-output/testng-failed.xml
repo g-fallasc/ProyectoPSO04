@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Test Cases - Segunda Entrega]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Pruebas Validar Orden(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"/>
+    <parameter name="evidencePath" value="C:\\Evidencia\\Checkout"/>
+    <parameter name="URL" value="http://tutorialsninja.com/demo/"/>
+    <parameter name="dataPath" value="src/test/resources/dataCheckout.json"/>
     <classes>
-      <class name="TestCases.Auth">
+      <class name="TestCases.CheckoutOrder">
         <methods>
-          <include name="TestCaseLogout"/>
-          <include name="TestCaseLoginIncorrect"/>
+          <include name="afterClass"/>
           <include name="afterTest"/>
           <include name="beforeTest"/>
-          <include name="afterClass"/>
-          <include name="TestCaseRegisterSuccess"/>
           <include name="beforeClass"/>
-          <include name="TestCaseOptionRegister"/>
-          <include name="TestCaseOptionLogin"/>
-          <include name="TestCaseLoginSuccess"/>
-          <include name="TestCaseRegisterWithoutPrivacyPolicy"/>
-          <include name="TestCaseRegisterRepeatedEmail"/>
+          <include name="TestCaseCheckoutOrderAddNewAddress"/>
+          <include name="TestCaseCheckoutOrder"/>
         </methods>
-      </class> <!-- TestCases.Auth -->
+      </class> <!-- TestCases.CheckoutOrder -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Pruebas Validar Orden(failed) -->
+</suite> <!-- Failed suite [Test Cases - Segunda Entrega] -->
