@@ -10,7 +10,7 @@
 		"country": "Costa Rica",
 		"region": "Heredia",
 		"comment": "Orden de prueba",
-		"email": "qapso04@ucenfotec.ac.cr",
+		"email": "qa2pso04@ucenfotec.ac.cr",
 		"password": "QA1234"
 	},
 	"checkoutOrderAddNewAddress": {
