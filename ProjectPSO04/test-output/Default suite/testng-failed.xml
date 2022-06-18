@@ -3,22 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCases.Auth">
+      <class name="TestCases.ShoppingCartProducts">
         <methods>
-          <include name="TestCaseLogout"/>
-          <include name="TestCaseLoginIncorrect"/>
-          <include name="afterTest"/>
           <include name="beforeTest"/>
-          <include name="afterClass"/>
-          <include name="TestCaseRegisterSuccess"/>
+          <include name="TestCaseValidateShoppingCart"/>
+          <include name="TestCaseValidateShoppingCartProductList"/>
           <include name="beforeClass"/>
-          <include name="TestCaseOptionRegister"/>
-          <include name="TestCaseOptionLogin"/>
-          <include name="TestCaseLoginSuccess"/>
-          <include name="TestCaseRegisterWithoutPrivacyPolicy"/>
-          <include name="TestCaseRegisterRepeatedEmail"/>
+          <include name="afterTest"/>
+          <include name="afterClass"/>
         </methods>
-      </class> <!-- TestCases.Auth -->
+      </class> <!-- TestCases.ShoppingCartProducts -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

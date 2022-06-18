@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.InvalidSelectorException;
@@ -54,6 +55,7 @@ public class AdapterSelenium {
 				System.setProperty("webdriver.geckod.driver", driverPath);
 				// driver = new FirefoxDriver();
 			}
+			driver.manage().window().getSize();
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
@@ -63,6 +65,14 @@ public class AdapterSelenium {
 		} catch (WebDriverException e) {
 			Assert.fail(e.getMessage());
 		}
+	}
+
+	/**
+	 * OBTIENE LAS DIMENSIONES DEL DRIVER
+	 * @return dimension driver
+	 */
+	public Dimension getSize() {
+		return this.driver.manage().window().getSize();
 	}
 
 	/**

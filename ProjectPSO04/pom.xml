@@ -33,6 +33,15 @@
 			<artifactId>org.apache.commons.io</artifactId>
 			<version>2.4</version>
 		</dependency>
+
+		<!--Monte -->
+		<dependency>
+			<groupId>com.github.stephenc.monte</groupId>
+			<artifactId>monte-screen-recorder</artifactId>
+			<version>0.7.7.0</version>
+		</dependency>
+
+
 	</dependencies>
 
 </project>

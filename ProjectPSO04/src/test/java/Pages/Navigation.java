@@ -1,11 +1,14 @@
 package Pages;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Adapter.AdapterSelenium;
+import Utils.CustomScreenRecorder;
 
 public class Navigation {
 	/*
@@ -66,6 +69,37 @@ public class Navigation {
 
 	public void setEvidencePath(String nameTestCase) {
 		this.evidencePath = this.defaultPath + "\\" + nameTestCase;
+	}
+
+	private int getSizeHeight() {
+		return adapter.getSize().getHeight();
+	}
+
+	private int getSizeWidth() {
+		return adapter.getSize().getWidth();
+	}
+
+	/**
+	 * -------- Options Screen Record --------
+	 * 
+	 * @throws Exception **
+	 */
+	public void starRecording(String nameFile) {
+		try {
+			CustomScreenRecorder.startRecording(nameFile, getSizeHeight(), getSizeWidth());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public void stopRecording() {
+		try {
+			CustomScreenRecorder.stopRecording();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	/**
