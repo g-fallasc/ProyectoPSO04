@@ -40,6 +40,23 @@
 		</classes>
 	</test>
 
+	<!-- Test Cases for CheckOrder -->
+	<test name="Pruebas Validar Orden">
+		<parameter name="browser" value="Chrome"></parameter>
+		<parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"></parameter>
+		<parameter name="URL" value="http://tutorialsninja.com/demo/"></parameter>
+		<parameter name="dataPath" value="src/test/resources/dataCheckout.json"></parameter>
+		<parameter name="evidencePath" value="C:\\Evidencia\\Checkout"></parameter>
+		<classes>
+			<class name="TestCases.CheckoutOrder">
+				<methods>
+					<include name="TestCaseCheckoutOrder"></include>
+					<include name="TestCaseCheckoutOrderAddNewAddress"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
 	<!-- Test Cases for Verify Product Home Page -->
 	<test name="Pruebas Pagina Principal - Verificar Productos">
 		<parameter name="browser" value="Chrome"></parameter>
@@ -74,23 +91,6 @@
 					<include name="TestCaseSearchProductExist"></include>
 					<include name="TestCaseSearchChangeCriteria"></include>
 					<include name="TestCaseSearchProductNotExist"></include>
-				</methods>
-			</class>
-		</classes>
-	</test>
-
-	<!-- Test Cases for CheckOrder -->
-	<test name="Pruebas Validar Orden">
-		<parameter name="browser" value="Chrome"></parameter>
-		<parameter name="driverPath" value="C:\\Drivers\\chromedriver.exe"></parameter>
-		<parameter name="URL" value="http://tutorialsninja.com/demo/"></parameter>
-		<parameter name="dataPath" value="src/test/resources/dataCheckout.json"></parameter>
-		<parameter name="evidencePath" value="C:\\Evidencia\\Checkout"></parameter>
-		<classes>
-			<class name="TestCases.CheckoutOrder">
-				<methods>
-					<include name="TestCaseCheckoutOrder"></include>
-					<include name="TestCaseCheckoutOrderAddNewAddress"></include>
 				</methods>
 			</class>
 		</classes>
